@@ -18,7 +18,7 @@
 - тупые
 - `Адские монстры`
  # ` Сам NPC выглядит так:`
-![Screenshot_20240515-230133](https://github.com/3B3TServer/Docs/assets/169720081/b7479ac3-2f68-4b80-8755-94f8770879d8)
+ ![crafter](assets/Crafter.png)
  # `При нажатии правой кнопкой мыши по крафтеру,будут следущие предложения:`
  ![Screenshot_20240515-225514](https://github.com/3B3TServer/Docs/assets/169720081/026f5e28-e790-4fe5-945a-f4e458cda3fd)
  ![Screenshot_20240515-230615](https://github.com/3B3TServer/Docs/assets/169720081/2c9965b2-f84d-4704-8f54-0dde1e05a10f)
