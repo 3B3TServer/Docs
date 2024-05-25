@@ -19,7 +19,7 @@
 - `Адские монстры`
  # ` Сам NPC выглядит так:`
  ![crafter](assets/Crafter.png)
- # `При нажатии правой кнопкой мыши по крафтеру,будут следущие предложения:`
- ![Screenshot_20240515-225514](https://github.com/3B3TServer/Docs/assets/169720081/026f5e28-e790-4fe5-945a-f4e458cda3fd)
- ![Screenshot_20240515-230615](https://github.com/3B3TServer/Docs/assets/169720081/2c9965b2-f84d-4704-8f54-0dde1e05a10f)
-![Screenshot_20240515-230755](https://github.com/3B3TServer/Docs/assets/169720081/b98b3763-6d6c-453e-9608-c07d08ff3a52)
+ # `При нажатии правой кнопкой мыши по крафтеру,будут следущие предложения`
+![buy](assets/nitro.png)
+![buy](assets/buyer.png)
+![buy](assets/enma.png)
