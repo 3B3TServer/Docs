@@ -7,7 +7,5 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
-theme:
-  icon:
-    admonition:
-      <type>: <icon>
+  - pymdownx.tabbed:
+      alternate_style: true
