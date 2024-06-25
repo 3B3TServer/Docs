@@ -3,3 +3,9 @@ site_name: My Docs
 site_url: https://wiki.3b3t.fun
 theme:
   name: material
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
