@@ -1,5 +1,37 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
-site_name: My Docs
+site_name: 3B3T Wiki
 site_url: https://wiki.3b3t.fun
+repo_url: https://github.com/3B3TServer/Docs
+edit_uri: edit/main/docs/
 theme:
   name: material
+  language: ru
+  palette:
+    scheme: slate
+    primary: deep purple
+    accent: indigo
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/pencil 
+    view: material/eye
+  features:
+    - content.action.edit
+plugins:
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: iso_date
+      fallback_to_build_date: true
+  - git-committers:
+      repository: 3B3TServer/Docs
+      branch: main
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - attr_list
+  - md_in_html
