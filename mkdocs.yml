@@ -24,6 +24,7 @@ plugins:
   - git-committers:
       repository: 3B3TServer/Docs
       branch: main
+  - search
 markdown_extensions:
   - admonition
   - pymdownx.details
