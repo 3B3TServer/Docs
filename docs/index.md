@@ -1,17 +1,30 @@
-# Welcome to MkDocs
+# Добро пожаловать на вики 3B3T!
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Тут вы можете прочитать некоторые гайды!
 
-## Commands
+<br>
+У нас вы найдете:
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+· Возможность играть с телефона или ПК
 
-## Project layout
+· Поддержку Bedrock (PE)
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+· Стабильный онлайн и дружелюбное сообщество
+
+· Качественные сервера, работающие 24/7
+
+<br>
+:fire: Наши адреса:
+
+· IP для ПК (v1.13 - 1.20+): 3b3t.fun:25565
+
+· IP для телефона (v1.20.40+): 3b3t.fun:19132
+
+Присоединяйтесь к нам и получите незабываемые впечатления от игры в Minecraft!
+
+<br>
+:globe_with_meridians: Наши соц.сети:
+
+* [Дискорд](https://discord.gg/3b3t)
+
+* [ВК](https://vk.com/3three3bee)
