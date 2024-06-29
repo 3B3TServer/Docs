@@ -6,6 +6,7 @@ nav:
   - 'Кастомные крафты и вещи': 'Custom_items_and_crafts.md'
   - 'Питомцы': 'pets.md'
   - 'Топы': 'tops.md'
+  - 'Зачарования': 'enchantments.md'
   - 'Гайды':
     - '2FA': 'Guides/2FA.md'
     - 'Команды клана': 'Guides/Commands_clan.md'
@@ -57,3 +58,10 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+extra_css:
+  - assets/groups_css/simple.css
+  - assets/groups_css/unique.css
+  - assets/groups_css/elite.css
+  - assets/groups_css/ultimate.css
+  - assets/groups_css/legendary.css
+  - assets/groups_css/fabled.css

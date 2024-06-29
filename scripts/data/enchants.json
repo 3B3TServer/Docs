@@ -1,0 +1,1070 @@
+{
+  "ELITE": [
+    {
+      "appliesTo": "Трезубец",
+      "highestLevel": 4,
+      "description": "Шанс удвоить наносимый урон.",
+      "display": "Двойной Удар"
+    },
+    {
+      "appliesTo": "Удочка",
+      "highestLevel": 3,
+      "description": "Отравляет крючок.",
+      "display": "Отравленный крюк"
+    },
+    {
+      "appliesTo": "Удочка",
+      "highestLevel": 3,
+      "description": "Крючок наносит урон огнем.",
+      "display": "Огненный крюк"
+    },
+    {
+      "appliesTo": "Кирки",
+      "highestLevel": 3,
+      "description": "Добыть целую жилу руды",
+      "display": "Шахтер"
+    },
+    {
+      "appliesTo": "Оружие",
+      "highestLevel": 5,
+      "description": "Увеличивает урон, наносимый Эндермену и драконам Края.",
+      "display": "Эндер убийца"
+    },
+    {
+      "appliesTo": "Мечи, топоры",
+      "highestLevel": 3,
+      "description": "Увеличивает урон, наносимый паукам..",
+      "display": "Паука Убийца"
+    },
+    {
+      "appliesTo": "Удочка",
+      "highestLevel": 3,
+      "description": "Получите больше опыта от рыбалки.",
+      "display": "Крюк"
+    },
+    {
+      "appliesTo": "Удочка",
+      "highestLevel": 3,
+      "description": "Притяните пораженную сущность к себе.",
+      "display": "Захват"
+    },
+    {
+      "appliesTo": "Топор",
+      "highestLevel": 4,
+      "description": "Шанс дать противнику Эффекты увядания и слепоты при нанесении урона",
+      "display": "Жнец"
+    },
+    {
+      "appliesTo": "Оружие",
+      "highestLevel": 5,
+      "description": "Шанс увеличить урон, наносимый мобам Нижнего мира..",
+      "display": "Убийца ада"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Шанс вызвать слепоту при атаке.",
+      "display": "Ослепить"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Ваша атака притягивает к вам мобов.",
+      "display": "Очарование"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 3,
+      "description": "Может вызвать медлительность атакующего при защите.",
+      "display": "Заморозить"
+    },
+    {
+      "appliesTo": "Мечи, топоры",
+      "highestLevel": 4,
+      "description": "Дает эффект молнии и шанс замедлить врага.",
+      "display": "Парализовать"
+    },
+    {
+      "appliesTo": "Мечи, топоры",
+      "highestLevel": 3,
+      "description": "Шанс наложить эффект яда.",
+      "display": "Яд"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 4,
+      "description": "Шанс нанести яд атакующему.",
+      "display": "Отравленный"
+    },
+    {
+      "appliesTo": "Оружие и инструменты",
+      "highestLevel": 10,
+      "description": "Защищает оружие и инструменты на долговечность, предметы будут дольше ломаться.",
+      "display": "Перекованный"
+    },
+    {
+      "appliesTo": "Луки",
+      "highestLevel": 4,
+      "description": "Шанс замедлить и наложить эффект усталость на врага, стрелами.",
+      "display": "Ловушка"
+    },
+    {
+      "appliesTo": "Сапоги",
+      "highestLevel": 3,
+      "description": "Дает ускорение прыжка.",
+      "display": "Пружины"
+    },
+    {
+      "appliesTo": "Сапоги",
+      "highestLevel": 10,
+      "description": "При получение урона у вас есть шанс вызвать орду зомби, чтобы отвлечь и дезориентировать ваших противников.",
+      "display": "Уловка нежити"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 6,
+      "description": "Дает шанс справиться со слабостью.",
+      "display": "Вуду"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 5,
+      "description": "Шанс дать эффект иссушения.",
+      "display": "Визер"
+    },
+    {
+      "appliesTo": "Шлем",
+      "highestLevel": 8,
+      "description": "Шанс создать дымовую завесу и отвлечь врага.",
+      "display": "Дымовая бомба"
+    },
+    {
+      "appliesTo": "Мечи, Топоры",
+      "highestLevel": 3,
+      "description": "Взрывной эффект огня.",
+      "display": "Адский"
+    },
+    {
+      "appliesTo": "Штаны",
+      "highestLevel": 3,
+      "description": "Шанс потушить себя когда горишь.",
+      "display": "Потушить"
+    },
+    {
+      "appliesTo": "Нагурдник",
+      "highestLevel": 5,
+      "description": "Шанс отбросить нападающего когда твое здоровье низкое.",
+      "display": "Ударная волна"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Шанс исцелить вас на срок до 3 хп через несколько секунд после удара.",
+      "display": "Вампир"
+    },
+    {
+      "appliesTo": "Меч",
+      "highestLevel": 5,
+      "description": "Увеличивает урон, наносимый игрокам, которые владеют луком в момент удара.",
+      "display": "Анти лучник"
+    },
+    {
+      "appliesTo": "Лук, Арбалет, Трезубец",
+      "highestLevel": 5,
+      "description": "Умножает урон против игроков, которые владеют мечом в момент удара.",
+      "display": "Анти мечник"
+    },
+    {
+      "appliesTo": "Сапоги",
+      "highestLevel": 3,
+      "description": "Поднимитесь в воздух с низким уровнем здоровья..",
+      "display": "Ракетный побег"
+    },
+    {
+      "appliesTo": "Меч",
+      "highestLevel": 8,
+      "description": "Шанс украсть у врага опыт.",
+      "display": "Вор опыта"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 2,
+      "description": "Шанс наложить на врага эффект усталости.",
+      "display": "Проклятие"
+    },
+    {
+      "appliesTo": "Элитры",
+      "highestLevel": 3,
+      "description": "Шанс получить повышение скорости с фейерверком.",
+      "display": "Импульс"
+    },
+    {
+      "appliesTo": "Арбалет",
+      "highestLevel": 4,
+      "description": "Увеличивает урон, наносимый арбалетами.",
+      "display": "Cтрелок"
+    },
+    {
+      "appliesTo": "Трезубец",
+      "highestLevel": 4,
+      "description": "Увеличивает урон, наносимый трезубцами..",
+      "display": "Посейдон"
+    },
+    {
+      "appliesTo": "Кирки",
+      "highestLevel": 3,
+      "description": "Шанс восстановить еду во время добычи.",
+      "display": "Пополнить"
+    },
+    {
+      "appliesTo": "Арбалет",
+      "highestLevel": 5,
+      "description": "Стрелы превращаются в огненные шары.",
+      "display": "Гаст"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Шанс увеличения урона, наносимого критическим ударом.",
+      "display": "Критический"
+    },
+    {
+      "appliesTo": "Трезубец",
+      "highestLevel": 3,
+      "description": "Поджигайте противников.",
+      "display": "Искра"
+    },
+    {
+      "appliesTo": "Топоры",
+      "highestLevel": 4,
+      "description": "Шанс нанести удар с большой силой.",
+      "display": "Большая сила"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Шанс не отбросить моба при ударе.",
+      "display": "Липкий меч"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Замораживайте мобов ночью.",
+      "display": "Ночной странник"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Ваша атака притягивает игроков к себе.",
+      "display": "Магнит"
+    },
+    {
+      "appliesTo": "Меч",
+      "highestLevel": 5,
+      "description": "При каждом убийстве в PvP ваше здоровье и еда восстанавливаются.",
+      "display": "Сбор урожая душ"
+    }
+  ],
+  "FABLED": [
+    {
+      "appliesTo": "Кирка",
+      "highestLevel": 1,
+      "description": "Шанс превратить блок руды в свой блок",
+      "display": "Превращение Руды"
+    },
+    {
+      "appliesTo": "Инструменты",
+      "highestLevel": 3,
+      "description": "Позволяет быстрее размахивать инструментами.",
+      "display": "Быстрорез"
+    },
+    {
+      "appliesTo": "Инструменты",
+      "highestLevel": 4,
+      "description": "При разрушении предмет имеет шанс восстановить половину его прочности.",
+      "display": "Восстановить"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 4,
+      "description": "Шанс предотвратить повреждение брони от получения урона.",
+      "display": "Закаленный"
+    },
+    {
+      "appliesTo": "Инструменты",
+      "highestLevel": 1,
+      "description": "Инструменты с этим зачарованием становятся нерушимыми.",
+      "display": "Неломаемый"
+    },
+    {
+      "appliesTo": "Оружие + Инструменты + Лук",
+      "highestLevel": 3,
+      "description": "Шанс сохранить предмет после смерти.",
+      "display": "Прикованные души"
+    },
+    {
+      "appliesTo": "Лук, Арбалет",
+      "highestLevel": 2,
+      "description": "Шанс ослепить и ослабить врага, а так же нанести повышенный урон.",
+      "display": "Нейтрализовать"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Шанс обезоружить противника.",
+      "display": "Разоружение"
+    },
+    {
+      "appliesTo": "Нагрудники",
+      "highestLevel": 3,
+      "description": "Шанс возродить себя после смерти.",
+      "display": "Феникс"
+    },
+    {
+      "appliesTo": "Оружие",
+      "highestLevel": 5,
+      "description": "Шанс снять с соперника шлем.",
+      "display": "Напугать"
+    },
+    {
+      "appliesTo": "Оружие",
+      "highestLevel": 4,
+      "description": "Шанс нанести двойной урон при этом оставляя врага слепым. Затрачивает 40 душ / активация.",
+      "display": "Аннулировать"
+    },
+    {
+      "appliesTo": "Кирка",
+      "highestLevel": 5,
+      "description": "Шанс увеличить количество выпадающей руды. Затрачивает 5 душ / активация.",
+      "display": "Умножение"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Шанс получить больше душ от убийства игроков.",
+      "display": "Похищение души"
+    },
+    {
+      "appliesTo": "Топоры",
+      "highestLevel": 3,
+      "description": "Шанс получить больше душ от убийства игроков.",
+      "display": "Топор душ"
+    },
+    {
+      "appliesTo": "Кирка",
+      "highestLevel": 3,
+      "description": "Шанс получить души за добычу полезных ископаемых.",
+      "display": "Добытчик душ"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Шанс получить души, убивая мобов.",
+      "display": "Вор душ"
+    },
+    {
+      "appliesTo": "Топор",
+      "highestLevel": 4,
+      "description": "Шанс призвать чрезвычайно мощную молнию на врага.",
+      "display": "Мьельнир"
+    },
+    {
+      "appliesTo": "Топор",
+      "highestLevel": 6,
+      "description": "Наносит большой урон прочности брони врага.",
+      "display": "Разрушитель брони"
+    }
+  ],
+  "LEGENDARY": [
+    {
+      "appliesTo": "Трезубец",
+      "highestLevel": 4,
+      "description": "Заставь врага истекать кровью, если ударить, используя рукопашную атаку.",
+      "display": "Кровотечение"
+    },
+    {
+      "appliesTo": "Мечи, топоры",
+      "highestLevel": 4,
+      "description": "Увеличивает урон, наносимый враждебным мобам..",
+      "display": "Убийца мобов"
+    },
+    {
+      "appliesTo": "Удочка",
+      "highestLevel": 3,
+      "description": "Шанс получить двойное количество рыболовных предметов.",
+      "display": "Приманка"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 3,
+      "description": "Шанс восстановить прочность при повреждении игроками..",
+      "display": "Закаленный"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 3,
+      "description": "Шанс восстановить прочность при повреждении мобами..",
+      "display": "Заплата"
+    },
+    {
+      "appliesTo": "Нагрудник",
+      "highestLevel": 3,
+      "description": "Шанс взорвать врага когда в них попадают стрелы.",
+      "display": "Отразить"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 3,
+      "description": "Шанс предотвратить появление стражников пративника.",
+      "display": "Смятение"
+    },
+    {
+      "appliesTo": "Оружие",
+      "highestLevel": 3,
+      "description": "Восстановите немного здоровья после убийств.",
+      "display": "Вампир"
+    },
+    {
+      "appliesTo": "Оружие",
+      "highestLevel": 3,
+      "description": "Поражайте монстров молнией каждые 3 последовательных попадания.",
+      "display": "Повелитель грома"
+    },
+    {
+      "appliesTo": "Сапоги",
+      "highestLevel": 1,
+      "description": "Прогулка по лаве.",
+      "display": "Лавовый ходок"
+    },
+    {
+      "appliesTo": "Сапоги",
+      "highestLevel": 1,
+      "description": "Ходить по воде.",
+      "display": "Водный ходок"
+    },
+    {
+      "appliesTo": "Сапоги",
+      "highestLevel": 4,
+      "description": "Шанс нанести двойной урон, находясь в воде.",
+      "display": "Аква"
+    },
+    {
+      "appliesTo": "Элитры",
+      "highestLevel": 5,
+      "description": "Шанс отравить противника и обретение регенерации.",
+      "display": "Приговор"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 5,
+      "description": "Шанс отравить противника и обретение регенерации.",
+      "display": "Перенаправить"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 5,
+      "description": "Защититесь с помощью эффектов слабости и увядания на противника.",
+      "display": "Нечестивый"
+    },
+    {
+      "appliesTo": "Трезубец",
+      "highestLevel": 5,
+      "description": "Нанесите эффект слабости и иссушения.",
+      "display": "Хаос"
+    },
+    {
+      "appliesTo": "Сапоги",
+      "highestLevel": 6,
+      "description": "Шанс подбросить атакуещего в воздух.",
+      "display": "Конвульсия"
+    },
+    {
+      "appliesTo": "Нагрудники",
+      "highestLevel": 6,
+      "description": "Шанс получить меньше урона.",
+      "display": "Прочный"
+    },
+    {
+      "appliesTo": "Топоры",
+      "highestLevel": 4,
+      "description": "Шанс нанести больший урон топором.",
+      "display": "Варвар"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 3,
+      "description": "Шанс вылечить слепоту и При попадании в цель приобретают ночное зрение.",
+      "display": "Ясный"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Шанс нанести двойной удар.",
+      "display": "Двойной удар"
+    },
+    {
+      "appliesTo": "Сапоги",
+      "highestLevel": 2,
+      "description": "Добавлена ​​скорость, если надеты.",
+      "display": "Скорость"
+    },
+    {
+      "appliesTo": "Топоры",
+      "highestLevel": 3,
+      "description": "Поджечь всех игроков в радиусе действия..",
+      "display": "Воспламенять"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 5,
+      "description": "Шанс нанести большой урон монстрам.",
+      "display": "Моб Аура"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 4,
+      "description": "Шанс увеличить количество EXP, выпадающих из мобов.",
+      "display": "Любознательный"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 5,
+      "description": "Возможность украсть здоровье при атаке.",
+      "display": "Кража жизни"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 3,
+      "description": "Открывает дополнительные сердца.",
+      "display": "Сердца"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 4,
+      "description": "Уменьшает урон от вражеских мечей на 2% за уровень.",
+      "display": "Бронированный"
+    },
+    {
+      "appliesTo": "Топор",
+      "highestLevel": 5,
+      "description": "Отремонтируйте свое оружие в обмен за меньший урон.",
+      "display": "Кузнец"
+    },
+    {
+      "appliesTo": "Оружие",
+      "highestLevel": 1,
+      "description": "Оружие с этим заклинанием становится несокрушимым",
+      "display": "Постоянный"
+    },
+    {
+      "appliesTo": "Меч",
+      "highestLevel": 8,
+      "description": "Шанс снять случайное снаряжение часть брони вашего противника.",
+      "display": "Разоружение"
+    },
+    {
+      "appliesTo": "Трезубец",
+      "highestLevel": 5,
+      "description": "Выстрел в голову с трезубца дает шанс нанести двойной урон.",
+      "display": "Смертельный бросок"
+    },
+    {
+      "appliesTo": "Трезубец",
+      "highestLevel": 3,
+      "description": "Увеличивает урон Трезубца в ближнем бою..",
+      "display": "Борьба"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Подбрось себя, щелкнув правой кнопкой мыши.",
+      "display": "Запуск"
+    },
+    {
+      "appliesTo": "Элитры",
+      "highestLevel": 3,
+      "description": "Ускорьте полет, щелкнув правой кнопкой мыши.",
+      "display": "Ускорение"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Ударьте молнией по ближайшим игрокам.",
+      "display": "Тор"
+    },
+    {
+      "appliesTo": "Ботинки",
+      "highestLevel": 2,
+      "description": "Повышеает скорость бега.",
+      "display": "Скорость"
+    }
+  ],
+  "SIMPLE": [
+    {
+      "appliesTo": "Мечи, Лук, Арбалет, Трезубец",
+      "highestLevel": 3,
+      "description": "Шанс поразить молнией противника.",
+      "display": "Молния"
+    },
+    {
+      "appliesTo": "Шлемы",
+      "highestLevel": 1,
+      "description": "Дышать под водой.",
+      "display": "Водный"
+    },
+    {
+      "appliesTo": "Инструменты",
+      "highestLevel": 3,
+      "description": "Шанс получить ускорение после разрушения блоков.",
+      "display": "Спешить"
+    },
+    {
+      "appliesTo": "Кирка",
+      "highestLevel": 2,
+      "description": "Шанс восстановить воздух при добыче под водой.",
+      "display": "Ребризер"
+    },
+    {
+      "appliesTo": "Шлем",
+      "highestLevel": 1,
+      "description": "Дает постоянное ночное видение.",
+      "display": "Ночное зрение"
+    },
+    {
+      "appliesTo": "Мечи, Топоры",
+      "highestLevel": 3,
+      "description": "Шанс получить голову противников при смерти.",
+      "display": "Обезглавливание"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 5,
+      "description": "Шанс оттолкнуть противника.",
+      "display": "Силовое поле"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Дает частицы и звуковые эффекты.",
+      "display": "Эпичность"
+    },
+    {
+      "appliesTo": "Мечи, Топоры",
+      "highestLevel": 5,
+      "description": "Увеличивает урон, наносимый зомби..",
+      "display": "Смертельный удар"
+    },
+    {
+      "appliesTo": "Мечи, Топоры",
+      "highestLevel": 3,
+      "description": "Увеличивает урон, наносимый скелетам..",
+      "display": "Костолом"
+    }
+  ],
+  "ULTIMATE": [
+    {
+      "appliesTo": "Удочка",
+      "highestLevel": 4,
+      "description": "Автоматически сматывает удочку при поклевке..",
+      "display": "Автоматическая катушка"
+    },
+    {
+      "appliesTo": "Мотыги",
+      "highestLevel": 3,
+      "description": "Посадите семена на площади 3x3 нажав shift+правую кнопку мыши или присядьте на телефоне вместо shift.",
+      "display": "Плантатор"
+    },
+    {
+      "appliesTo": "Мотыги",
+      "highestLevel": 3,
+      "description": "Посадите картофель на участке 3x3 нажав shift+правую кнопку мыши или вместо shift присядьте на телефоне",
+      "display": "Картофелесажалка"
+    },
+    {
+      "appliesTo": "Мотыги",
+      "highestLevel": 3,
+      "description": "Посадите морковь на участке 3x3 нажав shift+правую кнопку мыши или присядьте на телефоне вместо shift",
+      "display": "Сажалка для моркови"
+    },
+    {
+      "appliesTo": "Сапоги",
+      "highestLevel": 3,
+      "description": "Шанс свести на нет урон от падения.",
+      "display": "Парашют"
+    },
+    {
+      "appliesTo": "Удочка",
+      "highestLevel": 9,
+      "description": "Нанесите урон крюком.",
+      "display": "Острый Крючок"
+    },
+    {
+      "appliesTo": "Удочка",
+      "highestLevel": 3,
+      "description": "Шанс увеличить удачу во время рыбалки.",
+      "display": "Удачливый"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 5,
+      "description": "Шанс замедлить и обескровить противников.",
+      "display": "Вечная мерзлота"
+    },
+    {
+      "appliesTo": "Топоры",
+      "highestLevel": 3,
+      "description": "Шанс сломать дерево одним ударом",
+      "display": "Лесник"
+    },
+    {
+      "appliesTo": "Оружие",
+      "highestLevel": 4,
+      "description": "Шанс отдалиться от своих врагов и получить регенерацию.",
+      "display": "Расстояние"
+    },
+    {
+      "appliesTo": "Топоры",
+      "highestLevel": 7,
+      "description": "Наносит урон игрокам в радиусе который увеличивается с уровнем зачарования.",
+      "display": "Раскалывать"
+    },
+    {
+      "appliesTo": "Мечи, Топоры",
+      "highestLevel": 7,
+      "description": "Наносит урон мобам в радиусе , который увеличивается с уровнем зачарования.",
+      "display": "Сфера"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 5,
+      "description": "Исцеляет при получении повреждений.",
+      "display": "Ангельский"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 4,
+      "description": "Шанс не дать вражеской стреле нанести урон.",
+      "display": "Отклонение стрелы"
+    },
+    {
+      "appliesTo": "Топор",
+      "highestLevel": 6,
+      "description": "Шанс, что стрелы отскочат от вас, когда вы держите предмет с этим зачарованием.",
+      "display": "Разрыв стрелы"
+    },
+    {
+      "appliesTo": "Топоры",
+      "highestLevel": 1,
+      "description": "Шанс наложить на врага усталость от добычи.",
+      "display": "Ослабить"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 2,
+      "description": "Шанс наложить на врага усталость от добычи.",
+      "display": "Прерывать"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 4,
+      "description": "Шанс на удаление плохих эффектов зелий.",
+      "display": "Возвышенный"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 4,
+      "description": "Шанс быть оттолкнуть врага назад, когда вас ударили.",
+      "display": "Тряпичная кукла"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Шанс отменить атаку и нанести до 4 единиц урона в ответ.",
+      "display": "Блокировать"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 5,
+      "description": "Шанс увернуться от физического противника, шанс увеличивается при подкрадывании.",
+      "display": "Уклоняться"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 10,
+      "description": "Шанс породить железных големов, чтобы помогать вам и присматривать за вами.",
+      "display": "Хранители"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Шанс вызвать медлительность воздействие на вашего врага.",
+      "display": "Ледяной аспект"
+    },
+    {
+      "appliesTo": "Шлемы",
+      "highestLevel": 3,
+      "description": "Шанс восстановить еду каждую минуту.",
+      "display": "Имплантат"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 1,
+      "description": "Дает постоянную огнестойкость.",
+      "display": "Обсидиановый щит"
+    },
+    {
+      "appliesTo": "Луки",
+      "highestLevel": 5,
+      "description": "Наносит больший урон.",
+      "display": "Пронизывающий"
+    },
+    {
+      "appliesTo": "Лук",
+      "highestLevel": 4,
+      "description": "Увеличивает урон, наносимый луками..",
+      "display": "Лучник"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 2,
+      "description": "Шанс получить сопротивление урону при защите.",
+      "display": "Охрана"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 4,
+      "description": "Шанс стать невидимым, когда мало здоровья.",
+      "display": "Исчезнуть"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 4,
+      "description": "Шанс наложить эффект тошноты.",
+      "display": "Запутать"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 4,
+      "description": "Шанс нанести дополнительный урон прочности всем вражеским доспехам при каждой атаке.",
+      "display": "Пробить"
+    },
+    {
+      "appliesTo": "Топоры",
+      "highestLevel": 4,
+      "description": "Шанс нанести дополнительный урон прочности Всем вражеским доспехам при каждой атаке.",
+      "display": "Разбить"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 5,
+      "description": "Уменьшает урон от вражеских луков на 2% за уровень.",
+      "display": "Крепкий"
+    },
+    {
+      "appliesTo": "Лук",
+      "highestLevel": 5,
+      "description": "Стрелы превращаются в огненные шары.",
+      "display": "Адское пламя"
+    },
+    {
+      "appliesTo": "Лук",
+      "highestLevel": 4,
+      "description": "Значительно увеличивает наносимый урон вражеским игрокам, которые с луком в руках.",
+      "display": "Длинный лук"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 4,
+      "description": "Шанс уменьшить урон от врагов топором на 2% за уровень.",
+      "display": "Танк"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 5,
+      "description": "Шанс уменьшить входящий урон во время владение мечом на 22% на максимальном уровне.",
+      "display": "Отклонить меч"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Двойной урон по мобам в Нижнем мире.",
+      "display": "Пустота"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Двойной урон мобам в Энд мире.",
+      "display": "Эндмастер"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 3,
+      "description": "Шанс получить иммунитет к урону от взрывчатки, при На более высоких уровнях у вас есть шанс исцелиться.",
+      "display": "Доспехи крипера"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 10,
+      "description": "Шанс появление Блейзов охраников.",
+      "display": "Духи"
+    },
+    {
+      "appliesTo": "Топоры",
+      "highestLevel": 6,
+      "description": "Заставьте противника истекать кровью.",
+      "display": "Кровотечение"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Поджечь всех мобов в радиусе.",
+      "display": "Сожжение"
+    },
+    {
+      "appliesTo": "Лук",
+      "highestLevel": 3,
+      "description": "Осыпать противника стрелами.",
+      "display": "Страйкер"
+    },
+    {
+      "appliesTo": "Лук",
+      "highestLevel": 5,
+      "description": "Выстрелы в голову с лукам наносит двойной урон.",
+      "display": "Снайпер"
+    },
+    {
+      "appliesTo": "Сапоги",
+      "highestLevel": 3,
+      "description": "Шанс увеличить скорость при получении урона от падения.",
+      "display": "Эгида"
+    },
+    {
+      "appliesTo": "Сапоги",
+      "highestLevel": 3,
+      "description": "Наносите урон ближайшим мобам при получении урона от падения.",
+      "display": "Большой вес"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Наносите больше урона мобам ночью.",
+      "display": "Ночной охотник"
+    },
+    {
+      "appliesTo": "Мечи",
+      "highestLevel": 3,
+      "description": "Дезориентировать хотбар противника.",
+      "display": "Опьянение"
+    },
+    {
+      "appliesTo": "Надкрылья",
+      "highestLevel": 4,
+      "description": "Снижает наносимый вам урон.",
+      "display": "Усиленный"
+    }
+  ],
+  "UNIQUE": [
+    {
+      "appliesTo": "Мотыги",
+      "highestLevel": 1,
+      "description": "Восстанавливает посевы, когда вы их ломаете.",
+      "display": "Авто Посев"
+    },
+    {
+      "appliesTo": "Оружие",
+      "highestLevel": 4,
+      "description": "Шанс дать противнику эффект голода.",
+      "display": "Голод"
+    },
+    {
+      "appliesTo": "Мечи, топоры",
+      "highestLevel": 5,
+      "description": "Шанс получить силу и усталость от добычи",
+      "display": "Боевой Рывок"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 5,
+      "description": "Поглощайте урон врага и отразить его обратно.",
+      "display": "Отражать"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 4,
+      "description": "Шанс поглотить урон врага",
+      "display": "Щит"
+    },
+    {
+      "appliesTo": "Лук",
+      "highestLevel": 5,
+      "description": "Шанс, что стрелы взорвутся.",
+      "display": "Взрывной"
+    },
+    {
+      "appliesTo": "Арбалет",
+      "highestLevel": 5,
+      "description": "Шанс, что стрелы взорвутся.",
+      "display": "Взрыв"
+    },
+    {
+      "appliesTo": "Мечи, Топоры",
+      "highestLevel": 3,
+      "description": "Шанс получить заряд ускорения.",
+      "display": "Легкий вес"
+    },
+    {
+      "appliesTo": "Броня",
+      "highestLevel": 4,
+      "description": "Шанс поджечь нападавшего.",
+      "display": "Расплавленный"
+    },
+    {
+      "appliesTo": "Мечи, Топоры",
+      "highestLevel": 4,
+      "description": "Шанс восстановить голод во время боя",
+      "display": "Прожорливый"
+    },
+    {
+      "appliesTo": "Штаны",
+      "highestLevel": 8,
+      "description": "Шанс призовать криперов в качестве охранников.",
+      "display": "Взрывная гибель"
+    },
+    {
+      "appliesTo": "Мечи, Топоры",
+      "highestLevel": 4,
+      "description": "Увеличивает урон по пассивным мобам.",
+      "display": "Хищник"
+    },
+    {
+      "appliesTo": "Лук, Арбалет, Трезубец",
+      "highestLevel": 4,
+      "description": "Увеличивает урон, наносимый пассивным мобам.",
+      "display": "Охотник"
+    },
+    {
+      "appliesTo": "Лук, Арбалет, Трезубец",
+      "highestLevel": 4,
+      "description": "Увеличивает урон, наносимый враждебным мобам..",
+      "display": "Бездушный"
+    },
+    {
+      "appliesTo": "Лук, арбалет, трезубец",
+      "highestLevel": 3,
+      "description": "Шанс наложить эффект яда.",
+      "display": "Вирус"
+    },
+    {
+      "appliesTo": "Лук, Арбалет, Трезубец",
+      "highestLevel": 5,
+      "description": "Шанс дать эффект иссушения.",
+      "display": "Губитель"
+    },
+    {
+      "appliesTo": "Оружие",
+      "highestLevel": 3,
+      "description": "Шанс восстановить еду при убийстве мобов.",
+      "display": "Пожиратель"
+    }
+  ]
+}
