@@ -1,6 +1,24 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: My Docs
 site_url: https://wiki.3b3t.fun
+nav:
+  - 'Главная страница': 'index.md'
+  - 'Кастомные крафты и вещи': 'Custom_items_and_crafts.md'
+  - 'Питомцы': 'pets.md'
+  - 'Топы': 'tops.md'
+  - 'Гайды':
+    - '2FA': 'Guides/2FA.md'
+    - 'Команды клана': 'Guides/Commands_clan.md'
+    - 'Команды скиллов': 'Guides/Commands_skills.md'
+    - 'Работы': 'Guides/jobs.md'
+    - 'Свитки': 'Guides/scrolls.md'
+    - 'Продажа инвентаря': 'Guides/sell_inv.md'
+    - 'Спавнера': 'Guides/spawners.md'
+    - 'Палка продавалка': 'Guides/stick_sell.md'
+    - 'Несоздаваемые зелья': 'Guides/Uncraftable_poitions.md'
+  - 'Ивенты':
+    - 'Денежный метеорит': 'Events/Money_meteor.md'
+    - 'Мистический сундук': 'Events/Mystick_chest.md'
 theme:
   name: material
 markdown_extensions:
