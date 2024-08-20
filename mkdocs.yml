@@ -14,9 +14,7 @@ nav:
     - 'Работы': 'Guides/jobs.md'
     - 'Свитки': 'Guides/scrolls.md'
     - 'Продажа инвентаря': 'Guides/sell_inv.md'
-    - 'Спавнера': 'Guides/spawners.md'
     - 'Палка продавалка': 'Guides/stick_sell.md'
-    - 'Несоздаваемые зелья': 'Guides/Uncraftable_poitions.md'
   - 'Ивенты':
     - 'Денежный метеорит': 'Events/Money_meteor.md'
     - 'Мистический сундук': 'Events/Mystick_chest.md'
