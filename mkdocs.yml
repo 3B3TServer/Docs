@@ -18,6 +18,7 @@ nav:
   - 'Ивенты':
     - 'Денежный метеорит': 'Events/Money_meteor.md'
     - 'Мистический сундук': 'Events/Mystick_chest.md'
+    - 'Сплиф': 'Events/spleef.md'
 repo_url: https://github.com/3B3TServer/Docs
 edit_uri: edit/main/docs/
 theme:
