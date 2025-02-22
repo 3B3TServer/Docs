@@ -7,6 +7,7 @@ nav:
   - 'Питомцы': 'pets.md'
   - 'Топы': 'tops.md'
   - 'Зачарования': 'enchantments.md'
+  - 'Кейсы': 'cases.md'
   - 'Гайды':
     - '2FA': 'Guides/2FA.md'
     - 'Команды клана': 'Guides/Commands_clan.md'
@@ -15,10 +16,11 @@ nav:
     - 'Свитки': 'Guides/scrolls.md'
     - 'Продажа инвентаря': 'Guides/sell_inv.md'
     - 'Палка продавалка': 'Guides/stick_sell.md'
+    - 'Кастомные зелья': 'Guides/custom_potions.md'
   - 'Ивенты':
     - 'Денежный метеорит': 'Events/Money_meteor.md'
     - 'Мистический сундук': 'Events/Mystick_chest.md'
-    - 'Сплиф': 'Events/spleef.md'
+    - 'Царь Горы': 'Events/king.md'
 repo_url: https://github.com/3B3TServer/Docs
 edit_uri: edit/main/docs/
 theme:
