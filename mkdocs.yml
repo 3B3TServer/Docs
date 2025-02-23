@@ -17,6 +17,7 @@ nav:
     - 'Продажа инвентаря': 'Guides/sell_inv.md'
     - 'Палка продавалка': 'Guides/stick_sell.md'
     - 'Кастомные зелья': 'Guides/custom_potions.md'
+    - 'Вещи с боссов': 'Guides/itemsboss.md'
   - 'Ивенты':
     - 'Денежный метеорит': 'Events/Money_meteor.md'
     - 'Мистический сундук': 'Events/Mystick_chest.md'
