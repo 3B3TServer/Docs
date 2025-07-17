@@ -1,0 +1,6575 @@
+# << Example configuration >>
+# lastchance:    <-- Enchantment name
+#  display: "%group-color%Last Chance"    <-- Display in item lore
+#  description: "Has a chance to heal when on low hearts"    <-- Enchantment Description
+#  applies-to: "Chestplate"    <-- What applies to (display purposes)
+#  type: "DEFENSE"    <-- Enchantment type (controls when enchantment activates)
+#  group: "COMMON"    <-- Enchantment group (For enchanter and right-click random books)
+#  settings:
+#    required-enchants:
+#      - "springs:1" # Can require specific level
+#      - "gears"
+#    not-applyable-with:
+#      - "frozen"
+#  applies:    <-- List of items that it applies
+#    - ALL_CHESTPLATE    <-- Item(s) list
+#  levels:    < -- All Levels are under here
+#    1:     <-- Level indicator
+#      chance: 30    <-- Chance for enchantment to activate
+#      conditions: "%victim health% > 5 : %stop%"    <-- Condition (read more about it at Conditions)
+#      description: "Has the lowest chance to heal when on low hearts"    <-- Per level description (different description for each level - optional)
+#      effects:    <-- All enchantment effects
+#        - "ADD_HEALTH:2 %victim%"    <-- Effect(s) list
+
+#  Display (String) (No spaces or enchantment will break)
+#    Determines how will enchantment look in item lore
+
+#  Applies-to (String)
+#    Display used in Custom Enchantment books for %description% variable
+
+#  Group (Setting)
+#    INFO: Create enchantment groups in config.yml under enchanter configuration.
+#   Enchantment groups are used for enchanter, to sell specific type books. You can group them
+#   and add a group-wide color, then obtain it with variable %group-color% (shown in example enchantments below).
+
+#  Enchantment Types List: https://ae.advancedplugins.net/enchantments/creating-enchantments/type-list
+
+#  Applies (Material)
+#    Determines which items will have the effects
+#    The Latest Materials list: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+#    NOTICE: You can use "LEATHER_ARMOR, IRON_ARMOR, CHAIN_ARMOR, GOLD_ARMOR or DIAMOND_ARMOR" to
+#    instantly add availability for all specific armor type pieces.
+#    Use "ALL_ARMOR" to add all armor pieces.
+#    Use "ALL_HELMET" to add all helmets.
+#    Use "ALL_CHESTPLATE" to add all chestplates.
+#    Use "ALL_BOOTS" to add all boots.
+#    Use "ALL_SWORD" to add all swords.
+#    Use "ALL_PICKAXE" to add all pickaxes.
+#    Use "ALL_AXE" to add all axes.
+#    Use "ALL_EDIBLE" to add all foods.
+#    And so on, but make sure to use non-plural names of items!
+
+#  Levels (Numbers)
+#    Effects for each level, use as display in examples.
+
+#  Enchantment Effect List: https://ae.advancedplugins.net/enchantments/creating-enchantments/effect-list
+
+#        # You can use tags <random word>word1,word2,word3</random word>, it will get a random word from listed words.
+#        # You can use tags <random number>x-y</random number> while x < y, it will generate a random number between two given integers.
+#        # e.g.: "STEAL_MONEY:<random number>10000-50000</random number>"
+#        # Use <chance>x</chance> to set per-effect chance, x being a chance percentage.
+#        # e.g.: "POTION:SPEED:1:100 %attacker% <chance>25</chance>"
+
+#        # You also may use %victim% or %attacker% flag to give effects to different players (in ATTACK, BOW, DEATH, KILL_PLAYER and DEFENSE types).
+#        # Example usage: - "POTION:POISON:1:50 %attacker%', this will give Level 2 POISON potion effect to the player who attacked.
+#        # If none is provided, effects will be given to the player who had custom enchanted item.
+#        # You can add %combo% instead of numbers, to use number of combo's player has (eg. to limit combo number: "%combo% > 0 && %combo% < 5 : %continue%')
+#        # You can add %damage% instead of numbers, to use number of damage has been done (for ATTACK and DEFENSE)
+
+#  Area of effect: https://ae.advancedplugins.net/enchantments/radius-of-effect-enchantments
+#  Conditions:  https://ae.advancedplugins.net/enchantments/enchantment-conditions
+
+# Settings for enchantments
+# *** This is not a required configuration section and each enchantment doesn't need to have it ***
+#  settings:
+#    required-enchants:
+#      - "springs"
+#    not-applyable-with:
+#      - "frozen"
+#    removeable: false # Makes enchantment non-removeable with blackscrolls
+#    disable-in-enchanter: true # Players can no longer obtain enchantment from Enchanter
+        
+harvest:
+  display: '%group-color%Сбор Урожая'
+  description: Шанс собрать урожай в области 3x3.
+  applies-to: Мотыги
+  type: MINING
+  group: ULTIMATE
+  applies:
+  - ALL_HOE
+  levels:
+    '1':
+      settings:
+        whitelist:
+        - CROPS
+        - WHEAT
+        - CARROT
+        - CARROTS
+        - POTATO
+        - POTATOES
+        - BEETROOT
+        - BEETROOTS
+        - COCOA
+        - NETHER_WART
+        - NETHER_WARTS
+        - TORCHFLOWER
+        - PITCHER_CROP
+      chance: 13
+      effects:
+      - BREAK_BLOCK @Trench{r=3,it=true}
+    '2':
+      settings:
+        whitelist:
+        - CROPS
+        - WHEAT
+        - CARROT
+        - CARROTS
+        - POTATO
+        - POTATOES
+        - BEETROOT
+        - BEETROOTS
+        - COCOA
+        - NETHER_WART
+        - NETHER_WARTS
+        - TORCHFLOWER
+        - PITCHER_CROP
+      chance: 26
+      effects:
+      - BREAK_BLOCK @Trench{r=3,it=true}
+    '3':
+      settings:
+        whitelist:
+        - CROPS
+        - WHEAT
+        - CARROT
+        - CARROTS
+        - POTATO
+        - POTATOES
+        - BEETROOT
+        - BEETROOTS
+        - COCOA
+        - NETHER_WART
+        - NETHER_WARTS
+        - TORCHFLOWER
+        - PITCHER_CROP
+      chance: 36
+      effects:
+      - BREAK_BLOCK @Trench{r=3,it=true}
+    '4':
+      settings:
+        whitelist:
+        - CROPS
+        - WHEAT
+        - CARROT
+        - CARROTS
+        - POTATO
+        - POTATOES
+        - BEETROOT
+        - BEETROOTS
+        - COCOA
+        - NETHER_WART
+        - NETHER_WARTS
+        - TORCHFLOWER
+        - PITCHER_CROP
+      chance: 49
+      effects:
+      - BREAK_BLOCK @Trench{r=3,it=true}
+    '5':
+      settings:
+        whitelist:
+        - CROPS
+        - WHEAT
+        - CARROT
+        - CARROTS
+        - POTATO
+        - POTATOES
+        - BEETROOT
+        - BEETROOTS
+        - COCOA
+        - NETHER_WART
+        - NETHER_WARTS
+        - TORCHFLOWER
+        - PITCHER_CROP
+      chance: 59
+      effects:
+      - BREAK_BLOCK @Trench{r=3,it=true}
+    '6':
+      settings:
+        whitelist:
+        - CROPS
+        - WHEAT
+        - CARROT
+        - CARROTS
+        - POTATO
+        - POTATOES
+        - BEETROOT
+        - BEETROOTS
+        - COCOA
+        - NETHER_WART
+        - NETHER_WARTS
+        - TORCHFLOWER
+        - PITCHER_CROP
+      chance: 72
+      effects:
+      - BREAK_BLOCK @Trench{r=3,it=true}
+    '7':
+      settings:
+        whitelist:
+        - CROPS
+        - WHEAT
+        - CARROT
+        - CARROTS
+        - POTATO
+        - POTATOES
+        - BEETROOT
+        - BEETROOTS
+        - COCOA
+        - NETHER_WART
+        - NETHER_WARTS
+        - TORCHFLOWER
+        - PITCHER_CROP
+      chance: 85
+      effects:
+      - BREAK_BLOCK @Trench{r=3,it=true}
+    '8':
+      settings:
+        whitelist:
+        - CROPS
+        - WHEAT
+        - CARROT
+        - CARROTS
+        - POTATO
+        - POTATOES
+        - BEETROOT
+        - BEETROOTS
+        - COCOA
+        - NETHER_WART
+        - NETHER_WARTS
+        - TORCHFLOWER
+        - PITCHER_CROP
+      chance: 90
+      effects:
+      - BREAK_BLOCK @Trench{r=3,it=true}
+    '9':
+      settings:
+        whitelist:
+        - CROPS
+        - WHEAT
+        - CARROT
+        - CARROTS
+        - POTATO
+        - POTATOES
+        - BEETROOT
+        - BEETROOTS
+        - COCOA
+        - NETHER_WART
+        - NETHER_WARTS
+        - TORCHFLOWER
+        - PITCHER_CROP
+      chance: 100
+      effects:
+      - BREAK_BLOCK @Trench{r=3,it=true}
+
+autoreel:
+  display: '%group-color%Автоподсечка'
+  description: "Автоматически подсекает удочку, когда клюёт рыба."
+  applies-to: Удочка
+  type: BITE_HOOK
+  group: ULTIMATE
+  settings:
+    showActionBar: true
+  applies:
+  - FISHING_ROD
+  levels:
+    '1':
+      chance: 25
+      effects:
+      - AUTO_REEL
+    '2':
+      chance: 50
+      effects:
+      - AUTO_REEL
+    '3':
+      chance: 75
+      effects:
+      - AUTO_REEL
+    '4':
+      effects:
+      - AUTO_REEL
+gemify:
+  display: '%group-color%Самоцветы'
+  description: Шанс превратить блок руды в соответствующий блок
+  applies-to: Кирка
+  type: MINING
+  group: FABLED
+  settings:
+    showActionBar: true
+  applies:
+  - ALL_PICKAXE
+  levels:
+    '1':
+      conditions:
+      - '%block natural% = true : %allow%'
+      chance: 1
+      cooldown: 15
+      effects:
+      - PARTICLE:GLOW:30:0.5 @Block
+      - PLAY_SOUND:ENTITY_PLAYER_LEVELUP @Self
+      - 'SET_BLOCK:GOLD_BLOCK @Block <condition>%block type% contains GOLD_ORE : %allow%</condition>'
+      - 'SET_BLOCK:IRON_BLOCK @Block <condition>%block type% contains IRON_ORE : %allow%</condition>'
+      - 'SET_BLOCK:COAL_BLOCK @Block <condition>%block type% contains COAL_ORE : %allow%</condition>'
+      - 'SET_BLOCK:EMERALD_BLOCK @Block <condition>%block type% contains EMERALD_ORE : %allow%</condition>'
+      - 'SET_BLOCK:COPPER_BLOCK @Block <condition>%block type% contains copper_ore : %allow%</condition>'
+      - 'SET_BLOCK:REDSTONE_BLOCK @Block <condition>%block type% contains redstone_ore : %allow%</condition>'
+      - 'SET_BLOCK:LAPIS_BLOCK @Block <condition>%block type% contains lapis_ore : %allow%</condition>'
+      - 'SET_BLOCK:DIAMOND_BLOCK @Block <condition>%block type% contains diamond_ore : %allow%</condition>'
+planter:
+  display: '%group-color%Сеятель'
+  description: |-
+    Сажает семена в области 3x3
+    при Shift+ПКМ.
+  applies-to: Мотыги
+  type: RIGHT_CLICK
+  settings:
+    showActionBar: true
+  group: ULTIMATE
+  applies:
+  - ALL_HOE
+  levels:
+    '1':
+      conditions:
+      - '%player is sneaking% = true : %allow%'
+      cooldown: 3
+      effects:
+      - PLANT_SEEDS:1
+    '2':
+      conditions:
+      - '%player is sneaking% = true : %allow%'
+      cooldown: 2
+      effects:
+      - PLANT_SEEDS:1
+    '3':
+      conditions:
+      - '%player is sneaking% = true : %allow%'
+      effects:
+      - PLANT_SEEDS:1
+potatoplanter:
+  display: '%group-color%Сажатель Картофеля'
+  description: |-
+    Сажает картофель в области 3x3
+    при Shift+ПКМ.
+  applies-to: Мотыги
+  type: RIGHT_CLICK
+  settings:
+    showActionBar: true
+  group: ULTIMATE
+  applies:
+  - ALL_HOE
+  levels:
+    '1':
+      conditions:
+      - '%player is sneaking% = true : %allow%'
+      cooldown: 3
+      effects:
+      - PLANT_SEEDS:1:POTATO
+    '2':
+      conditions:
+      - '%player is sneaking% = true : %allow%'
+      cooldown: 2
+      effects:
+      - PLANT_SEEDS:1:POTATO
+    '3':
+      conditions:
+      - '%player is sneaking% = true : %allow%'
+      effects:
+      - PLANT_SEEDS:1:POTATO
+carrotplanter:
+  display: '%group-color%Сажатель Моркови'
+  description: |-
+    Сажает морковь в области 3x3
+    при Shift+ПКМ.
+  applies-to: Мотыги
+  type: RIGHT_CLICK
+  group: ULTIMATE
+  settings:
+    showActionBar: true
+  applies:
+  - ALL_HOE
+  levels:
+    '1':
+      conditions:
+      - '%player is sneaking% = true : %allow%'
+      cooldown: 3
+      effects:
+      - PLANT_SEEDS:1:CARROT
+    '2':
+      conditions:
+      - '%player is sneaking% = true : %allow%'
+      cooldown: 2
+      effects:
+      - PLANT_SEEDS:1:CARROT
+    '3':
+      conditions:
+      - '%player is sneaking% = true : %allow%'
+      effects:
+      - PLANT_SEEDS:2:CARROT
+replanter:
+  display: '%group-color%Пересадка'
+  description: Пересаживает культуры при их сборе.
+  applies-to: Мотыги
+  type: MINING
+  group: UNIQUE
+  applies:
+  - ALL_HOE
+  levels:
+    '1':
+      conditions:
+      - '%is crop% = false : %stop%'
+      - '%is fully grown% = false : %stop%'
+      effects:
+      - PLANT_SEEDS:0:%block drop type%
+strike:
+  display: '%group-color%Разряд'
+  description: |-
+    Шанс ударить противника
+    молнией.
+  applies-to: Мечи, Лук, Арбалет, Трезубец
+  type: ATTACK;ATTACK_MOB;SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
+  group: SIMPLE
+  applies:
+  - TRIDENT
+  - BOW
+  - CROSSBOW
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 24
+      cooldown: 4
+      effects:
+      - LIGHTNING @Victim
+    '2':
+      chance: 32
+      cooldown: 4
+      effects:
+      - LIGHTNING @Victim
+    '3':
+      chance: 40
+      cooldown: 5
+      effects:
+      - LIGHTNING @Victim
+impact:
+  display: '%group-color%Сила Удара'
+  description: Шанс удвоить наносимый урон.
+  applies-to: Трезубец
+  type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
+  group: ELITE
+  applies:
+  - TRIDENT
+  levels:
+    '1':
+      chance: 5
+      cooldown: 3
+      effects:
+      - DOUBLE_DAMAGE @Victim
+    '2':
+      chance: 8
+      cooldown: 3
+      effects:
+      - DOUBLE_DAMAGE @Victim
+    '3':
+      chance: 11
+      cooldown: 5
+      effects:
+      - DOUBLE_DAMAGE @Victim
+    '4':
+      chance: 14
+      cooldown: 6
+      effects:
+      - DOUBLE_DAMAGE @Victim
+twinge:
+  display: '%group-color%Укол'
+  description: |-
+    Заставляет врага истекать кровью при
+    ударе в ближнем бою.
+  applies-to: Трезубец
+  type: ATTACK
+  group: LEGENDARY
+  settings:
+    showActionBar: true
+  applies:
+  - TRIDENT
+  levels:
+    '1':
+      chance: 5
+      cooldown: 3
+      effects:
+      - POTION:SLOW:0:100 @Victim
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - MESSAGE:§4You're bleeding! @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+    '2':
+      chance: 8
+      cooldown: 3
+      effects:
+      - POTION:SLOW:0:100 @Victim
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - MESSAGE:§4You're bleeding! @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+    '3':
+      chance: 11
+      cooldown: 5
+      effects:
+      - POTION:SLOW:0:100 @Victim
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - MESSAGE:§4You're bleeding! @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+    '4':
+      chance: 14
+      cooldown: 6
+      effects:
+      - POTION:SLOW:0:100 @Victim
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - MESSAGE:§4You're bleeding! @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+jellylegs:
+  display: '%group-color%Резиновые Ноги'
+  description: Шанс избежать урона от падения.
+  applies-to: Ботинки
+  type: FALL_DAMAGE
+  settings:
+    showActionBar: true
+  group: ULTIMATE
+  applies:
+  - ALL_BOOTS
+  levels:
+    '1':
+      chance: 40
+      effects:
+      - CANCEL_EVENT
+    '2':
+      chance: 80
+      effects:
+      - CANCEL_EVENT
+    '3':
+      effects:
+      - CANCEL_EVENT
+# wings:
+#   display: '%group-color%Крылья'
+#   description: Позволяет летать при ношении.
+#   applies-to: Ботинки
+#   type: EFFECT_STATIC
+#   group: LEGENDARY
+#   applies:
+#   - ALL_BOOTS
+#   levels:
+#     '1':
+#       effects:
+#       - FLY
+aquatic:
+  display: '%group-color%Водное Дыхание'
+  description: Дышите под водой.
+  applies-to: Шлемы
+  type: EFFECT_STATIC
+  group: SIMPLE
+  applies:
+  - ALL_HELMET
+  levels:
+    '1':
+      effects:
+      - POTION:WATER_BREATHING:0
+smelting:
+  display: '%group-color%Плавление'
+  description: Шанс расплавить добытые блоки.
+  applies-to: Кирки
+  type: MINING
+  group: SIMPLE
+  applies:
+  - ALL_PICKAXE
+  - ALL_SHOVEL
+  levels:
+    '1':
+      chance: 33
+      effects:
+      - SMELT
+    '2':
+      chance: 66
+      effects:
+      - SMELT
+    '3':
+      chance: 100
+      effects:
+      - SMELT
+experience:
+  display: '%group-color%Опыт'
+  description: Шанс получить больше опыта от руд.
+  applies-to: Инструменты
+  type: MINING
+  group: SIMPLE
+  applies:
+  - ALL_PICKAXE
+  - ALL_SPADE
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 15
+      cooldown: 1
+      conditions:
+      - '%block type% contains ORE : %allow%'
+      effects:
+      - EXP:<random number>2-5</random number> @Block
+    '2':
+      chance: 30
+      cooldown: 2
+      conditions:
+      - '%block type% contains ORE : %allow%'
+      effects:
+      - EXP:<random number>2-5</random number>
+    '3':
+      chance: 45
+      cooldown: 3
+      conditions:
+      - '%block type% contains ORE : %allow%'
+      effects:
+      - EXP:<random number>2-5</random number> @Block
+    '4':
+      chance: 60
+      cooldown: 4
+      conditions:
+      - '%block type% contains ORE : %allow%'
+      effects:
+      - EXP:<random number>2-5</random number> @Block
+    '5':
+      chance: 75
+      cooldown: 5
+      conditions:
+      - '%block type% contains ORE : %allow%'
+      effects:
+      - EXP:<random number>2-5</random number> @Block
+hasten:
+  display: '%group-color%Ускорение'
+  description: Шанс получить Спешку после разрушения блоков.
+  applies-to: Инструменты
+  type: MINING
+  group: SIMPLE
+  applies:
+  - ALL_PICKAXE
+  - ALL_SPADE
+  levels:
+    '1':
+      chance: 5
+      cooldown: 30
+      effects:
+      - POTION:FAST_DIGGING:0:40
+    '2':
+      chance: 15
+      cooldown: 30
+      effects:
+      - POTION:FAST_DIGGING:1:60
+    '3':
+      chance: 20
+      cooldown: 30
+      effects:
+      - POTION:FAST_DIGGING:2:80
+haste:
+  display: '%group-color%Спешка'
+  description: Позволяет быстрее работать инструментами.
+  applies-to: Инструменты
+  type: HELD
+  group: FABLED
+  applies:
+  - ALL_PICKAXE
+  - ALL_SPADE
+  levels:
+    '1':
+      cooldown: 5
+      effects:
+      - POTION:FAST_DIGGING:0
+    '2':
+      cooldown: 5
+      effects:
+      - POTION:FAST_DIGGING:1
+    '3':
+      cooldown: 5
+      effects:
+      - POTION:FAST_DIGGING:2
+rebreather:
+  display: '%group-color%Воздух'
+  description: |-
+    Шанс восстановить воздух
+    при добыче под водой.
+  applies-to: Кирка
+  type: MINING
+  group: SIMPLE
+  applies:
+  - ALL_PICKAXE
+  levels:
+    '1':
+      cooldown: 3
+      chance: 30
+      effects:
+      - AIR
+    '2':
+      cooldown: 3
+      chance: 60
+      effects:
+      - AIR
+glowing:
+  display: '%group-color%Свечение'
+  description: Даёт постоянное ночное зрение.
+  applies-to: Шлем
+  type: EFFECT_STATIC
+  group: SIMPLE
+  applies:
+  - ALL_HELMET
+  levels:
+    '1':
+      effects:
+      - POTION:NIGHT_VISION:0
+decapitation:
+  display: '%group-color%Обезглавливание'
+  description: |-
+    Шанс получить голову противника
+    при его смерти.
+  applies-to: Мечи, Топоры
+  type: KILL_PLAYER
+  settings:
+    showActionBar: true
+  group: SIMPLE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 5
+      cooldown: 10
+      effects:
+      - DROP_HEAD @Victim
+    '2':
+      chance: 10
+      cooldown: 10
+      effects:
+      - DROP_HEAD @Victim
+    '3':
+      chance: 15
+      cooldown: 10
+      effects:
+      - DROP_HEAD @Victim
+forcefield:
+  display: '%group-color%Силовое Поле'
+  description: Шанс оттолкнуть противника.
+  applies-to: Мечи
+  type: ATTACK;ATTACK_MOB
+  settings:
+    showActionBar: true
+  group: SIMPLE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 30
+      cooldown: 12
+      effects:
+      - PULL_AWAY:1.0 @Victim
+    '2':
+      chance: 36
+      cooldown: 12
+      effects:
+      - PULL_AWAY:1.5 @Victim
+    '3':
+      chance: 42
+      cooldown: 12
+      effects:
+      - PULL_AWAY:2.0 @Victim
+    '4':
+      chance: 48
+      cooldown: 13
+      effects:
+      - PULL_AWAY:2.5 @Victim
+    '5':
+      chance: 54
+      cooldown: 13
+      effects:
+      - PULL_AWAY:3.0 @Victim
+epicness:
+  display: '%group-color%Эпичность'
+  description: Добавляет частицы и звуковые эффекты.
+  applies-to: Мечи
+  type: ATTACK;ATTACK_MOB
+  group: SIMPLE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 20
+      cooldown: 3
+      effects:
+      - PARTICLE:SMOKE_LARGE:50:1 @Victim
+      - PLAY_SOUND:ENTITY_GHAST_SCREAM
+    '2':
+      chance: 40
+      cooldown: 3
+      effects:
+      - PARTICLE:SMOKE_LARGE:50:1 @Victim
+      - PLAY_SOUND:ENTITY_GHAST_SCREAM
+    '3':
+      chance: 60
+      cooldown: 3
+      effects:
+      - PARTICLE:SMOKE_LARGE:50:1 @Victim
+      - PLAY_SOUND:ENTITY_GHAST_SCREAM
+famine:
+  display: '%group-color%Голод'
+  description: Шанс наложить на противника эффект голода.
+  applies-to: Оружие
+  type: ATTACK
+  group: UNIQUE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 12
+      cooldown: 8
+      effects:
+      - POTION:HUNGER:0:80 @Victim
+    '2':
+      chance: 15
+      cooldown: 8
+      effects:
+      - POTION:HUNGER:0:120 @Victim
+    '3':
+      chance: 18
+      cooldown: 8
+      effects:
+      - POTION:HUNGER:1:80 @Victim
+    '4':
+      chance: 22
+      cooldown: 8
+      effects:
+      - POTION:HUNGER:1:120 @Victim
+berserk:
+  display: '%group-color%Берсерк'
+  description: |-
+    Шанс получить силу
+    и усталость от добычи.
+  applies-to: Мечи, Топоры
+  type: ATTACK;ATTACK_MOB
+  group: UNIQUE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 4
+      cooldown: 8
+      effects:
+      - POTION:SLOW_DIGGING:0:60 @Attacker
+      - POTION:INCREASE_DAMAGE:0:60 @Attacker
+    '2':
+      chance: 8
+      cooldown: 7
+      effects:
+      - POTION:SLOW_DIGGING:0:80 @Attacker
+      - POTION:INCREASE_DAMAGE:0:80 @Attacker
+    '3':
+      chance: 12
+      cooldown: 6
+      effects:
+      - POTION:SLOW_DIGGING:0:100 @Attacker
+      - POTION:INCREASE_DAMAGE:0:100 @Attacker
+    '4':
+      chance: 16
+      cooldown: 5
+      effects:
+      - POTION:SLOW_DIGGING:1:80 @Attacker
+      - POTION:INCREASE_DAMAGE:1:80 @Attacker
+    '5':
+      chance: 20
+      cooldown: 4
+      effects:
+      - POTION:SLOW_DIGGING:1:100 @Attacker
+      - POTION:INCREASE_DAMAGE:1:100 @Attacker
+reflect:
+  display: '%group-color%Отражение'
+  description: |-
+    Поглощает урон от врага и
+    отражает его обратно.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  group: UNIQUE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 3
+      cooldown: 23
+      effects:
+      - CANCEL_EVENT
+      - DO_HARM:%damage% @Attacker
+      - CACTUS @Victim
+    '2':
+      chance: 4
+      cooldown: 23
+      effects:
+      - CANCEL_EVENT
+      - DO_HARM:%damage% @Attacker
+      - CACTUS @Victim
+    '3':
+      chance: 5
+      cooldown: 23
+      effects:
+      - CANCEL_EVENT
+      - DO_HARM:%damage% @Attacker
+      - CACTUS @Victim
+    '4':
+      chance: 6
+      cooldown: 23
+      effects:
+      - CANCEL_EVENT
+      - DO_HARM:%damage% @Attacker
+      - CACTUS @Victim
+    '5':
+      chance: 7
+      cooldown: 23
+      effects:
+      - CANCEL_EVENT
+      - DO_HARM:%damage% @Attacker
+      - CACTUS @Victim
+ward:
+  display: '%group-color%Защита'
+  description: Шанс поглотить урон от врага
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  group: UNIQUE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 3
+      cooldown: 20
+      effects:
+      - CANCEL_EVENT
+    '2':
+      chance: 7
+      cooldown: 20
+      effects:
+      - CANCEL_EVENT
+    '3':
+      chance: 11
+      cooldown: 20
+      effects:
+      - CANCEL_EVENT
+    '4':
+      chance: 15
+      cooldown: 20
+      effects:
+      - CANCEL_EVENT
+explosive:
+  display: '%group-color%Взрывной'
+  description: Шанс взрыва стрел.
+  applies-to: Лук
+  type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
+  group: UNIQUE
+  applies:
+  - BOW
+  levels:
+    '1':
+      chance: 20
+      cooldown: 7
+      effects:
+      - TNT @Victim
+    '2':
+      chance: 30
+      cooldown: 8
+      effects:
+      - TNT @Victim
+    '3':
+      chance: 40
+      cooldown: 8
+      effects:
+      - TNT @Victim
+    '4':
+      chance: 50
+      cooldown: 8
+      effects:
+      - TNT @Victim
+    '5':
+      chance: 60
+      cooldown: 10
+      effects:
+      - TNT @Victim
+frenzy:
+  display: '%group-color%Безумие'
+  description: Шанс взрыва стрел.
+  applies-to: Арбалет
+  type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
+  group: UNIQUE
+  applies:
+  - CROSSBOW
+  levels:
+    '1':
+      chance: 20
+      cooldown: 7
+      effects:
+      - TNT @Victim
+    '2':
+      chance: 30
+      cooldown: 8
+      effects:
+      - TNT @Victim
+    '3':
+      chance: 40
+      cooldown: 8
+      effects:
+      - TNT @Victim
+    '4':
+      chance: 50
+      cooldown: 8
+      effects:
+      - TNT @Victim
+    '5':
+      chance: 60
+      cooldown: 9
+      effects:
+      - TNT @Victim
+featherweight:
+  display: '%group-color%Легковесность'
+  description: Шанс получить всплеск спешки.
+  applies-to: Мечи, Топоры
+  type: ATTACK;ATTACK_MOB
+  group: UNIQUE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 35
+      cooldown: 4
+      effects:
+      - POTION:FAST_DIGGING:0:60
+    '2':
+      chance: 55
+      cooldown: 4
+      effects:
+      - POTION:FAST_DIGGING:1:80
+    '3':
+      chance: 75
+      cooldown: 4
+      effects:
+      - POTION:FAST_DIGGING:2:100
+# sharpnesshook:
+#   display: '%group-color%Острый Крючок'
+#   description: Наносит урон крючком.
+#   applies-to: Удочка
+#   type: HOOK_ENTITY
+#   group: ULTIMATE
+#   applies:
+#   - FISHING_ROD
+#   levels:
+#     '1':
+#       effects:
+#       - DO_HARM:2 @Victim
+#     '2':
+#       effects:
+#       - DO_HARM:4 @Victim
+#     '3':
+#       effects:
+#       - DO_HARM:6 @Victim
+#     '4':
+#       effects:
+#       - DO_HARM:9 @Victim
+#     '5':
+#       effects:
+#       - DO_HARM:12 @Victim
+#     '6':
+#       effects:
+#       - DO_HARM:15 @Victim
+#     '7':
+#       effects:
+#       - DO_HARM:19 @Victim
+#     '8':
+#       effects:
+#       - DO_HARM:23 @Victim
+#     '9':
+#       effects:
+#       - DO_HARM:27 @Victim
+poisonedhook:
+  display: '%group-color%Отравленный Крючок'
+  description: Отравляет крючок.
+  applies-to: Удочка
+  type: HOOK_ENTITY
+  group: ELITE
+  applies:
+  - FISHING_ROD
+  levels:
+    '1':
+      chance: 6
+      cooldown: 2
+      effects:
+      - POTION:POISON:0:80 @Victim
+    '2':
+      chance: 22
+      cooldown: 2
+      effects:
+      - POTION:POISON:0:120 @Victim
+    '3':
+      chance: 35
+      cooldown: 2
+      effects:
+      - POTION:POISON:1:80 @Victim
+firehook:
+  display: '%group-color%Огненный Крючок'
+  description: Крючок в огне.
+  applies-to: Удочка
+  type: HOOK_ENTITY
+  group: ELITE
+  applies:
+  - FISHING_ROD
+  levels:
+    '1':
+      chance: 25
+      cooldown: 3
+      effects:
+      - BURN:40 @Victim
+    '2':
+      chance: 35
+      cooldown: 6
+      effects:
+      - BURN:40 @Victim
+    '3':
+      chance: 100
+      cooldown: 8
+      effects:
+      - BURN:40 @Victim
+molten:
+  display: '%group-color%Расплавление'
+  description: Шанс поджечь атакующего.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  group: UNIQUE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 21
+      cooldown: 2
+      effects:
+      - BURN:2 @Attacker
+    '2':
+      chance: 32
+      cooldown: 2
+      effects:
+      - BURN:4 @Attacker
+    '3':
+      chance: 49
+      cooldown: 2
+      effects:
+      - BURN:6 @Attacker
+    '4':
+      chance: 63
+      cooldown: 2
+      effects:
+      - BURN:8 @Attacker
+ravenous:
+  display: '%group-color%Прожорливость'
+  description: |-
+    Шанс восстановить голод
+    во время боя.
+  applies-to: Мечи, Топоры
+  type: ATTACK;ATTACK_MOB
+  group: UNIQUE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 14
+      cooldown: 2
+      effects:
+      - ADD_FOOD:<random number>1-4</random number> @Attacker
+    '2':
+      chance: 18
+      cooldown: 2
+      effects:
+      - ADD_FOOD:<random number>1-4</random number> @Attacker
+    '3':
+      chance: 22
+      cooldown: 2
+      effects:
+      - ADD_FOOD:<random number>1-4</random number> @Attacker
+    '4':
+      chance: 26
+      cooldown: 2
+      effects:
+      - ADD_FOOD:<random number>1-4</random number> @Attacker
+veinminer:
+  display: '%group-color%Добыча Жилы'
+  description: Добывает всю жилу руды целиком
+  applies-to: Кирки
+  group: ELITE
+  type: MINING
+  applies:
+  - ALL_PICKAXE
+  levels:
+    '1':
+      chance: 15
+      cooldown: 4
+      settings:
+        whitelist:
+        - "COAL_ORE"
+        - "COPPER_ORE"
+        - "IRON_ORE"
+        - "GOLD_ORE"
+        - "LAPIS_ORE"
+        - "REDSTONE_ORE"
+        - "DIAMOND_ORE"
+        - "EMERALD_ORE"
+        - "NETHER_QUARTZ_ORE"
+        - "NETHER_GOLD_ORE"
+        - "ANCIENT_DEBRIS"
+        - "DEEPSLATE_COAL_ORE"
+        - "DEEPSLATE_COPPER_ORE"
+        - "DEEPSLATE_IRON_ORE"
+        - "DEEPSLATE_GOLD_ORE"
+        - "DEEPSLATE_LAPIS_ORE"
+        - "DEEPSLATE_REDSTONE_ORE"
+        - "DEEPSLATE_DIAMOND_ORE"
+        - "DEEPSLATE_EMERALD_ORE"
+      effects:
+      - BREAK_BLOCK @Veinmine
+    '2':
+      chance: 35
+      cooldown: 3
+      settings:
+        whitelist:
+        - "COAL_ORE"
+        - "COPPER_ORE"
+        - "IRON_ORE"
+        - "GOLD_ORE"
+        - "LAPIS_ORE"
+        - "REDSTONE_ORE"
+        - "DIAMOND_ORE"
+        - "EMERALD_ORE"
+        - "NETHER_QUARTZ_ORE"
+        - "NETHER_GOLD_ORE"
+        - "ANCIENT_DEBRIS"
+        - "DEEPSLATE_COAL_ORE"
+        - "DEEPSLATE_COPPER_ORE"
+        - "DEEPSLATE_IRON_ORE"
+        - "DEEPSLATE_GOLD_ORE"
+        - "DEEPSLATE_LAPIS_ORE"
+        - "DEEPSLATE_REDSTONE_ORE"
+        - "DEEPSLATE_DIAMOND_ORE"
+        - "DEEPSLATE_EMERALD_ORE"
+      effects:
+      - BREAK_BLOCK @Veinmine
+    '3':
+      settings:
+        whitelist:
+        - "COAL_ORE"
+        - "COPPER_ORE"
+        - "IRON_ORE"
+        - "GOLD_ORE"
+        - "LAPIS_ORE"
+        - "REDSTONE_ORE"
+        - "DIAMOND_ORE"
+        - "EMERALD_ORE"
+        - "NETHER_QUARTZ_ORE"
+        - "NETHER_GOLD_ORE"
+        - "ANCIENT_DEBRIS"
+        - "DEEPSLATE_COAL_ORE"
+        - "DEEPSLATE_COPPER_ORE"
+        - "DEEPSLATE_IRON_ORE"
+        - "DEEPSLATE_GOLD_ORE"
+        - "DEEPSLATE_LAPIS_ORE"
+        - "DEEPSLATE_REDSTONE_ORE"
+        - "DEEPSLATE_DIAMOND_ORE"
+        - "DEEPSLATE_EMERALD_ORE"
+      effects:
+      - BREAK_BLOCK @Veinmine
+telepathy:
+  display: '%group-color%Телепатия'
+  description: |-
+    Автоматически помещает добытые
+    блоки в ваш инвентарь.
+  applies-to: Инструменты
+  type: MINING
+  group: UNIQUE
+  applies:
+  - ALL_TOOLS
+  levels:
+    '1':
+      chance: 40
+      effects:
+      - TP_DROPS @Block
+    '2':
+      chance: 60
+      effects:
+      - TP_DROPS @Block
+    '3':
+      chance: 80
+      effects:
+      - TP_DROPS @Block
+    '4':
+      effects:
+      - TP_DROPS @Block
+explosivedemise:
+  display: '%group-color%Взрывная Гибель'
+  description: |-
+    Призывает криперов в качестве стражей
+    когда вы близки к смерти.
+  applies-to: Поножи
+  type: DEFENSE;DEFENSE_MOB
+  settings:
+    showActionBar: true
+  group: UNIQUE
+  applies:
+  - ALL_LEGGINGS
+  levels:
+    '1':
+      chance: 13
+      cooldown: 3
+      conditions:
+      - '%victim health% > 6 : %stop%'
+      effects:
+      - GUARD:CREEPER:8:1:@Victim
+      - POTION:BLINDNESS:0:40 @Attacker
+    '2':
+      chance: 17
+      cooldown: 3
+      conditions:
+      - '%victim health% > 6 : %stop%'
+      effects:
+      - GUARD:CREEPER:8:1:@Victim
+      - POTION:BLINDNESS:0:60 @Attacker
+    '3':
+      chance: 24
+      cooldown: 3
+      conditions:
+      - '%victim health% > 7 : %stop%'
+      effects:
+      - GUARD:CREEPER:8:1:@Victim
+      - POTION:BLINDNESS:0:100 @Attacker
+    '4':
+      chance: 30
+      cooldown: 3
+      conditions:
+      - '%victim health% > 7 : %stop%'
+      effects:
+      - GUARD:CREEPER:8:1:@Victim
+      - POTION:BLINDNESS:1:40 @Attacker
+    '5':
+      chance: 38
+      cooldown: 3
+      conditions:
+      - '%victim health% > 8 : %stop%'
+      effects:
+      - GUARD:CREEPER:8:2:@Victim
+      - POTION:BLINDNESS:1:80 @Attacker
+    '6':
+      chance: 46
+      cooldown: 3
+      conditions:
+      - '%victim health% > 8 : %stop%'
+      effects:
+      - GUARD:CREEPER:8:2:@Victim
+      - POTION:BLINDNESS:1:120 @Attacker
+    '7':
+      chance: 55
+      cooldown: 3
+      conditions:
+      - '%victim health% > 8 : %stop%'
+      effects:
+      - GUARD:CREEPER:8:2:@Victim
+      - POTION:BLINDNESS:2:60 @Attacker
+    '8':
+      chance: 69
+      cooldown: 3
+      conditions:
+      - '%victim health% > 8 : %stop%'
+      effects:
+      - GUARD:CREEPER:8:3:@Victim
+      - POTION:BLINDNESS:2:100 @Attacker
+enderslayer:
+  display: '%group-color%Убийца Эндера'
+  description: Увеличивает урон, наносимый Эндерменам и Драконам Края.
+  applies-to: Оружие
+  type: ATTACK_MOB
+  group: ELITE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 16
+      cooldown: 2
+      conditions:
+      - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '2':
+      chance: 21
+      cooldown: 2
+      conditions:
+      - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '3':
+      chance: 29
+      cooldown: 2
+      conditions:
+      - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '4':
+      chance: 34
+      cooldown: 2
+      conditions:
+      - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '5':
+      chance: 41
+      cooldown: 2
+      conditions:
+      - '%mob type% = ENDERMAN or %mob type% = ENDER_DRAGON or %mob type% = ENDERDRAGON : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+deathpunch:
+  display: '%group-color%Смертельный Удар'
+  description: Увеличивает урон, наносимый Зомби.
+  applies-to: Мечи, Топоры
+  type: ATTACK_MOB
+  group: SIMPLE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 16
+      cooldown: 2
+      conditions:
+      - '%mob type% = ZOMBIE : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '2':
+      chance: 20
+      cooldown: 2
+      conditions:
+      - '%mob type% = ZOMBIE : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '3':
+      chance: 40
+      cooldown: 2
+      conditions:
+      - '%mob type% = ZOMBIE : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '4':
+      chance: 60
+      cooldown: 1
+      conditions:
+      - '%mob type% = ZOMBIE : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '5':
+      chance: 80
+      conditions:
+      - '%mob type% = ZOMBIE : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+bonecrusher:
+  display: '%group-color%Костолом'
+  description: Увеличивает урон, наносимый Скелетам.
+  applies-to: Мечи, Топоры
+  type: ATTACK_MOB
+  group: SIMPLE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 25
+      cooldown: 2
+      conditions:
+      - '%mob type% = SKELETON : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '2':
+      chance: 50
+      cooldown: 2
+      conditions:
+      - '%mob type% = SKELETON : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '3':
+      chance: 75
+      cooldown: 1
+      conditions:
+      - '%mob type% = SKELETON : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+immolate:
+  display: '%group-color%Испепеление'
+  description: Увеличивает урон, наносимый Паукам.
+  applies-to: Мечи, Топоры
+  type: ATTACK_MOB
+  group: ELITE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 25
+      cooldown: 2
+      conditions:
+      - '%mob type% = SPIDER : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '2':
+      chance: 50
+      cooldown: 2
+      conditions:
+      - '%mob type% = SPIDER : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '3':
+      chance: 75
+      conditions:
+      - '%mob type% = SPIDER : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+slayer:
+  display: '%group-color%Убийца'
+  description: Увеличивает урон, наносимый мирным мобам.
+  applies-to: Мечи, Топоры
+  type: ATTACK_MOB
+  group: UNIQUE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 25
+      cooldown: 2
+      conditions:
+      - '%is hostile% = false : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '2':
+      chance: 50
+      cooldown: 2
+      conditions:
+      - '%is hostile% = false : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '3':
+      chance: 75
+      conditions:
+      - '%is hostile% = false : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '4':
+      conditions:
+      - '%is hostile% = false : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+hunter:
+  display: '%group-color%Охотник'
+  description: Увеличивает урон, наносимый мирным мобам.
+  applies-to: Лук, Арбалет, Трезубец
+  type: SHOOT_MOB
+  group: UNIQUE
+  applies:
+  - TRIDENT
+  - BOW
+  - CROSSBOW
+  levels:
+    '1':
+      chance: 25
+      cooldown: 2
+      conditions:
+      - '%is hostile% = false : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '2':
+      chance: 50
+      cooldown: 2
+      conditions:
+      - '%is hostile% = false : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '3':
+      chance: 75
+      conditions:
+      - '%is hostile% = false : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '4':
+      conditions:
+      - '%is hostile% = false : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+beastslayer:
+  display: '%group-color%Истребитель'
+  description: Увеличивает урон, наносимый враждебным мобам.
+  applies-to: Мечи, Топоры
+  type: ATTACK_MOB
+  group: LEGENDARY
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 25
+      cooldown: 2
+      conditions:
+      - '%is hostile% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '2':
+      chance: 50
+      cooldown: 2
+      conditions:
+      - '%is hostile% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '3':
+      chance: 75
+      conditions:
+      - '%is hostile% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '4':
+      conditions:
+      - '%is hostile% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+hook:
+  display: '%group-color%Крючок'
+  description: Получайте больше опыта от рыбалки.
+  applies-to: Удочка
+  type: CATCH_FISH
+  group: ELITE
+  applies:
+  - FISHING_ROD
+  levels:
+    '1':
+      chance: 15
+      cooldown: 12
+      effects:
+      - EXP:%exp%
+    '2':
+      chance: 25
+      cooldown: 12
+      effects:
+      - EXP:%exp%
+    '3':
+      chance: 35
+      cooldown: 12
+      effects:
+      - EXP:%exp%
+bait:
+  display: '%group-color%Наживка'
+  description: Шанс получить двойную добычу от рыбалки.
+  applies-to: Удочка
+  type: CATCH_FISH
+  settings:
+    showActionBar: true
+  group: LEGENDARY
+  applies:
+  - FISHING_ROD
+  levels:
+    '1':
+      chance: 15
+      cooldown: 10
+      effects:
+      - MORE_DROPS:1
+    '2':
+      chance: 18
+      cooldown: 15
+      effects:
+      - MORE_DROPS:1
+    '3':
+      chance: 26
+      cooldown: 20
+      effects:
+      - MORE_DROPS:1
+snap:
+  display: '%group-color%Рывок'
+  description: Притягивает пораженную сущность к вам.
+  applies-to: Удочка
+  type: CATCH_FISH
+  group: ELITE
+  applies:
+  - FISHING_ROD
+  levels:
+    '1':
+      chance: 15
+      cooldown: 4
+      conditions:
+      - '%caught% = PLAYER : %allow%'
+      effects:
+      - PULL_CLOSER:1 @Victim
+    '2':
+      chance: 25
+      cooldown: 6
+      conditions:
+      - '%caught% = PLAYER : %allow%'
+      effects:
+      - PULL_CLOSER:1.5 @Victim
+    '3':
+      conditions:
+      - '%caught% = PLAYER : %allow%'
+      effects:
+      - PULL_CLOSER:2 @Victim
+lucky:
+  display: '%group-color%Удачливый'
+  description: Шанс увеличить удачу во время рыбалки.
+  applies-to: Удочка
+  type: RIGHT_CLICK
+  group: ULTIMATE
+  applies:
+  - FISHING_ROD
+  levels:
+    '1':
+      chance: 75
+      cooldown: 12
+      effects:
+      - POTION:LUCK:1:1000
+    '2':
+      chance: 85
+      cooldown: 12
+      effects:
+      - POTION:LUCK:2:1000
+    '3':
+      chance: 95
+      cooldown: 12
+      effects:
+      - POTION:LUCK:3:1000
+permafrost:
+  display: '%group-color%Вечная Мерзлота'
+  description: Шанс замедлить и заставить противников истекать кровью.
+  applies-to: Мечи
+  type: ATTACK;ATTACK_MOB
+  group: ULTIMATE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 15
+      cooldown: 12
+      effects:
+      - DO_HARM:1 @Victim
+      - BLOOD @Victim
+      - POTION:SLOW:0:20 @Victim
+      - WAIT:20
+      - DO_HARM:1 @Victim
+      - BLOOD @Victim
+      - WAIT:20
+      - DO_HARM:1 @Victim
+      - BLOOD @Victim
+    '2':
+      chance: 18
+      cooldown: 12
+      effects:
+      - DO_HARM:2 @Victim
+      - BLOOD @Victim
+      - POTION:SLOW:0:40 @Victim
+      - WAIT:20
+      - DO_HARM:2 @Victim
+      - BLOOD @Victim
+      - WAIT:20
+      - DO_HARM:1 @Victim
+      - BLOOD @Victim
+    '3':
+      chance: 19
+      cooldown: 12
+      effects:
+      - DO_HARM:3 @Victim
+      - BLOOD @Victim
+      - POTION:SLOW:0:50 @Victim
+      - WAIT:20
+      - DO_HARM:2 @Victim
+      - BLOOD @Victim
+      - WAIT:20
+      - DO_HARM:1 @Victim
+      - BLOOD @Victim
+    '4':
+      chance: 21
+      cooldown: 13
+      effects:
+      - DO_HARM:3 @Victim
+      - BLOOD @Victim
+      - POTION:SLOW:0:60 @Victim
+      - WAIT:20
+      - DO_HARM:2 @Victim
+      - BLOOD @Victim
+      - WAIT:20
+      - DO_HARM:2 @Victim
+      - BLOOD @Victim
+    '5':
+      chance: 25
+      cooldown: 13
+      effects:
+      - DO_HARM:3 @Victim
+      - BLOOD @Victim
+      - POTION:SLOW:1:60 @Victim
+      - WAIT:20
+      - DO_HARM:3 @Victim
+      - BLOOD @Victim
+      - WAIT:20
+      - DO_HARM:2 @Victim
+      - BLOOD @Victim
+soulless:
+  display: '%group-color%Бездушный'
+  description: Увеличивает урон, наносимый враждебным мобам.
+  applies-to: Лук, Арбалет, Трезубец
+  type: SHOOT_MOB
+  group: UNIQUE
+  applies:
+  - TRIDENT
+  - BOW
+  - CROSSBOW
+  levels:
+    '1':
+      chance: 25
+      cooldown: 2
+      conditions:
+      - '%is hostile% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '2':
+      chance: 50
+      cooldown: 2
+      conditions:
+      - '%is hostile% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '3':
+      chance: 75
+      conditions:
+      - '%is hostile% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '4':
+      conditions:
+      - '%is hostile% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+reaper:
+  display: '%group-color%Жнец'
+  description: |-
+    Шанс наложить на противника эффекты
+    Иссушения и Слепоты
+    при нанесении урона
+  applies-to: Топор
+  settings:
+    showActionBar: true
+  type: ATTACK
+  group: ELITE
+  applies:
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 8
+      cooldown: 16
+      effects:
+      - POTION:WITHER:0:35 @Victim
+      - POTION:BLINDNESS:0:35 @Victim
+    '2':
+      chance: 10
+      cooldown: 14
+      effects:
+      - POTION:WITHER:0:40 @Victim
+      - POTION:BLINDNESS:0:40 @Victim
+    '3':
+      chance: 12
+      cooldown: 12
+      effects:
+      - POTION:WITHER:0:50 @Victim
+      - POTION:BLINDNESS:0:50 @Victim
+    '4':
+      chance: 14
+      cooldown: 10
+      effects:
+      - POTION:WITHER:0:60 @Victim
+      - POTION:BLINDNESS:0:60 @Victim
+netherslayer:
+  display: '%group-color%Истребитель Незера'
+  description: Увеличивает урон, наносимый мобам нижнего мира.
+  applies-to: Оружие
+  type: ATTACK_MOB
+  group: ELITE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 16
+      cooldown: 2
+      conditions:
+      - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE or %mob type% = GHAST : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '2':
+      chance: 21
+      cooldown: 2
+      conditions:
+      - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIEor %mob type% = GHAST : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '3':
+      chance: 29
+      cooldown: 2
+      conditions:
+      - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE or %mob type% = GHAST : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '4':
+      chance: 34
+      cooldown: 2
+      conditions:
+      - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE or %mob type% = GHAST : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+    '5':
+      chance: 41
+      cooldown: 2
+      conditions:
+      - '%mob type% = BLAZE or %mob type% = ZOMBIE_PIGMAN or %mob type% = PIG_ZOMBIE or %mob type% = GHAST : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>10-40</random number> @Attacker
+blind:
+  display: '%group-color%Ослепление'
+  description: |-
+    Шанс вызвать слепоту
+    при атаке.
+  applies-to: Мечи
+  type: ATTACK
+  group: ELITE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 17
+      cooldown: 5
+      effects:
+      - POTION:BLINDNESS:0:60 @Victim
+    '2':
+      chance: 25
+      cooldown: 5
+      effects:
+      - POTION:BLINDNESS:1:80 @Victim
+    '3':
+      chance: 33
+      cooldown: 5
+      effects:
+      - POTION:BLINDNESS:2:100 @Victim
+allure:
+  display: '%group-color%Притяжение'
+  description: Ваша атака притягивает мобов к вам.
+  applies-to: Мечи
+  type: ATTACK_MOB
+  group: ELITE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 30
+      effects:
+      - PULL_CLOSER:1 @Victim
+    '2':
+      chance: 60
+      effects:
+      - PULL_CLOSER:1.5 @Victim
+    '3':
+      effects:
+      - PULL_CLOSER:2 @Victim
+frozen:
+  display: '%group-color%Заморозка'
+  description: |-
+    Может вызвать замедление атакующего
+    при защите.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  group: ELITE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 19
+      cooldown: 6
+      effects:
+      - POTION:SLOW:0:40 @Attacker
+    '2':
+      chance: 19
+      cooldown: 6
+      effects:
+      - POTION:SLOW:1:50 @Attacker
+    '3':
+      chance: 26
+      cooldown: 6
+      effects:
+      - POTION:SLOW:2:60 @Attacker
+paralyze:
+  display: '%group-color%Паралич'
+  description: |-
+    Создает эффект молнии и дает шанс
+    на замедление и медленный замах.
+  applies-to: Мечи, Топоры
+  type: ATTACK;ATTACK_MOB
+  group: ELITE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 7
+      cooldown: 3
+      effects:
+      - LIGHTNING @Victim
+      - EXTINGUISH @Victim
+      - POTION:SLOW:0:60 @Victim
+      - POTION:SLOW_DIGGING:0:60 @Victim
+    '2':
+      chance: 10
+      cooldown: 3
+      effects:
+      - LIGHTNING @Victim
+      - EXTINGUISH @Victim
+      - POTION:SLOW:0:100 @Victim
+      - POTION:SLOW_DIGGING:0:100 @Victim
+    '3':
+      chance: 13
+      cooldown: 3
+      effects:
+      - LIGHTNING @Victim
+      - EXTINGUISH @Victim
+      - POTION:SLOW:1:60 @Victim
+      - POTION:SLOW_DIGGING:1:60 @Victim
+    '4':
+      chance: 16
+      cooldown: 3
+      effects:
+      - LIGHTNING @Victim
+      - EXTINGUISH @Victim
+      - POTION:SLOW:1:100 @Victim
+      - POTION:SLOW_DIGGING:1:100 @Victim
+poison:
+  display: '%group-color%Яд'
+  description: Шанс наложить эффект отравления.
+  applies-to: Мечи, Топоры
+  type: ATTACK;ATTACK_MOB
+  group: ELITE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 6
+      cooldown: 2
+      effects:
+      - POTION:POISON:0:80 @Victim
+    '2':
+      chance: 22
+      cooldown: 2
+      effects:
+      - POTION:POISON:0:120 @Victim
+    '3':
+      chance: 35
+      cooldown: 2
+      effects:
+      - POTION:POISON:1:80 @Victim
+virus:
+  display: '%group-color%Вирус'
+  description: Шанс наложить эффект отравления.
+  applies-to: Лук, Арбалет, Трезубец
+  type: SHOOT_MOB;SHOOT
+  settings:
+    showActionBar: true
+  group: UNIQUE
+  applies:
+  - TRIDENT
+  - BOW
+  - CROSSBOW
+  levels:
+    '1':
+      chance: 6
+      cooldown: 2
+      effects:
+      - POTION:POISON:0:80 @Victim
+    '2':
+      chance: 22
+      cooldown: 2
+      effects:
+      - POTION:POISON:0:120 @Victim
+    '3':
+      chance: 35
+      cooldown: 2
+      effects:
+      - POTION:POISON:1:80 @Victim
+poisoned:
+  display: '%group-color%Отравленный'
+  description: Шанс отравить вашего атакующего.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB;DEFENSE_PROJECTILE
+  group: ELITE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 8
+      cooldown: 6
+      effects:
+      - POTION:POISON:0:60 @Attacker
+    '2':
+      chance: 12
+      cooldown: 6
+      effects:
+      - POTION:POISON:0:120 @Attacker
+    '3':
+      chance: 17
+      cooldown: 6
+      effects:
+      - POTION:POISON:1:60 @Attacker
+    '4':
+      chance: 23
+      cooldown: 6
+      effects:
+      - POTION:POISON:1:120 @Attacker
+reforged:
+  display: '%group-color%Перекованный'
+  description: |-
+    Защищает прочность оружия и инструментов, предметы будут
+    дольше ломаться.
+  applies-to: Оружие и инструменты
+  type: ATTACK_MOB;MINING
+  group: ELITE
+  applies:
+  - ALL_AXE
+  - ALL_SWORD
+  - ALL_PICKAXE
+  - ALL_SPADE
+  levels:
+    '1':
+      chance: 10
+      effects:
+      - ADD_DURABILITY_ITEM:1
+    '2':
+      chance: 20
+      effects:
+      - ADD_DURABILITY_ITEM:1
+    '3':
+      chance: 30
+      effects:
+      - ADD_DURABILITY_ITEM:1
+    '4':
+      chance: 40
+      effects:
+      - ADD_DURABILITY_ITEM:1
+    '5':
+      chance: 50
+      effects:
+      - ADD_DURABILITY_ITEM:1
+    '6':
+      chance: 60
+      effects:
+      - ADD_DURABILITY_ITEM:1
+    '7':
+      chance: 70
+      effects:
+      - ADD_DURABILITY_ITEM:1
+    '8':
+      chance: 80
+      effects:
+      - ADD_DURABILITY_ITEM:1
+    '9':
+      chance: 90
+      effects:
+      - ADD_DURABILITY_ITEM:1
+    '10':
+      effects:
+      - ADD_DURABILITY_ITEM:1
+snare:
+  display: '%group-color%Западня'
+  description: |-
+    Шанс замедлить и утомить
+    противников снарядами.
+  applies-to: Луки
+  type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
+  group: ELITE
+  applies:
+  - BOW
+  - CROSSBOW
+  levels:
+    '1':
+      chance: 12
+      cooldown: 3
+      effects:
+      - POTION:SLOW:0:80 @Victim
+      - POTION:SLOW_DIGGING:0:80 @Victim
+    '2':
+      chance: 19
+      cooldown: 3
+      effects:
+      - POTION:SLOW:0:120 @Victim
+      - POTION:SLOW_DIGGING:0:120 @Victim
+    '3':
+      chance: 24
+      cooldown: 3
+      effects:
+      - POTION:SLOW:1:80 @Victim
+      - POTION:SLOW_DIGGING:1:80 @Victim
+    '4':
+      chance: 29
+      cooldown: 3
+      effects:
+      - POTION:SLOW:1:120 @Victim
+      - POTION:SLOW_DIGGING:1:120 @Victim
+springs:
+  display: '%group-color%Пружины'
+  description: Дает усиление прыжка.
+  applies-to: Ботинки
+  type: EFFECT_STATIC
+  group: ELITE
+  applies:
+  - ALL_BOOTS
+  levels:
+    '1':
+      effects:
+      - POTION:JUMP:0
+    '2':
+      effects:
+      - POTION:JUMP:1
+    '3':
+      effects:
+      - POTION:JUMP:2
+undeadruse:
+  display: '%group-color%Нежить'
+  description: |-
+    При получении урона есть шанс призвать орды зомби,
+    чтобы отвлечь и дезориентировать противников.
+  applies-to: Ботинки
+  type: DEFENSE;DEFENSE_MOB
+  settings:
+    showActionBar: true
+  group: ELITE
+  applies:
+  - ALL_BOOTS
+  levels:
+    '1':
+      chance: 1
+      cooldown: 30
+      effects:
+      - GUARD:ZOMBIE:8:2:@Victim
+    '2':
+      chance: 2
+      cooldown: 30
+      effects:
+      - GUARD:ZOMBIE:8:2:@Victim
+    '3':
+      chance: 3
+      cooldown: 30
+      effects:
+      - GUARD:ZOMBIE:8:2:@Victim
+    '4':
+      chance: 4
+      cooldown: 30
+      effects:
+      - GUARD:ZOMBIE:8:2:@Victim
+    '5':
+      chance: 5
+      cooldown: 30
+      effects:
+      - GUARD:ZOMBIE:8:2:@Victim
+    '6':
+      chance: 6
+      cooldown: 30
+      effects:
+      - GUARD:ZOMBIE:8:3:@Victim
+    '7':
+      chance: 7
+      cooldown: 30
+      effects:
+      - GUARD:ZOMBIE:8:3:@Victim
+    '8':
+      chance: 8
+      cooldown: 30
+      effects:
+      - GUARD:ZOMBIE:8:4:@Victim
+    '9':
+      chance: 9
+      cooldown: 30
+      effects:
+      - GUARD:ZOMBIE:8:4:@Victim
+    '10':
+      chance: 10
+      cooldown: 30
+      effects:
+      - GUARD:ZOMBIE:8:5:@Victim
+voodoo:
+  display: '%group-color%Вуду'
+  description: Дает шанс наложить слабость.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  group: ELITE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 2.5
+      cooldown: 2
+      effects:
+      - POTION:WEAKNESS:0:60 @Attacker
+    '2':
+      chance: 3.5
+      cooldown: 2
+      effects:
+      - POTION:WEAKNESS:0:100 @Attacker
+    '3':
+      chance: 4.5
+      cooldown: 2
+      effects:
+      - POTION:WEAKNESS:0:140 @Attacker
+    '4':
+      chance: 6.5
+      cooldown: 2
+      effects:
+      - POTION:WEAKNESS:0:60 @Attacker
+    '5':
+      chance: 8
+      cooldown: 2
+      effects:
+      - POTION:WEAKNESS:0:100 @Attacker
+    '6':
+      chance: 10.5
+      cooldown: 2
+      effects:
+      - POTION:WEAKNESS:0:120 @Attacker
+wither:
+  display: '%group-color%Иссушение'
+  description: Шанс наложить эффект иссушения.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  group: ELITE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 9
+      cooldown: 3
+      effects:
+      - POTION:WITHER:0:60 @Attacker
+    '2':
+      chance: 11
+      cooldown: 3
+      effects:
+      - POTION:WITHER:0:100 @Attacker
+    '3':
+      chance: 14
+      cooldown: 3
+      effects:
+      - POTION:WITHER:0:140 @Attacker
+    '4':
+      chance: 17
+      cooldown: 3
+      effects:
+      - POTION:WITHER:1:60 @Attacker
+    '5':
+      chance: 21
+      cooldown: 3
+      effects:
+      - POTION:WITHER:1:100 @Attacker
+perish:
+  display: '%group-color%Гибель'
+  description: Шанс наложить эффект иссушения.
+  applies-to: Лук, Арбалет, Трезубец
+  type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
+  group: UNIQUE
+  applies:
+  - TRIDENT
+  - BOW
+  - CROSSBOW
+  levels:
+    '1':
+      chance: 9
+      cooldown: 3
+      effects:
+      - POTION:WITHER:0:60 @Victim
+    '2':
+      chance: 11
+      cooldown: 3
+      effects:
+      - POTION:WITHER:0:100 @Victim
+    '3':
+      chance: 14
+      cooldown: 3
+      effects:
+      - POTION:WITHER:0:140 @Victim
+    '4':
+      chance: 17
+      cooldown: 3
+      effects:
+      - POTION:WITHER:1:60 @Victim
+    '5':
+      chance: 21
+      cooldown: 3
+      effects:
+      - POTION:WITHER:1:100 @Victim
+smokebomb:
+  display: '%group-color%Дымовая Бомба'
+  description: |-
+    Когда вы близки к смерти,
+    вы создадите дымовую бомбу для
+    отвлечения ваших врагов.
+  applies-to: Шлем
+  type: DEFENSE;DEFENSE_MOB
+  settings:
+    showActionBar: true
+  group: ELITE
+  applies:
+  - ALL_HELMET
+  levels:
+    '1':
+      chance: 9
+      cooldown: 2
+      conditions:
+      - '%victim health% > 4 : %stop%'
+      effects:
+      - PARTICLE:CLOUD:200:3 @Victim
+      - POTION:BLINDNESS:0:60 @Attacker
+    '2':
+      chance: 15
+      cooldown: 2
+      conditions:
+      - '%victim health% > 4 : %stop%'
+      effects:
+      - PARTICLE:CLOUD:200:3 @Victim
+      - POTION:BLINDNESS:0:60 @Attacker
+    '3':
+      chance: 23
+      cooldown: 2
+      conditions:
+      - '%victim health% > 4 : %stop%'
+      effects:
+      - PARTICLE:CLOUD:200:3 @Victim
+      - POTION:BLINDNESS:0:100 @Attacker
+    '4':
+      chance: 28
+      cooldown: 2
+      conditions:
+      - '%victim health% > 5 : %stop%'
+      effects:
+      - PARTICLE:CLOUD:200:3 @Victim
+      - POTION:BLINDNESS:0:100 @Attacker
+    '5':
+      chance: 30
+      cooldown: 2
+      conditions:
+      - '%victim health% > 5 : %stop%'
+      effects:
+      - PARTICLE:CLOUD:200:3 @Victim
+      - POTION:BLINDNESS:1:60 @Attacker
+    '6':
+      chance: 34
+      cooldown: 2
+      conditions:
+      - '%victim health% > 5 : %stop%'
+      effects:
+      - PARTICLE:CLOUD:200:3 @Victim
+      - POTION:BLINDNESS:1:100 @Attacker
+    '7':
+      chance: 36
+      cooldown: 2
+      conditions:
+      - '%victim health% > 6 : %stop%'
+      effects:
+      - PARTICLE:CLOUD:200:3 @Victim
+      - POTION:BLINDNESS:1:140 @Attacker
+    '8':
+      chance: 38
+      cooldown: 2
+      conditions:
+      - '%victim health% > 6 : %stop%'
+      effects:
+      - PARTICLE:CLOUD:200:3 @Victim
+      - POTION:BLINDNESS:2:120 @Attacker
+infernal:
+  display: '%group-color%Пекло'
+  description: Взрывной огненный эффект.
+  applies-to: Мечи, Топоры
+  type: ATTACK;ATTACK_MOB
+  group: ELITE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 15
+      cooldown: 2
+      effects:
+      - PARTICLE:BURN:2:20
+      - BURN:2 @Victim
+    '2':
+      chance: 30
+      cooldown: 2
+      effects:
+      - PARTICLE:BURN:2:40
+      - BURN:4 @Victim
+    '3':
+      chance: 50
+      cooldown: 2
+      effects:
+      - PARTICLE:BURN:3:20
+      - BURN:6 @Victim
+extinguish:
+  display: '%group-color%Гашение'
+  description: |-
+    Шанс потушить себя
+    когда вы горите.
+  applies-to: Поножи
+  type: DEFENSE;DEFENSE_MOB;FIRE
+  group: ELITE
+  applies:
+  - ALL_LEGGINGS
+  levels:
+    '1':
+      chance: 20
+      effects:
+      - WAIT:1
+      - EXTINGUISH @Victim
+    '2':
+      chance: 60
+      effects:
+      - WAIT:1
+      - EXTINGUISH @Victim
+    '3':
+      chance: 80
+      effects:
+      - WAIT:1
+      - EXTINGUISH @Victim
+shockwave:
+  display: '%group-color%Ударная Волна'
+  description: |-
+    Шанс оттолкнуть вашего атакующего
+    когда ваше здоровье низкое.
+  applies-to: Нагрудники
+  type: DEFENSE;DEFENSE_MOB
+  settings:
+    showActionBar: true
+  group: ELITE
+  applies:
+  - ALL_CHESTPLATE
+  levels:
+    '1':
+      chance: 10
+      cooldown: 4
+      conditions:
+      - '%victim health% > 5 : %stop%'
+      effects:
+      - PULL_AWAY:0.5 @Attacker
+    '2':
+      chance: 20
+      cooldown: 4
+      conditions:
+      - '%victim health% > 5 : %stop%'
+      effects:
+      - PULL_AWAY:1.0 @Attacker
+    '3':
+      chance: 30
+      cooldown: 4
+      conditions:
+      - '%victim health% > 5 : %stop%'
+      effects:
+      - PULL_AWAY:1.5 @Attacker
+    '4':
+      chance: 40
+      cooldown: 4
+      conditions:
+      - '%victim health% > 5 : %stop%'
+      effects:
+      - PULL_AWAY:2.0 @Attacker
+    '5':
+      chance: 50
+      cooldown: 4
+      conditions:
+      - '%victim health% > 5 : %stop%'
+      effects:
+      - PULL_AWAY:2.5 @Attacker
+vampire:
+  display: '%group-color%Вампир'
+  description: |-
+    Шанс исцелить вас до
+    3 ед. здоровья через несколько секунд после удара.
+  applies-to: Мечи
+  type: ATTACK;ATTACK_MOB
+  group: ELITE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 7
+      cooldown: 4
+      effects:
+      - WAIT:40
+      - ADD_HEALTH:<random number>1-6</random number>
+    '2':
+      chance: 12
+      cooldown: 4
+      effects:
+      - WAIT:40
+      - ADD_HEALTH:<random number>1-6</random number>
+    '3':
+      chance: 15
+      cooldown: 4
+      effects:
+      - WAIT:40
+      - ADD_HEALTH:<random number>1-6</random number>
+greatsword:
+  display: '%group-color%Великий Меч'
+  description: |-
+    Увеличивает урон против игроков, которые
+    держат Лук в момент удара.
+  applies-to: Меч
+  type: ATTACK
+  group: ELITE
+  settings:
+    showActionBar: true
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 15
+      cooldown: 2
+      conditions:
+      - '%victim is holding% contains BOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>45-70</random number> @Attacker
+    '2':
+      chance: 25
+      cooldown: 2
+      conditions:
+      - '%victim is holding% contains BOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>75-90</random number> @Attacker
+    '3':
+      chance: 35
+      cooldown: 2
+      conditions:
+      - '%victim is holding% contains BOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>85-165</random number> @Attacker
+    '4':
+      chance: 45
+      cooldown: 2
+      conditions:
+      - '%victim is holding% contains BOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>105-205</random number>
+    '5':
+      chance: 55
+      cooldown: 2
+      conditions:
+      - '%victim is holding% contains BOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>105-205</random number>
+bowmaster:
+  display: '%group-color%Мастер Лука'
+  description: |-
+    Увеличивает урон против игроков, которые
+    держат Меч в момент удара.
+  applies-to: Лук, Арбалет, Трезубец
+  type: SHOOT
+  group: ELITE
+  applies:
+  - TRIDENT
+  - BOW
+  - CROSSBOW
+  levels:
+    '1':
+      chance: 15
+      cooldown: 2
+      conditions:
+      - '%victim is holding% contains SWORD : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>45-70</random number> @Attacker
+    '2':
+      chance: 25
+      cooldown: 2
+      conditions:
+      - '%victim is holding% contains SWORD : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>75-90</random number> @Attacker
+    '3':
+      chance: 35
+      cooldown: 2
+      conditions:
+      - '%victim is holding% contains SWORD : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>85-165</random number> @Attacker
+    '4':
+      chance: 45
+      cooldown: 2
+      conditions:
+      - '%victim is holding% contains SWORD : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>105-205</random number>
+    '5':
+      chance: 55
+      cooldown: 2
+      conditions:
+      - '%victim is holding% contains SWORD : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>105-205</random number>
+hardened:
+  display: '%group-color%Закаленный'
+  description: Шанс восстановить прочность при получении урона от игроков.
+  applies-to: Броня
+  type: DEFENSE
+  group: LEGENDARY
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 25
+      cooldown: 7
+      effects:
+      - ADD_DURABILITY_CURRENT_ITEM:1 @Victim
+    '2':
+      chance: 35
+      cooldown: 7
+      effects:
+      - ADD_DURABILITY_CURRENT_ITEM:1 @Victim
+    '3':
+      chance: 45
+      cooldown: 7
+      effects:
+      - ADD_DURABILITY_CURRENT_ITEM:2 @Victim
+patch:
+  display: '%group-color%Починка'
+  description: Шанс восстановить прочность при получении урона от мобов.
+  applies-to: Броня
+  type: DEFENSE_MOB
+  group: LEGENDARY
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 25
+      cooldown: 15
+      effects:
+      - ADD_DURABILITY_CURRENT_ITEM:1 @Victim
+    '2':
+      chance: 35
+      cooldown: 15
+      effects:
+      - ADD_DURABILITY_CURRENT_ITEM:1 @Victim
+    '3':
+      chance: 45
+      cooldown: 15
+      effects:
+      - ADD_DURABILITY_CURRENT_ITEM:2 @Victim
+rocketescape:
+  display: '%group-color%Ракетный Побег'
+  description: Взлетите в воздух при низком HP.
+  applies-to: Ботинки
+  type: DEFENSE;DEFENSE_MOB
+  settings:
+    showActionBar: true
+  group: ELITE
+  applies:
+  - ALL_BOOTS
+  levels:
+    '1':
+      chance: 20
+      cooldown: 8
+      conditions:
+      - '%victim health% > 6 : %stop%'
+      effects:
+      - BOOST:UP:20 @Victim
+    '2':
+      chance: 34
+      cooldown: 8
+      conditions:
+      - '%victim health% > 6 : %stop%'
+      effects:
+      - BOOST:UP:25 @Victim
+    '3':
+      chance: 40
+      cooldown: 8
+      conditions:
+      - '%victim health% > 6 : %stop%'
+      effects:
+      - BOOST:UP:30 @Victim
+trickster:
+  display: '%group-color%Обманщик'
+  description: |-
+    При получении урона у вас есть
+    шанс телепортироваться прямо
+    за спину вашего противника.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  settings:
+    showActionBar: true
+  group: ELITE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 8
+      cooldown: 5
+      effects:
+      - TELEPORT_BEHIND @Victim
+    '2':
+      chance: 14
+      cooldown: 5
+      effects:
+      - TELEPORT_BEHIND @Victim
+    '3':
+      chance: 17
+      cooldown: 5
+      effects:
+      - TELEPORT_BEHIND @Victim
+    '4':
+      chance: 21
+      cooldown: 5
+      effects:
+      - TELEPORT_BEHIND @Victim
+    '5':
+      chance: 29
+      cooldown: 5
+      effects:
+      - TELEPORT_BEHIND @Victim
+    '6':
+      chance: 37
+      cooldown: 5
+      effects:
+      - TELEPORT_BEHIND @Victim
+    '7':
+      chance: 46
+      cooldown: 5
+      effects:
+      - TELEPORT_BEHIND @Victim
+    '8':
+      chance: 51
+      cooldown: 5
+      effects:
+      - TELEPORT_BEHIND @Victim
+timber:
+  display: '%group-color%Лесоруб'
+  description: Шанс сломать дерево одним ударом
+  applies-to: Топоры
+  group: ULTIMATE
+  type: MINING
+  settings:
+    showActionBar: true
+  applies:
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 10
+      cooldown: 6
+      effects:
+      - BREAK_TREE @Block
+    '2':
+      chance: 25
+      cooldown: 6
+      effects:
+      - BREAK_TREE @Block
+    '3':
+      chance: 35
+      cooldown: 8
+      effects:
+      - BREAK_TREE @Block
+distance:
+  display: '%group-color%Дистанция'
+  description: |-
+    Шанс отдалиться от врагов
+    и получить регенерацию.
+  applies-to: Оружие
+  type: ATTACK
+  group: ULTIMATE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 16
+      cooldown: 6
+      effects:
+      - PULL_AWAY:3.0 @Victim
+      - POTION:REGENERATION:0:20 @Attacker
+    '2':
+      chance: 20
+      cooldown: 6
+      effects:
+      - PULL_AWAY:4.5 @Victim
+      - POTION:REGENERATION:0:20 @Attacker
+    '3':
+      chance: 24
+      cooldown: 6
+      effects:
+      - PULL_AWAY:5.0 @Victim
+      - POTION:REGENERATION:1:20 @Attacker
+    '4':
+      chance: 28
+      cooldown: 6
+      effects:
+      - PULL_AWAY:6.5 @Victim
+      - POTION:REGENERATION:1:40 @Attacker
+cleave:
+  display: '%group-color%Рассечение'
+  description: |-
+    Наносит урон игрокам в радиусе,
+    который увеличивается с уровнем зачарования.
+  applies-to: Топоры
+  type: ATTACK
+  settings:
+    showActionBar: true
+  group: ULTIMATE
+  applies:
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 4
+      cooldown: 8
+      effects:
+      - DO_HARM:<random number>1-2</random number> @Aoe{radius=2,target=damageable}
+    '2':
+      chance: 5
+      cooldown: 8
+      effects:
+      - DO_HARM:<random number>1-2</random number> @Aoe{radius=2,target=damageable}
+    '3':
+      chance: 6
+      cooldown: 9
+      effects:
+      - DO_HARM:<random number>1-3</random number> @Aoe{radius=3,target=damageable}
+    '4':
+      chance: 7
+      cooldown: 9
+      effects:
+      - DO_HARM:<random number>1-3</random number> @Aoe{radius=4,target=damageable}
+    '5':
+      chance: 9
+      cooldown: 10
+      effects:
+      - DO_HARM:<random number>2-3</random number> @Aoe{radius=5,target=damageable}
+    '6':
+      chance: 12
+      cooldown: 12
+      effects:
+      - DO_HARM:<random number>2-3</random number> @Aoe{radius=6,target=damageable}
+    '7':
+      chance: 15
+      cooldown: 14
+      effects:
+      - DO_HARM:<random number>2-3</random number> @Aoe{radius=7,target=damageable}
+ambit:
+  display: '%group-color%Размах'
+  description: "Наносит урон мобам в радиусе,
+
+    который увеличивается с уровнем зачарования."
+  applies-to: Мечи, Топоры
+  type: ATTACK_MOB
+  settings:
+    showActionBar: true
+  group: ULTIMATE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 4
+      cooldown: 8
+      effects:
+      - DO_HARM:<random number>1-2</random number> @Aoe{radius=7,target=mobs}
+    '2':
+      chance: 5
+      cooldown: 8
+      effects:
+      - DO_HARM:<random number>1-2</random number> @Aoe{radius=2,target=mobs}
+    '3':
+      chance: 6
+      cooldown: 9
+      effects:
+      - DO_HARM:<random number>1-3</random number> @Aoe{radius=3,target=mobs}
+    '4':
+      chance: 7
+      cooldown: 9
+      effects:
+      - DO_HARM:<random number>1-3</random number> @Aoe{radius=4,target=mobs}
+    '5':
+      chance: 9
+      cooldown: 10
+      effects:
+      - DO_HARM:<random number>2-3</random number> @Aoe{radius=5,target=mobs}
+    '6':
+      chance: 12
+      cooldown: 12
+      effects:
+      - DO_HARM:<random number>2-3</random number> @Aoe{radius=6,target=mobs}
+    '7':
+      chance: 15
+      cooldown: 14
+      effects:
+      - DO_HARM:<random number>2-3</random number> @Aoe{radius=7,target=mobs}
+angelic:
+  display: '%group-color%Ангельский'
+  description: Исцеляет при получении урона.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  group: ULTIMATE
+  applies:
+  - ALL_CHESTPLATE
+  levels:
+    '1':
+      chance: 9
+      cooldown: 7
+      effects:
+      - ADD_HEALTH:<random number>1-3</random number> @Victim
+    '2':
+      chance: 14
+      cooldown: 9
+      effects:
+      - ADD_HEALTH:<random number>1-3</random number> @Victim
+    '3':
+      chance: 17
+      cooldown: 11
+      effects:
+      - ADD_HEALTH:<random number>1-3</random number> @Victim
+    '4':
+      chance: 26
+      cooldown: 13
+      effects:
+      - ADD_HEALTH:<random number>1-4</random number> @Victim
+    '5':
+      chance: 34
+      cooldown: 15
+      effects:
+      - ADD_HEALTH:<random number>1-4</random number> @Victim
+arrowdeflect:
+  display: '%group-color%Отражение Стрел'
+  description: Шанс предотвратить урон от вражеской стрелы.
+  applies-to: Броня
+  type: DEFENSE_PROJECTILE
+  group: ULTIMATE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 15
+      cooldown: 6
+      effects:
+      - CANCEL_EVENT
+    '2':
+      chance: 25
+      cooldown: 6
+      effects:
+      - CANCEL_EVENT
+    '3':
+      chance: 35
+      cooldown: 6
+      effects:
+      - CANCEL_EVENT
+    '4':
+      chance: 45
+      cooldown: 6
+      effects:
+      - CANCEL_EVENT
+arrowbreak:
+  display: '%group-color%Разбивание Стрел'
+  description: "Шанс отразить стрелы,
+
+    держа предмет с этим зачарованием."
+  applies-to: Топор
+  type: DEFENSE_PROJECTILE
+  group: ULTIMATE
+  applies:
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 15
+      cooldown: 8
+      effects:
+      - CANCEL_EVENT
+      - PLAY_SOUND:ENTITY_ITEM_BREAK:2 @Victim
+    '2':
+      chance: 25
+      cooldown: 8
+      effects:
+      - CANCEL_EVENT
+      - PLAY_SOUND:ENTITY_ITEM_BREAK:2 @Victim
+    '3':
+      chance: 35
+      cooldown: 8
+      effects:
+      - CANCEL_EVENT
+      - PLAY_SOUND:ENTITY_ITEM_BREAK:2 @Victim
+    '4':
+      chance: 45
+      cooldown: 9
+      effects:
+      - CANCEL_EVENT
+      - PLAY_SOUND:ENTITY_ITEM_BREAK:2 @Victim
+    '5':
+      chance: 55
+      cooldown: 9
+      effects:
+      - CANCEL_EVENT
+      - PLAY_SOUND:ENTITY_ITEM_BREAK:2 @Victim
+    '6':
+      chance: 65
+      cooldown: 10
+      effects:
+      - CANCEL_EVENT
+      - PLAY_SOUND:ENTITY_ITEM_BREAK:2 @Victim
+curse:
+  display: '%group-color%Проклятие'
+  description: Шанс наложить на врага усталость от добычи.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  group: ELITE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 13
+      effects:
+      - POTION:SLOW_DIGGING:0:100 @Attacker
+    '2':
+      chance: 17
+      cooldown: 15
+      effects:
+      - POTION:SLOW_DIGGING:1:100 @Attacker
+diminish:
+  display: '%group-color%Ослабление'
+  description: Шанс наложить на врага усталость от добычи.
+  applies-to: Топоры
+  type: ATTACK;ATTACK_MOB
+  group: ULTIMATE
+  applies:
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 13
+      effects:
+      - POTION:SLOW_DIGGING:0:100 @Victim
+interrupt:
+  display: '%group-color%Прерывание'
+  description: Шанс наложить на врага усталость от добычи.
+  applies-to: Мечи
+  type: ATTACK;ATTACK_MOB
+  group: ULTIMATE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 13
+      effects:
+      - POTION:SLOW_DIGGING:0:100 @Victim
+    '2':
+      chance: 17
+      cooldown: 15
+      effects:
+      - POTION:SLOW_DIGGING:1:100 @Victim
+exalted:
+  display: '%group-color%Возвышенный'
+  description: |-
+    Шанс снять
+    негативные эффекты зелий.
+  applies-to: Мечи
+  type: ATTACK
+  group: ULTIMATE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 12
+      cooldown: 8
+      effects:
+      - CURE:SLOW @Attacker
+      - CURE:CONFUSION @Attacker
+      - CURE:BLINDNESS @Attacker
+      - CURE:POISON @Attacker
+      - CURE:WITHER @Attacker
+      - CURE:HUNGER @Attacker
+      - CURE:WEAKNESS @Attacker
+      - CURE:SLOW_DIGGING @Attacker
+    '2':
+      chance: 16
+      cooldown: 8
+      effects:
+      - CURE:SLOW @Attacker
+      - CURE:CONFUSION @Attacker
+      - CURE:BLINDNESS @Attacker
+      - CURE:POISON @Attacker
+      - CURE:WITHER @Attacker
+      - CURE:HUNGER @Attacker
+      - CURE:WEAKNESS @Attacker
+      - CURE:SLOW_DIGGING @Attacker
+    '3':
+      chance: 22
+      cooldown: 8
+      effects:
+      - CURE:SLOW @Attacker
+      - CURE:CONFUSION @Attacker
+      - CURE:BLINDNESS @Attacker
+      - CURE:POISON @Attacker
+      - CURE:WITHER @Attacker
+      - CURE:HUNGER @Attacker
+      - CURE:WEAKNESS @Attacker
+      - CURE:SLOW_DIGGING @Attacker
+    '4':
+      chance: 36
+      cooldown: 8
+      effects:
+      - CURE:SLOW @Attacker
+      - CURE:CONFUSION @Attacker
+      - CURE:BLINDNESS @Attacker
+      - CURE:POISON @Attacker
+      - CURE:WITHER @Attacker
+      - CURE:HUNGER @Attacker
+      - CURE:WEAKNESS @Attacker
+      - CURE:SLOW_DIGGING @Attacker
+ragdoll:
+  display: '%group-color%Отброс'
+  description: |-
+    Шанс быть отброшенным
+    при получении удара.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  group: ULTIMATE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 10
+      cooldown: 4
+      effects:
+      - PULL_AWAY:0.1 @Victim
+    '2':
+      chance: 20
+      cooldown: 4
+      effects:
+      - PULL_AWAY:0.2 @Victim
+    '3':
+      chance: 30
+      cooldown: 4
+      effects:
+      - PULL_AWAY:0.3 @Victim
+    '4':
+      chance: 50
+      cooldown: 4
+      effects:
+      - PULL_AWAY:0.4 @Victim
+block:
+  display: '%group-color%Блок'
+  description: |-
+    Шанс отразить атаку
+    и нанести до 4 единиц урона в ответ.
+  applies-to: Мечи
+  type: DEFENSE;DEFENSE_MOB
+  group: ULTIMATE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 16
+      cooldown: 4
+      effects:
+      - NEGATE_DAMAGE:50 @Victim
+      - DO_HARM:<random number>1-4</random number> @Attacker
+    '2':
+      chance: 22
+      cooldown: 4
+      effects:
+      - NEGATE_DAMAGE:50 @Victim
+      - DO_HARM:<random number>1-4</random number> @Attacker
+    '3':
+      chance: 30
+      cooldown: 4
+      effects:
+      - NEGATE_DAMAGE:50 @Victim
+      - DO_HARM:<random number>1-4</random number> @Attacker
+trench:
+  display: '%group-color%Траншея'
+  description: Шанс копать в области 3x3.
+  applies-to: Кирки, Лопаты
+  type: MINING
+  group: FABLED
+  applies:
+  - ALL_PICKAXE
+  - ALL_SPADE
+  levels:
+    '1':
+      chance: 13
+      effects:
+      - BREAK_BLOCK @Trench{r=3}
+    '2':
+      chance: 26
+      effects:
+      - BREAK_BLOCK @Trench{r=3}
+    '3':
+      chance: 36
+      effects:
+      - BREAK_BLOCK @Trench{r=3}
+    '4':
+      chance: 49
+      effects:
+      - BREAK_BLOCK @Trench{r=3}
+    '5':
+      chance: 59
+      effects:
+      - BREAK_BLOCK @Trench{r=3}
+    '6':
+      chance: 72
+      effects:
+      - BREAK_BLOCK @Trench{r=3}
+    '7':
+      chance: 85
+      effects:
+      - BREAK_BLOCK @Trench{r=3}
+    '8':
+      chance: 90
+      effects:
+      - BREAK_BLOCK @Trench{r=3}
+    '9':
+      chance: 100
+      effects:
+      - BREAK_BLOCK @Trench{r=3}
+dodge:
+  display: '%group-color%Уклонение'
+  description: |-
+    Шанс уклониться от физического врага,
+    шанс увеличивается при крадущейся ходьбе.
+  applies-to: Броня
+  type: DEFENSE
+  group: ULTIMATE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 5
+      cooldown: 16
+      conditions:
+      - '%victim is sneaking% = true : %chance%+7'
+      effects:
+      - CANCEL_EVENT
+      - PLAY_SOUND:ENTITY_BAT_TAKEOFF:0.7 @Victim
+    '2':
+      chance: 8
+      cooldown: 16
+      conditions:
+      - '%victim is sneaking% = true : %chance%+7'
+      effects:
+      - CANCEL_EVENT
+      - PLAY_SOUND:ENTITY_BAT_TAKEOFF:0.7 @Victim
+    '3':
+      chance: 12
+      cooldown: 16
+      conditions:
+      - '%victim is sneaking% = true : %chance%+7'
+      effects:
+      - CANCEL_EVENT
+      - PLAY_SOUND:ENTITY_BAT_TAKEOFF:0.7 @Victim
+    '4':
+      chance: 16
+      cooldown: 16
+      conditions:
+      - '%victim is sneaking% = true : %chance%+7'
+      effects:
+      - CANCEL_EVENT
+      - PLAY_SOUND:ENTITY_BAT_TAKEOFF:0.7 @Victim
+    '5':
+      chance: 18
+      cooldown: 16
+      conditions:
+      - '%victim is sneaking% = true : %chance%+7'
+      effects:
+      - CANCEL_EVENT
+      - PLAY_SOUND:ENTITY_BAT_TAKEOFF:0.7 @Victim
+fumble:
+  display: '%group-color%Неловкость'
+  description: |-
+    Шанс взорвать врага
+    при попадании его стрелами.
+  applies-to: Нагрудник
+  type: DEFENSE_PROJECTILE
+  group: LEGENDARY
+  applies:
+  - ALL_CHESTPLATE
+  levels:
+    '1':
+      chance: 10
+      cooldown: 8
+      effects:
+      - TNT:1 @Attacker
+      - PLAY_SOUND:ENCHANT_THORNS_HIT:1:1 @Victim
+    '2':
+      chance: 15
+      cooldown: 8
+      effects:
+      - TNT:1 @Attacker
+      - PLAY_SOUND:ENCHANT_THORNS_HIT:1:1 @Victim
+    '3':
+      chance: 25
+      cooldown: 8
+      effects:
+      - TNT:1 @Attacker
+      - PLAY_SOUND:ENCHANT_THORNS_HIT:1:1 @Victim
+turmoil:
+  display: '%group-color%Смятение'
+  description: |-
+    Шанс предотвратить появление
+    стражей противника.
+  applies-to: Броня
+  type: DEFENSE
+  group: LEGENDARY
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 10
+      cooldown: 8
+      effects:
+      - DISABLE_ACTIVATION:guardians:4
+      - DISABLE_ACTIVATION:spirits:4
+      - DISABLE_ACTIVATION:explosivedemise:4
+      - DISABLE_ACTIVATION:undeadruse:4
+    '2':
+      chance: 14
+      cooldown: 8
+      effects:
+      - DISABLE_ACTIVATION:guardians:4
+      - DISABLE_ACTIVATION:spirits:4
+      - DISABLE_ACTIVATION:explosivedemise:4
+      - DISABLE_ACTIVATION:undeadruse:4
+    '3':
+      chance: 18
+      cooldown: 8
+      effects:
+      - DISABLE_ACTIVATION:guardians:4
+      - DISABLE_ACTIVATION:spirits:4
+      - DISABLE_ACTIVATION:explosivedemise:4
+      - DISABLE_ACTIVATION:undeadruse:4
+guardians:
+  display: '%group-color%Стражи'
+  description: |-
+    Шанс призвать железных големов,
+    чтобы помочь вам и защитить вас.
+  applies-to: Броня
+  type: DEFENSE
+  settings:
+    showActionBar: true
+  group: ULTIMATE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 1
+      cooldown: 30
+      effects:
+      - GUARD:IRON_GOLEM:8:1 @Victim
+    '2':
+      chance: 2
+      cooldown: 30
+      effects:
+      - GUARD:IRON_GOLEM:8:1 @Victim
+    '3':
+      chance: 3
+      cooldown: 30
+      effects:
+      - GUARD:IRON_GOLEM:8:1 @Victim
+    '4':
+      chance: 4
+      cooldown: 30
+      effects:
+      - GUARD:IRON_GOLEM:8:1 @Victim
+    '5':
+      chance: 5
+      cooldown: 30
+      effects:
+      - GUARD:IRON_GOLEM:8:1 @Victim
+    '6':
+      chance: 6
+      cooldown: 30
+      effects:
+      - GUARD:IRON_GOLEM:8:2 @Victim
+    '7':
+      chance: 7
+      cooldown: 30
+      effects:
+      - GUARD:IRON_GOLEM:8:2 @Victim
+    '8':
+      chance: 8
+      cooldown: 30
+      effects:
+      - GUARD:IRON_GOLEM:8:3 @Victim
+    '9':
+      chance: 9
+      cooldown: 30
+      effects:
+      - GUARD:IRON_GOLEM:8:3 @Victim
+    '10':
+      chance: 10
+      cooldown: 30
+      effects:
+      - GUARD:IRON_GOLEM:8:4 @Victim
+iceaspect:
+  display: '%group-color%Ледяной Аспект'
+  description: |-
+    Шанс вызвать эффект замедления
+    у вашего врага.
+  applies-to: Мечи
+  type: ATTACK;ATTACK_MOB
+  group: ULTIMATE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 15
+      cooldown: 2
+      effects:
+      - POTION:SLOW:1:100 @Victim
+    '2':
+      chance: 23
+      cooldown: 2
+      effects:
+      - POTION:SLOW:1:100 @Victim
+    '3':
+      chance: 31
+      cooldown: 2
+      effects:
+      - POTION:SLOW:1:100 @Victim
+momentum:
+  display: '%group-color%Импульс'
+  description: |-
+    Шанс получить ускорение
+    с фейерверками.
+  applies-to: Элитры
+  type: RIGHT_CLICK
+  group: ELITE
+  applies:
+  - ELYTRA
+  levels:
+    '1':
+      chance: 10
+      cooldown: 5
+      conditions:
+      - '%player is holding% = FIREWORK_ROCKET : %allow%'
+      effects:
+      - POTION:SPEED:0:40
+    '2':
+      chance: 25
+      cooldown: 5
+      conditions:
+      - '%player is holding% = FIREWORK_ROCKET : %allow%'
+      effects:
+      - POTION:SPEED:1:60
+    '3':
+      chance: 45
+      cooldown: 5
+      conditions:
+      - '%player is holding% = FIREWORK_ROCKET : %allow%'
+      effects:
+      - POTION:SPEED:2:80
+reinforced:
+  display: '%group-color%Укрепленный'
+  description: Уменьшает получаемый вами урон.
+  applies-to: Элитры
+  type: DEFENSE;DEFENSE_MOB;DEFENSE_PROJECTILE
+  group: ULTIMATE
+  applies:
+  - ELYTRA
+  levels:
+    '1':
+      chance: 15
+      cooldown: 1
+      effects:
+      - DECREASE_DAMAGE:15
+    '2':
+      chance: 45
+      cooldown: 1
+      effects:
+      - DECREASE_DAMAGE:25
+    '3':
+      chance: 60
+      cooldown: 1
+      effects:
+      - DECREASE_DAMAGE:35
+    '4':
+      chance: 75
+      cooldown: 1
+      effects:
+      - DECREASE_DAMAGE:45
+restore:
+  display: '%group-color%Восстановление'
+  description: |-
+    При поломке предмет имеет шанс
+    потерять это зачарование и восстановить
+    половину своей прочности.
+  applies-to: Инструменты
+  type: ITEM_BREAK
+  group: FABLED
+  settings:
+    showActionBar: true
+  applies:
+  - ALL_PICKAXE
+  - ALL_SPADE
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 40
+      effects:
+      - ADD_DURABILITY_CURRENT_ITEM:<round><math>(%maximum durability%/2)</math></round>
+      - REMOVE_ENCHANT:restore
+      - PLAY_SOUND:ITEM_TOTEM_USE
+    '2':
+      chance: 60
+      effects:
+      - ADD_DURABILITY_CURRENT_ITEM:<round><math>(%maximum durability%/2)</math></round>
+      - REMOVE_ENCHANT:restore
+      - PLAY_SOUND:ITEM_TOTEM_USE
+    '3':
+      chance: 80
+      effects:
+      - ADD_DURABILITY_CURRENT_ITEM:<round><math>(%maximum durability%/2)</math></round>
+      - REMOVE_ENCHANT:restore
+      - PLAY_SOUND:ITEM_TOTEM_USE
+    '4':
+      chance: 100
+      effects:
+      - ADD_DURABILITY_CURRENT_ITEM:<round><math>(%maximum durability%/2)</math></round>
+      - REMOVE_ENCHANT:restore
+      - PLAY_SOUND:ITEM_TOTEM_USE
+implants:
+  display: '%group-color%Имплантаты'
+  description: Шанс восстановить голод каждые несколько секунд.
+  applies-to: Шлемы
+  type: REPEATING
+  group: ULTIMATE
+  applies:
+  - ALL_HELMET
+  levels:
+    '1':
+      chance: 15
+      time: 6
+      effects:
+      - ADD_FOOD:1
+    '2':
+      chance: 25
+      time: 6
+      effects:
+      - ADD_FOOD:1
+    '3':
+      chance: 30
+      time: 6
+      effects:
+      - ADD_FOOD:1
+obsidianshield:
+  display: '%group-color%Обсидиановый Щит'
+  description: Дает постоянную огнестойкость.
+  applies-to: Броня
+  type: EFFECT_STATIC
+  group: ULTIMATE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      effects:
+      - POTION:FIRE_RESISTANCE:0
+piercing:
+  display: '%group-color%Пронзание'
+  description: Наносит больше урона.
+  applies-to: Луки
+  type: SHOOT;SHOOT_MOB
+  group: ULTIMATE
+  applies:
+  - BOW
+  - CROSSBOW
+  levels:
+    '1':
+      chance: 13
+      cooldown: 3
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+    '2':
+      chance: 19
+      cooldown: 3
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+    '3':
+      chance: 25
+      cooldown: 3
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+    '4':
+      chance: 32
+      cooldown: 3
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+    '5':
+      chance: 37
+      cooldown: 3
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+archer:
+  display: '%group-color%Лучник'
+  description: Увеличивает урон, наносимый луками.
+  applies-to: Лук
+  type: SHOOT;SHOOT_MOB
+  group: ULTIMATE
+  applies:
+  - BOW
+  levels:
+    '1':
+      chance: 10
+      cooldown: 6
+      conditions:
+      - '%attacker is holding% = BOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+    '2':
+      chance: 15
+      cooldown: 6
+      conditions:
+      - '%attacker is holding% = BOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+    '3':
+      chance: 20
+      cooldown: 6
+      conditions:
+      - '%attacker is holding% = BOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+    '4':
+      chance: 25
+      cooldown: 6
+      conditions:
+      - '%attacker is holding% = BOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+marksman:
+  display: '%group-color%Стрелок'
+  description: Увеличивает урон, наносимый арбалетами.
+  applies-to: Арбалет
+  type: SHOOT;SHOOT_MOB
+  group: ELITE
+  applies:
+  - CROSSBOW
+  levels:
+    '1':
+      chance: 13
+      cooldown: 6
+      conditions:
+      - '%attacker is holding% = CROSSBOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+    '2':
+      chance: 19
+      cooldown: 6
+      conditions:
+      - '%attacker is holding% = CROSSBOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+    '3':
+      chance: 25
+      cooldown: 6
+      conditions:
+      - '%attacker is holding% = CROSSBOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+    '4':
+      chance: 32
+      cooldown: 6
+      conditions:
+      - '%attacker is holding% = CROSSBOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+poseidon:
+  display: '%group-color%Посейдон'
+  description: Увеличивает урон, наносимый трезубцами.
+  applies-to: Трезубец
+  type: SHOOT;SHOOT_MOB
+  group: ELITE
+  applies:
+  - TRIDENT
+  levels:
+    '1':
+      chance: 13
+      cooldown: 3
+      conditions:
+      - '%item type% = TRIDENT : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+    '2':
+      chance: 19
+      cooldown: 3
+      conditions:
+      - '%item type% = TRIDENT : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+    '3':
+      chance: 25
+      cooldown: 3
+      conditions:
+      - '%item type% = TRIDENT : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+    '4':
+      chance: 32
+      cooldown: 3
+      conditions:
+      - '%item type% = TRIDENT : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>50-150</random number> @Victim
+safeguard:
+  display: '%group-color%Охрана'
+  description: |-
+    Шанс получить сопротивление урону
+    при защите.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  group: ULTIMATE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 5
+      cooldown: 5
+      effects:
+      - POTION:DAMAGE_RESISTANCE:0:60 @Victim
+    '2':
+      chance: 9
+      cooldown: 5
+      effects:
+      - POTION:DAMAGE_RESISTANCE:1:60 @Victim
+disappear:
+  display: '%group-color%Исчезновение'
+  description: |-
+    Шанс стать невидимым когда
+    здоровье на исходе.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  settings:
+    showActionBar: true
+  group: ULTIMATE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 20
+      cooldown: 20
+      conditions:
+      - '%victim health% > 5 : %stop%'
+      effects:
+      - POTION:INVISIBILITY:2:60 @Victim
+    '2':
+      chance: 23
+      cooldown: 20
+      conditions:
+      - '%victim health% > 6 : %stop%'
+      effects:
+      - POTION:INVISIBILITY:2:80 @Victim
+    '3':
+      chance: 26
+      cooldown: 20
+      conditions:
+      - '%victim health% > 7 : %stop%'
+      effects:
+      - POTION:INVISIBILITY:2:100 @Victim
+    '4':
+      chance: 30
+      cooldown: 20
+      conditions:
+      - '%victim health% > 8 : %stop%'
+      effects:
+      - POTION:INVISIBILITY:2:120 @Victim
+confuse:
+  display: '%group-color%Замешательство'
+  description: Шанс вызвать эффект тошноты.
+  applies-to: Мечи
+  type: ATTACK
+  group: ULTIMATE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 12
+      cooldown: 6
+      effects:
+      - POTION:CONFUSION:0:60 @Victim
+    '2':
+      chance: 14
+      cooldown: 7
+      effects:
+      - POTION:CONFUSION:1:60 @Victim
+    '3':
+      chance: 16
+      cooldown: 8
+      effects:
+      - POTION:CONFUSION:2:60 @Victim
+    '4':
+      chance: 18
+      cooldown: 8
+      effects:
+      - POTION:CONFUSION:3:60 @Victim
+disintegrate:
+  display: '%group-color%Дезинтеграция'
+  description: |-
+    Шанс нанести дополнительный урон прочности
+    всей броне врага с каждой атакой.
+  applies-to: Мечи
+  type: ATTACK
+  group: ULTIMATE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 5
+      cooldown: 8
+      effects:
+      - ADD_DURABILITY_ARMOR:-2 @Victim
+    '2':
+      chance: 10
+      cooldown: 8
+      effects:
+      - ADD_DURABILITY_ARMOR:-2 @Victim
+    '3':
+      chance: 15
+      cooldown: 8
+      effects:
+      - ADD_DURABILITY_ARMOR:-2 @Victim
+    '4':
+      chance: 20
+      cooldown: 8
+      effects:
+      - ADD_DURABILITY_ARMOR:-2 @Victim
+shatter:
+  display: '%group-color%Разрушение'
+  description: |-
+    Шанс нанести дополнительный урон прочности
+    всей броне врага с каждой атакой.
+  applies-to: Топоры
+  type: ATTACK
+  group: ULTIMATE
+  applies:
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 5
+      cooldown: 10
+      effects:
+      - ADD_DURABILITY_ARMOR:-2 @Victim
+    '2':
+      chance: 10
+      cooldown: 10
+      effects:
+      - ADD_DURABILITY_ARMOR:-2 @Victim
+    '3':
+      chance: 15
+      cooldown: 10
+      effects:
+      - ADD_DURABILITY_ARMOR:-2 @Victim
+    '4':
+      chance: 20
+      cooldown: 10
+      effects:
+      - ADD_DURABILITY_ARMOR:-2 @Victim
+heavy:
+  display: '%group-color%Тяжелый'
+  description: |-
+    Уменьшает урон от вражеских луков
+    на 2% за уровень.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_PROJECTILE
+  group: ULTIMATE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 4
+      cooldown: 4
+      conditions:
+      - '%attacker is holding% = BOW : %allow%'
+      effects:
+      - DECREASE_DAMAGE:2 @Victim
+    '2':
+      chance: 9
+      cooldown: 4
+      conditions:
+      - '%attacker is holding% = BOW : %allow%'
+      effects:
+      - DECREASE_DAMAGE:4 @Victim
+    '3':
+      chance: 12
+      cooldown: 4
+      conditions:
+      - '%attacker is holding% = BOW : %allow%'
+      effects:
+      - DECREASE_DAMAGE:6 @Victim
+    '4':
+      chance: 16
+      cooldown: 4
+      conditions:
+      - '%attacker is holding% = BOW : %allow%'
+      effects:
+      - DECREASE_DAMAGE:8 @Victim
+    '5':
+      chance: 21
+      cooldown: 4
+      conditions:
+      - '%attacker is holding% = BOW : %allow%'
+      effects:
+      - DECREASE_DAMAGE:10 @Victim
+devour:
+  display: '%group-color%Пожирание'
+  description: Шанс восстановить голод при убийстве мобов.
+  applies-to: Оружие
+  type: KILL_MOB
+  group: UNIQUE
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 10
+      effects:
+      - ADD_FOOD:1
+    '2':
+      chance: 15
+      effects:
+      - ADD_FOOD:1
+    '3':
+      chance: 20
+      effects:
+      - ADD_FOOD:1
+replenish:
+  display: '%group-color%Пополнение'
+  description: Шанс восстановить голод во время добычи.
+  applies-to: Кирки
+  type: MINING
+  group: ELITE
+  applies:
+  - ALL_PICKAXE
+  levels:
+    '1':
+      chance: 30
+      effects:
+      - ADD_FOOD:1
+    '2':
+      chance: 40
+      effects:
+      - ADD_FOOD:2
+    '3':
+      chance: 60
+      effects:
+      - ADD_FOOD:3
+hellfire:
+  display: '%group-color%Адское Пламя'
+  description: Стрелы превращаются в огненные шары.
+  applies-to: Лук
+  type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
+  group: ULTIMATE
+  applies:
+  - BOW
+  levels:
+    '1':
+      chance: 10
+      cooldown: 5
+      effects:
+      - FIREBALL @Victim
+    '2':
+      chance: 25
+      cooldown: 5
+      effects:
+      - FIREBALL @Victim
+    '3':
+      chance: 35
+      cooldown: 5
+      effects:
+      - FIREBALL @Victim
+    '4':
+      chance: 50
+      cooldown: 5
+      effects:
+      - FIREBALL @Victim
+    '5':
+      chance: 70
+      cooldown: 5
+      effects:
+      - FIREBALL @Victim
+missile:
+  display: '%group-color%Ракета'
+  description: Стрелы превращаются в огненные шары.
+  applies-to: Арбалет
+  settings:
+    showActionBar: true
+  type: SHOOT;SHOOT_MOB
+  group: ELITE
+  applies:
+  - CROSSBOW
+  levels:
+    '1':
+      chance: 10
+      cooldown: 3
+      effects:
+      - FIREBALL @Victim
+    '2':
+      chance: 25
+      cooldown: 3
+      effects:
+      - FIREBALL @Victim
+    '3':
+      chance: 35
+      cooldown: 3
+      effects:
+      - FIREBALL @Victim
+    '4':
+      chance: 50
+      cooldown: 3
+      effects:
+      - FIREBALL @Victim
+    '5':
+      chance: 70
+      cooldown: 3
+      effects:
+      - FIREBALL @Victim
+longbow:
+  display: '%group-color%Длинный Лук'
+  description: |-
+    Значительно увеличивает урон, наносимый
+    вражеским игрокам, которые держат
+    лук в руках.
+  applies-to: Лук
+  settings:
+    showActionBar: true
+  type: SHOOT
+  group: ULTIMATE
+  applies:
+  - BOW
+  - CROSSBOW
+  levels:
+    '1':
+      chance: 12
+      cooldown: 4
+      conditions:
+      - '%victim is holding% = BOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>25-50</random number> @Attacker
+    '2':
+      chance: 17
+      cooldown: 4
+      conditions:
+      - '%victim is holding% = BOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>25-50</random number> @Attacker
+    '3':
+      chance: 25
+      cooldown: 4
+      conditions:
+      - '%victim is holding% = BOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>50-100</random number> @Attacker
+    '4':
+      chance: 33
+      cooldown: 4
+      conditions:
+      - '%victim is holding% = BOW : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>50-100</random number> @Attacker
+tank:
+  display: '%group-color%Танк'
+  description: |-
+    Шанс уменьшить урон от вражеских
+    топоров на 2% за уровень.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  group: ULTIMATE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 5
+      cooldown: 3
+      conditions:
+      - '%attacker is holding% contains AXE : %allow%'
+      effects:
+      - DECREASE_DAMAGE:2 @Victim
+    '2':
+      chance: 8
+      cooldown: 3
+      conditions:
+      - '%attacker is holding% contains AXE : %allow%'
+      effects:
+      - DECREASE_DAMAGE:4 @Victim
+    '3':
+      chance: 12
+      cooldown: 3
+      conditions:
+      - '%attacker is holding% contains AXE : %allow%'
+      effects:
+      - DECREASE_DAMAGE:6 @Victim
+    '4':
+      chance: 16
+      cooldown: 3
+      conditions:
+      - '%attacker is holding% contains AXE : %allow%'
+      effects:
+      - DECREASE_DAMAGE:8 @Victim
+swordsman:
+  display: '%group-color%Мечник'
+  description: |-
+    Шанс уменьшить получаемый урон при
+    использовании меча до 22% на максимальном уровне.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  group: ULTIMATE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 4
+      cooldown: 4
+      conditions:
+      - '%victim is holding% contains SWORD : %allow%'
+      effects:
+      - DECREASE_DAMAGE:<random number>1-4</random number> @Victim
+    '2':
+      chance: 9
+      cooldown: 4
+      conditions:
+      - '%attacker is holding% contains SWORD : %allow%'
+      effects:
+      - DECREASE_DAMAGE:<random number>8-12</random number> @Victim
+    '3':
+      chance: 13
+      cooldown: 4
+      conditions:
+      - '%attacker is holding% contains SWORD : %allow%'
+      effects:
+      - DECREASE_DAMAGE:<random number>12-15</random number> @Victim
+    '4':
+      chance: 16
+      cooldown: 4
+      conditions:
+      - '%attacker is holding% contains SWORD : %allow%'
+      effects:
+      - DECREASE_DAMAGE:<random number>15-18</random number> @Victim
+    '5':
+      chance: 21
+      cooldown: 4
+      conditions:
+      - '%attacker is holding% contains SWORD : %allow%'
+      effects:
+      - DECREASE_DAMAGE:<random number>18-22</random number> @Victim
+critical:
+  display: '%group-color%Критический'
+  description: Увеличивает урон, наносимый критическим ударом.
+  applies-to: Мечи
+  type: ATTACK_MOB;ATTACK
+  group: ELITE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 5
+      cooldown: 5
+      conditions:
+      - '%is critical% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:10
+    '2':
+      chance: 6
+      cooldown: 5
+      conditions:
+      - '%is critical% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:15
+    '3':
+      chance: 10
+      cooldown: 5
+      conditions:
+      - '%is critical% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:20
+rebound:
+  display: '%group-color%Отскок'
+  description: Восстанавливает немного здоровья после убийств.
+  applies-to: Оружие
+  type: KILL_PLAYER;KILL_MOB
+  settings:
+    showActionBar: true
+  group: LEGENDARY
+  applies:
+  - ALL_AXE
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 25
+      cooldown: 5
+      effects:
+      - ADD_HEALTH:2 @Attacker
+    '2':
+      chance: 35
+      cooldown: 5
+      effects:
+      - ADD_HEALTH:4 @Attacker
+    '3':
+      chance: 45
+      cooldown: 5
+      effects:
+      - ADD_HEALTH:6 @Attacker
+thunderlord:
+  display: '%group-color%Громовержец'
+  description: |-
+    Бьет монстров молнией
+    каждые 3 последовательных удара.
+  applies-to: Оружие
+  type: ATTACK_MOB
+  group: LEGENDARY
+  applies:
+  - ALL_AXE
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 25
+      cooldown: 2
+      conditions:
+      - '%attacker combo% > 2 : %allow%'
+      effects:
+      - LIGHTNING @Victim
+      - RESET_COMBO @Attacker
+    '2':
+      chance: 45
+      cooldown: 2
+      conditions:
+      - '%attacker combo% > 2 : %allow%'
+      effects:
+      - LIGHTNING @Victim
+      - RESET_COMBO @Attacker
+    '3':
+      chance: 75
+      cooldown: 2
+      conditions:
+      - '%attacker combo% > 2 : %allow%'
+      effects:
+      - LIGHTNING @Victim
+      - RESET_COMBO @Attacker
+netherling:
+  display: '%group-color%Мастер Ада'
+  description: Удваивает урон мобам в Аду.
+  applies-to: Мечи
+  type: ATTACK_MOB
+  group: ULTIMATE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 25
+      conditions:
+      - '%player world% contains NETHER : %allow%'
+      effects:
+      - INCREASE_DAMAGE:50
+    '2':
+      chance: 50
+      conditions:
+      - '%player world% contains NETHER : %allow%'
+      effects:
+      - INCREASE_DAMAGE:50
+    '3':
+      chance: 75
+      conditions:
+      - '%player world% contains NETHER : %allow%'
+      effects:
+      - INCREASE_DAMAGE:50
+endmaster:
+  display: '%group-color%Эндермастер'
+  description: Удваивает урон мобам в Энде.
+  applies-to: Мечи
+  type: ATTACK_MOB
+  group: ULTIMATE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 25
+      conditions:
+      - '%player world% contains _END : %allow%'
+      effects:
+      - INCREASE_DAMAGE:50
+    '2':
+      chance: 50
+      conditions:
+      - '%player world% contains _END : %allow%'
+      effects:
+      - INCREASE_DAMAGE:50
+    '3':
+      chance: 75
+      conditions:
+      - '%player world% contains _END : %allow%'
+      effects:
+      - INCREASE_DAMAGE:50
+creeperarmor:
+  display: '%group-color%Криперская Броня'
+  description: |-
+    Шанс получить иммунитет к урону от взрывов, на
+    высоких уровнях есть шанс исцелиться.
+  applies-to: Броня
+  type: EXPLOSION
+  group: ULTIMATE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 25
+      effects:
+      - CANCEL_EVENT
+    '2':
+      chance: 50
+      effects:
+      - CANCEL_EVENT
+    '3':
+      chance: 75
+      effects:
+      - CANCEL_EVENT
+      - ADD_HEALTH:<random number>1-2</random number>
+spirits:
+  display: '%group-color%Духи'
+  description: Шанс призвать охранных ифритов.
+  applies-to: Броня
+  type: DEFENSE
+  settings:
+    showActionBar: true
+  group: ULTIMATE
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 1
+      cooldown: 30
+      effects:
+      - GUARD:BLAZE:8:3:@Victim
+    '2':
+      chance: 2
+      cooldown: 30
+      effects:
+      - GUARD:BLAZE:8:4:@Victim
+    '3':
+      chance: 3
+      cooldown: 30
+      effects:
+      - GUARD:BLAZE:8:4:@Victim
+    '4':
+      chance: 4
+      cooldown: 30
+      effects:
+      - GUARD:BLAZE:8:4:@Victim
+    '5':
+      chance: 5
+      cooldown: 30
+      effects:
+      - GUARD:BLAZE:8:4:@Victim
+    '6':
+      chance: 6
+      cooldown: 30
+      effects:
+      - GUARD:BLAZE:8:4:@Victim
+    '7':
+      chance: 7
+      cooldown: 30
+      effects:
+      - GUARD:BLAZE:8:4:@Victim
+    '8':
+      chance: 8
+      cooldown: 30
+      effects:
+      - GUARD:BLAZE:8:4:@Victim
+    '9':
+      chance: 9
+      cooldown: 30
+      effects:
+      - GUARD:BLAZE:8:4:@Victim
+    '10':
+      chance: 10
+      cooldown: 30
+      effects:
+      - GUARD:BLAZE:8:5:@Victim
+bleed:
+  display: '%group-color%Кровотечение'
+  description: Заставляет вашего противника истекать кровью.
+  applies-to: Топоры
+  type: ATTACK;ATTACK_MOB
+  settings:
+    showActionBar: true
+  group: ULTIMATE
+  applies:
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 8
+      effects:
+      - POTION:SLOW:0:100 @Victim
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+    '2':
+      chance: 15
+      effects:
+      - POTION:SLOW:0:100 @Victim
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+    '3':
+      chance: 23
+      effects:
+      - POTION:SLOW:0:100 @Victim
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+    '4':
+      chance: 30
+      effects:
+      - POTION:SLOW:0:100 @Victim
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+    '5':
+      chance: 44
+      effects:
+      - POTION:SLOW:0:100 @Victim
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+    '6':
+      chance: 60
+      effects:
+      - POTION:SLOW:0:100 @Victim
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+      - WAIT:20
+      - DO_HARM:<random number>1-3</random number> @Victim
+lavawalker:
+  display: '%group-color%Хождение по Лаве'
+  description: Позволяет ходить по лаве.
+  applies-to: Ботинки
+  type: EFFECT_STATIC
+  group: LEGENDARY
+  applies:
+  - ALL_BOOTS
+  levels:
+    '1':
+      effects:
+      - LAVA_WALKER
+waterwalker:
+  display: '%group-color%Хождение по Воде'
+  description: Позволяет ходить по воде.
+  applies-to: Ботинки
+  type: EFFECT_STATIC
+  group: LEGENDARY
+  applies:
+  - ALL_BOOTS
+  levels:
+    '1':
+      effects:
+      - WATER_WALKER
+aqua:
+  display: '%group-color%Аква'
+  description: Наносит двойной урон в воде.
+  applies-to: Ботинки
+  type: ATTACK;ATTACK_MOB
+  group: LEGENDARY
+  applies:
+  - ALL_BOOTS
+  levels:
+    '1':
+      chance: 8
+      cooldown: 3
+      conditions:
+      - '%is under water% = TRUE : %allow%'
+      effects:
+      - DOUBLE_DAMAGE
+    '2':
+      chance: 13
+      cooldown: 3
+      conditions:
+      - '%is under water% = TRUE : %allow%'
+      effects:
+      - DOUBLE_DAMAGE
+    '3':
+      chance: 19
+      cooldown: 5
+      conditions:
+      - '%is under water% = TRUE : %allow%'
+      effects:
+      - DOUBLE_DAMAGE
+    '4':
+      chance: 23
+      cooldown: 5
+      conditions:
+      - '%is under water% = TRUE : %allow%'
+      effects:
+      - DOUBLE_DAMAGE
+judgement:
+  display: '%group-color%Суд'
+  description: |-
+    Шанс отравить противника и
+    получить регенерацию.
+  applies-to: Элитры
+  type: DEFENSE;DEFENSE_MOB
+  group: LEGENDARY
+  applies:
+  - ELYTRA
+  levels:
+    '1':
+      chance: 6
+      cooldown: 20
+      effects:
+      - POTION:POISON:0:100 @Attacker
+      - POTION:REGENERATION:0:100 @Victim
+    '2':
+      chance: 8
+      cooldown: 20
+      effects:
+      - POTION:POISON:0:100 @Attacker
+      - POTION:REGENERATION:0:100 @Victim
+    '3':
+      chance: 10
+      cooldown: 20
+      effects:
+      - POTION:POISON:0:100 @Attacker
+      - POTION:REGENERATION:0:100 @Victim
+    '4':
+      chance: 12
+      cooldown: 20
+      effects:
+      - POTION:POISON:0:100 @Attacker
+      - POTION:REGENERATION:1:60 @Victim
+    '5':
+      chance: 16
+      cooldown: 25
+      effects:
+      - POTION:POISON:0:100 @Attacker
+      - POTION:REGENERATION:1:100 @Victim
+divert:
+  display: '%group-color%Отвод'
+  description: |-
+    Шанс отравить противника и
+    получить регенерацию.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  group: LEGENDARY
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 6
+      cooldown: 20
+      effects:
+      - POTION:POISON:0:100 @Attacker
+      - POTION:REGENERATION:0:100 @Victim
+    '2':
+      chance: 8
+      cooldown: 20
+      effects:
+      - POTION:POISON:0:100 @Attacker
+      - POTION:REGENERATION:0:100 @Victim
+    '3':
+      chance: 10
+      cooldown: 20
+      effects:
+      - POTION:POISON:0:100 @Attacker
+      - POTION:REGENERATION:0:100 @Victim
+    '4':
+      chance: 12
+      cooldown: 20
+      effects:
+      - POTION:POISON:0:100 @Attacker
+      - POTION:REGENERATION:1:60 @Victim
+    '5':
+      chance: 16
+      cooldown: 25
+      effects:
+      - POTION:POISON:0:100 @Attacker
+      - POTION:REGENERATION:1:100 @Victim
+unholy:
+  display: '%group-color%Нечестивый'
+  description: При получении урона накладывает на атакующего иссушение и слабость
+  applies-to: Броня
+  type: DEFENSE
+  group: LEGENDARY
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 2
+      cooldown: 40
+      effects:
+      - POTION:WITHER:0:60 @Attacker
+      - POTION:WEAKNESS:0:100 @Attacker
+    '2':
+      chance: 4
+      cooldown: 40
+      effects:
+      - POTION:WITHER:1:60 @Attacker
+      - POTION:WEAKNESS:0:5 @Attacker
+    '3':
+      chance: 6
+      cooldown: 40
+      effects:
+      - POTION:WITHER:1:60 @Attacker
+      - POTION:WEAKNESS:0:100 @Attacker
+    '4':
+      chance: 8
+      cooldown: 40
+      effects:
+      - POTION:WITHER:1:60 @Attacker
+      - POTION:WEAKNESS:0:100 @Attacker
+    '5':
+      chance: 10
+      cooldown: 40
+      effects:
+      - POTION:WITHER:1:60 @Attacker
+      - POTION:WEAKNESS:0:100 @Attacker
+chaos:
+  display: '%group-color%Хаос'
+  description: Наносит эффекты слабости и иссушения.
+  applies-to: Трезубец
+  type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
+  group: LEGENDARY
+  applies:
+  - TRIDENT
+  levels:
+    '1':
+      chance: 2
+      cooldown: 40
+      effects:
+      - POTION:WITHER:0:60 @Victim
+      - POTION:WEAKNESS:0:100 @Victim
+    '2':
+      chance: 4
+      cooldown: 40
+      effects:
+      - POTION:WITHER:1:60 @Victim
+      - POTION:WEAKNESS:0:5 @Victim
+    '3':
+      chance: 6
+      cooldown: 40
+      effects:
+      - POTION:WITHER:1:60 @Victim
+      - POTION:WEAKNESS:0:100 @Victim
+    '4':
+      chance: 8
+      cooldown: 40
+      effects:
+      - POTION:WITHER:1:60 @Victim
+      - POTION:WEAKNESS:0:100 @Victim
+    '5':
+      chance: 10
+      cooldown: 40
+      effects:
+      - POTION:WITHER:1:60 @Victim
+      - POTION:WEAKNESS:0:100 @Victim
+convulse:
+  display: '%group-color%Судорога'
+  description: |-
+    Шанс подбросить ваших
+    атакующих в воздух.
+  applies-to: Ботинки
+  type: DEFENSE;DEFENSE_MOB
+  group: LEGENDARY
+  applies:
+  - ALL_BOOTS
+  levels:
+    '1':
+      chance: 8
+      cooldown: 10
+      effects:
+      - BOOST:UP:5 @Attacker
+    '2':
+      chance: 10
+      cooldown: 10
+      effects:
+      - BOOST:UP:6 @Attacker
+    '3':
+      chance: 12
+      cooldown: 10
+      effects:
+      - BOOST:UP:7 @Attacker
+    '4':
+      chance: 14
+      cooldown: 10
+      effects:
+      - BOOST:UP:8 @Attacker
+    '5':
+      chance: 16
+      cooldown: 10
+      effects:
+      - BOOST:UP:9 @Attacker
+    '6':
+      chance: 18
+      cooldown: 10
+      effects:
+      - BOOST:UP:10 @Attacker
+chunky:
+  display: '%group-color%Массивный'
+  description: Шанс получать меньше урона.
+  applies-to: Нагрудники
+  type: DEFENSE;DEFENSE_MOB
+  group: LEGENDARY
+  applies:
+  - ALL_CHESTPLATE
+  levels:
+    '1':
+      chance: 5
+      cooldown: 10
+      effects:
+      - NEGATE_DAMAGE:10 @Victim
+    '2':
+      chance: 10
+      cooldown: 10
+      effects:
+      - NEGATE_DAMAGE:20 @Victim
+    '3':
+      chance: 12
+      cooldown: 10
+      effects:
+      - NEGATE_DAMAGE:30 @Victim
+    '4':
+      chance: 15
+      cooldown: 10
+      effects:
+      - NEGATE_DAMAGE:40 @Victim
+    '5':
+      chance: 18
+      cooldown: 10
+      effects:
+      - NEGATE_DAMAGE:50 @Victim
+    '6':
+      chance: 20
+      cooldown: 10
+      effects:
+      - NEGATE_DAMAGE:60 @Victim
+barbarian:
+  display: '%group-color%Варвар'
+  description: Шанс наносить больше урона топором.
+  applies-to: Топоры
+  type: ATTACK;ATTACK_MOB
+  settings:
+    showActionBar: true
+  group: LEGENDARY
+  applies:
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 8
+      cooldown: 8
+      conditions:
+      - '%attacker is holding% contains AXE : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>25-100</random number> @Victim
+    '2':
+      chance: 15
+      cooldown: 8
+      conditions:
+      - '%attacker is holding% contains AXE : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>25-100</random number> @Victim
+    '3':
+      chance: 19
+      cooldown: 8
+      conditions:
+      - '%attacker is holding% contains AXE : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>25-100</random number> @Victim
+    '4':
+      chance: 25
+      cooldown: 8
+      conditions:
+      - '%attacker is holding% contains AXE : %allow%'
+      effects:
+      - INCREASE_DAMAGE:<random number>25-100</random number> @Victim
+lucid:
+  display: '%group-color%Ясность'
+  description: |-
+    Шанс избавиться от слепоты и
+    получить ночное зрение при ударе.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  group: LEGENDARY
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 22
+      cooldown: 5
+      effects:
+      - CURE:BLINDNESS @Victim
+      - POTION:NIGHT_VISION:0:40 @Victim
+    '2':
+      chance: 32
+      cooldown: 5
+      effects:
+      - CURE:BLINDNESS @Victim
+      - POTION:NIGHT_VISION:0:60 @Victim
+    '3':
+      chance: 42
+      cooldown: 5
+      effects:
+      - CURE:BLINDNESS @Victim
+      - POTION:NIGHT_VISION:0:80 @Victim
+doublestrike:
+  display: '%group-color%Двойной Удар'
+  description: Шанс ударить дважды.
+  applies-to: Мечи
+  type: ATTACK;ATTACK_MOB
+  settings:
+    showActionBar: true
+  group: LEGENDARY
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 8
+      cooldown: 15
+      effects:
+      - WAIT:20
+      - DO_HARM:%damage% @Victim
+      - BLOOD @Victim
+    '2':
+      chance: 13
+      cooldown: 15
+      effects:
+      - WAIT:20
+      - DO_HARM:%damage% @Victim
+      - BLOOD @Victim
+    '3':
+      chance: 19
+      cooldown: 15
+      effects:
+      - WAIT:20
+      - DO_HARM:%damage% @Victim
+      - BLOOD @Victim
+gears:
+  display: '%group-color%Шестерни'
+  description: Дополнительная скорость при ношении.
+  applies-to: Ботинки
+  type: EFFECT_STATIC
+  group: LEGENDARY
+  applies:
+  - ALL_BOOTS
+  levels:
+    '1':
+      effects:
+      - POTION:SPEED:0
+    '2':
+      effects:
+      - POTION:SPEED:1
+    '3':
+      effects:
+      - POTION:SPEED:2
+inflame:
+  display: '%group-color%Воспламенение'
+  description: Поджигает всех игроков в радиусе.
+  applies-to: Топоры
+  group: LEGENDARY
+  type: ATTACK
+  settings:
+    showActionBar: true
+  applies:
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 10
+      cooldown: 4
+      effects:
+      - PARTICLE:FALLING_LAVA:5:0 @Aoe{radius=2,target=damageable}
+      - BURN:40 @Aoe{radius=2,target=damageable}
+    '2':
+      chance: 12
+      cooldown: 5
+      effects:
+      - PARTICLE:FALLING_LAVA:5:0 @Aoe{radius=4,target=damageable}
+      - BURN:50 @Aoe{radius=4,target=damageable}
+    '3':
+      chance: 16
+      cooldown: 5
+      effects:
+      - PARTICLE:FALLING_LAVA:5:0 @Aoe{radius=6,target=damageable}
+      - BURN:60 @Aoe{radius=6,target=damageable}
+immolation:
+  display: '%group-color%Самосожжение'
+  description: Поджигает всех мобов в радиусе.
+  applies-to: Мечи
+  group: ULTIMATE
+  type: ATTACK_MOB
+  settings:
+    showActionBar: true
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 10
+      cooldown: 4
+      effects:
+      - PARTICLE:FALLING_LAVA:5:0 @Aoe{radius=2,target=mobs}
+      - BURN:40 @Aoe{radius=2,target=mobs}
+    '2':
+      chance: 12
+      cooldown: 5
+      effects:
+      - PARTICLE:FALLING_LAVA:5:0@Aoe{radius=4,target=mobs}
+      - BURN:50 @Aoe{radius=4,target=mobs}
+    '3':
+      chance: 16
+      cooldown: 5
+      effects:
+      - PARTICLE:FALLING_LAVA:5:0 @Aoe{radius=6,target=mobs}
+      - BURN:60 @Aoe{radius=6,target=mobs}
+# killaura:
+#   display: '%group-color%Убийственная Аура'
+#   description: |-
+#     Шанс убить нескольких
+#     монстров в радиусе.
+#   applies-to: Мечи
+#   group: LEGENDARY
+#   type: ATTACK_MOB
+#   settings:
+#     showActionBar: true
+#   applies:
+#   - ALL_SWORD
+#   levels:
+#     '1':
+#       chance: 5
+#       cooldown: 3
+#       effects:
+#       - PARTICLE:SPELL_MOB:5:0 @Aoe{radius=2,target=mobs}
+#       - KILL:1 @Aoe{radius=2,target=mobs}
+#     '2':
+#       chance: 8
+#       cooldown: 4
+#       effects:
+#       - PARTICLE:SPELL_MOB:5:0 @Aoe{radius=2,target=mobs}
+#       - KILL:1 @Aoe{radius=2,target=mobs}
+#     '3':
+#       chance: 12
+#       cooldown: 5
+#       effects:
+#       - PARTICLE:SPELL_MOB:5:0 @Aoe{radius=3,target=mobs}
+#       - KILL:1 @Aoe{radius=3,target=mobs}
+#     '4':
+#       chance: 15
+#       cooldown: 5
+#       effects:
+#       - PARTICLE:SPELL_MOB:5:0 @Aoe{radius=3,target=mobs}
+#       - KILL:1 @Aoe{radius=3,target=mobs}
+#     '5':
+#       chance: 18
+#       cooldown: 6
+#       effects:
+#       - PARTICLE:SPELL_MOB:5:0 @Aoe{radius=4,target=mobs}
+#       - KILL:1 @Aoe{radius=4,target=mobs}
+inquisitive:
+  display: '%group-color%Любознательность'
+  description: Шанс увеличить выпадение опыта от мобов.
+  applies-to: Мечи
+  type: KILL_MOB
+  group: LEGENDARY
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 5
+      cooldown: 6
+      effects:
+      - EXP:<math>%exp% * (1.0 + 0.25 * %level%)</math> @Victim
+    '2':
+      chance: 10
+      cooldown: 6
+      effects:
+      - EXP:<math>%exp% * (1.0 + 0.25 * %level%)</math> @Victim
+    '3':
+      chance: 15
+      cooldown: 6
+      effects:
+      - EXP:<math>%exp% * (1.0 + 0.25 * %level%)</math> @Victim
+    '4':
+      chance: 20
+      cooldown: 6
+      effects:
+      - EXP:<math>%exp% * (1.0 + 0.25 * %level%)</math> @Victim
+lifesteal:
+  display: '%group-color%Вампиризм'
+  description: |-
+    Шанс украсть здоровье
+    при атаке.
+  applies-to: Мечи
+  type: ATTACK;ATTACK_MOB
+  group: LEGENDARY
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 9
+      cooldown: 15
+      effects:
+      - STEAL_HEALTH:<random number>1-3</random number> @Attacker
+    '2':
+      chance: 13
+      cooldown: 15
+      effects:
+      - STEAL_HEALTH:<random number>1-3</random number> @Attacker
+    '3':
+      chance: 17
+      cooldown: 15
+      effects:
+      - STEAL_HEALTH:<random number>1-4</random number> @Attacker
+    '4':
+      chance: 21
+      cooldown: 15
+      effects:
+      - STEAL_HEALTH:<random number>1-5</random number> @Attacker
+    '5':
+      chance: 25
+      cooldown: 15
+      effects:
+      - STEAL_HEALTH:<random number>1-5</random number> @Attacker
+overload:
+  display: '%group-color%Перегрузка'
+  description: Разблокирует дополнительные сердца.
+  applies-to: Броня
+  type: EFFECT_STATIC
+  group: LEGENDARY
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      effects:
+      - POTION:HEALTH_BOOST:0
+    '2':
+      effects:
+      - POTION:HEALTH_BOOST:1
+    '3':
+      effects:
+      - POTION:HEALTH_BOOST:2
+armored:
+  display: '%group-color%Бронированный'
+  description: "Уменьшает урон от вражеских
+
+    мечей на 2% за уровень."
+  applies-to: Броня
+  type: DEFENSE
+  group: LEGENDARY
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 6
+      cooldown: 8
+      conditions:
+      - '%attacker is holding% contains SWORD : %allow%'
+      effects:
+      - DECREASE_DAMAGE:2 @Attacker
+    '2':
+      chance: 12
+      cooldown: 8
+      conditions:
+      - '%attacker is holding% contains SWORD : %allow%'
+      effects:
+      - DECREASE_DAMAGE:4 @Attacker
+    '3':
+      chance: 16
+      cooldown: 8
+      conditions:
+      - '%attacker is holding% contains SWORD : %allow%'
+      effects:
+      - DECREASE_DAMAGE:6 @Attacker
+    '4':
+      chance: 20
+      cooldown: 8
+      conditions:
+      - '%attacker is holding% contains SWORD : %allow%'
+      effects:
+      - DECREASE_DAMAGE:8 @Attacker
+blacksmith:
+  display: '%group-color%Кузнец'
+  description: |-
+    Ремонтирует ваше оружие в обмен
+    на уменьшение наносимого урона.
+  applies-to: Топор
+  type: ATTACK;ATTACK_MOB
+  group: LEGENDARY
+  applies:
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 9
+      cooldown: 3
+      effects:
+      - ADD_DURABILITY_CURRENT_ITEM:3
+      - HALF_DAMAGE
+      - PARTICLE:BLOCK_DUST:20:1
+    '2':
+      chance: 15
+      cooldown: 3
+      effects:
+      - ADD_DURABILITY_CURRENT_ITEM:3
+      - HALF_DAMAGE
+      - PARTICLE:BLOCK_DUST:20:1
+    '3':
+      chance: 23
+      cooldown: 3
+      effects:
+      - ADD_DURABILITY_CURRENT_ITEM:3
+      - HALF_DAMAGE
+      - PARTICLE:BLOCK_DUST:20:1
+    '4':
+      chance: 31
+      cooldown: 3
+      effects:
+      - ADD_DURABILITY_CURRENT_ITEM:4
+      - HALF_DAMAGE
+      - PARTICLE:BLOCK_DUST:20:1
+    '5':
+      chance: 39
+      cooldown: 3
+      effects:
+      - ADD_DURABILITY_CURRENT_ITEM:4
+      - HALF_DAMAGE
+      - PARTICLE:BLOCK_DUST:20:1
+immortal:
+  display: '%group-color%Бессмертный'
+  description: |-
+    Шанс предотвратить потерю
+    прочности вашей брони.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  group: FABLED
+  applies:
+  - ALL_ARMOR
+  levels:
+    '1':
+      chance: 12
+      cooldown: 40
+      effects:
+      - ADD_DURABILITY_ARMOR:10 @Victim
+    '2':
+      chance: 18
+      cooldown: 40
+      effects:
+      - ADD_DURABILITY_ARMOR:10 @Victim
+    '3':
+      chance: 25
+      cooldown: 40
+      effects:
+      - ADD_DURABILITY_ARMOR:10 @Victim
+    '4':
+      chance: 31
+      cooldown: 40
+      effects:
+      - ADD_DURABILITY_ARMOR:10 @Victim
+unbreakable:
+  display: '%group-color%Нерушимый'
+  description: Инструменты с этим зачарованием становятся нерушимыми
+  applies-to: Инструменты
+  type: MINING;ATTACK;ATTACK_MOB
+  group: FABLED
+  applies:
+  - ALL_TOOLS
+  levels:
+    '1':
+      effects:
+      - REPAIR
+abiding:
+  display: '%group-color%Стойкий'
+  description: Оружие с этим зачарованием становится нерушимым
+  applies-to: Оружие
+  type: ATTACK;ATTACK_MOB;SHOOT;SHOOT_MOB
+  group: LEGENDARY
+  applies:
+  - ALL_SWORD
+  - BOW
+  levels:
+    '1':
+      effects:
+      - REPAIR 
+striker:
+  display: '%group-color%Ударник'
+  description: Обрушивает стрелы на противника.
+  applies-to: Лук
+  type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
+  group: ULTIMATE
+  applies:
+  - BOW
+  levels:
+    '1':
+      chance: 15
+      cooldown: 8
+      effects:
+      - SPAWN_ARROWS @Victim
+    '2':
+      chance: 18
+      cooldown: 8
+      effects:
+      - SPAWN_ARROWS @Victim
+    '3':
+      chance: 22
+      cooldown: 8
+      effects:
+      - SPAWN_ARROWS @Victim
+sniper:
+  display: '%group-color%Снайпер'
+  description: |-
+    Попадания в голову из лука
+    наносят двойной урон.
+  applies-to: Лук
+  type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
+  group: ULTIMATE
+  applies:
+  - BOW
+  levels:
+    '1':
+      chance: 15
+      cooldown: 5
+      conditions:
+      - '%is headshot% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:100 @Attacker
+    '2':
+      chance: 20
+      cooldown: 5
+      conditions:
+      - '%is headshot% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:100 @Attacker
+    '3':
+      chance: 25
+      cooldown: 5
+      conditions:
+      - '%is headshot% = false : %stop%'
+      effects:
+      - INCREASE_DAMAGE:100 @Attacker
+    '4':
+      chance: 30
+      cooldown: 5
+      conditions:
+      - '%is headshot% = false : %stop%'
+      effects:
+      - INCREASE_DAMAGE:100 @Attacker
+    '5':
+      chance: 35
+      cooldown: 5
+      conditions:
+      - '%is headshot% = false : %stop%'
+      effects:
+      - INCREASE_DAMAGE:100 @Attacker
+deadshot:
+  display: '%group-color%Меткий Стрелок'
+  description: |-
+    Попадания в голову трезубцем
+    наносят двойной урон.
+  applies-to: Трезубец
+  type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
+  group: LEGENDARY
+  applies:
+  - TRIDENT
+  levels:
+    '1':
+      chance: 15
+      cooldown: 5
+      conditions:
+      - '%is headshot% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:100 @Attacker
+    '2':
+      chance: 20
+      cooldown: 5
+      conditions:
+      - '%is headshot% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:100 @Attacker
+    '3':
+      chance: 25
+      cooldown: 5
+      conditions:
+      - '%is headshot% = false : %stop%'
+      effects:
+      - INCREASE_DAMAGE:100 @Attacker
+    '4':
+      chance: 30
+      cooldown: 5
+      conditions:
+      - '%is headshot% = false : %stop%'
+      effects:
+      - INCREASE_DAMAGE:100 @Attacker
+    '5':
+      chance: 35
+      cooldown: 5
+      conditions:
+      - '%is headshot% = false : %stop%'
+      effects:
+      - INCREASE_DAMAGE:100 @Attacker
+soulbound:
+  display: '%group-color%Душевная Связь'
+  description: Шанс сохранить предмет после смерти.
+  applies-to: Оружие + Инструменты + Луки
+  type: DEATH;PASSIVE_DEATH
+  group: FABLED
+  applies:
+  - ALL_TOOLS
+  - ALL_SWORD
+  - BOW
+  - CROSSBOW
+  levels:
+    '1':
+      chance: 4
+      cooldown: 300
+      effects:
+      - KEEP_ON_DEATH
+    '2':
+      chance: 6
+      cooldown: 300
+      effects:
+      - KEEP_ON_DEATH
+    '3':
+      chance: 8
+      cooldown: 300
+      effects:
+      - KEEP_ON_DEATH
+neutralize:
+  display: '%group-color%Нейтрализация'
+  description: Шанс разоружить противника.
+  applies-to: Лук, Арбалет
+  settings:
+    showActionBar: true
+  type: SHOOT
+  group: FABLED
+  applies:
+  - BOW
+  - CROSSBOW
+  levels:
+    '1':
+      chance: 3
+      cooldown: 35
+      effects:
+      - DISARM @Victim
+    '2':
+      chance: 6
+      cooldown: 35
+      effects:
+      - DISARM @Victim
+phoenix:
+  display: '%group-color%Феникс'
+  description: Шанс воскреснуть после смерти.
+  applies-to: Нагрудники
+  type: DEATH
+  group: FABLED
+  applies:
+  - ALL_CHESTPLATE
+  levels:
+    '1':
+      chance: 5
+      cooldown: 20
+      conditions:
+      - "%victim has enchantment in CHESTPLATE of phoenix% = true : %allow%"
+      effects:
+      - REVIVE @Victim
+    '2':
+      chance: 7
+      cooldown: 20
+      conditions:
+      - "%victim has enchantment in CHESTPLATE of phoenix% = true : %allow%"
+      effects:
+      - REVIVE @Victim
+    '3':
+      chance: 9
+      cooldown: 20
+      conditions:
+      - "%victim has enchantment in CHESTPLATE of phoenix% = true : %allow%"
+      effects:
+      - REVIVE @Victim
+strife:
+  display: '%group-color%Раздор'
+  description: Увеличивает урон трезубца в ближнем бою.
+  applies-to: Трезубец
+  type: ATTACK;ATTACK_MOB
+  group: LEGENDARY
+  applies:
+  - TRIDENT
+  levels:
+    '1':
+      chance: 5
+      cooldown: 3
+      effects:
+      - INCREASE_DAMAGE:15
+    '2':
+      chance: 10
+      cooldown: 6
+      effects:
+      - INCREASE_DAMAGE:25
+    '3':
+      chance: 15
+      cooldown: 8
+      effects:
+      - INCREASE_DAMAGE:30
+spark:
+  display: '%group-color%Искра'
+  description: Поджигает противников.
+  applies-to: Трезубец
+  type: ATTACK;ATTACK_MOB;SHOOT;SHOOT_MOB
+  group: ELITE
+  applies:
+  - TRIDENT
+  levels:
+    '1':
+      chance: 25
+      cooldown: 3
+      effects:
+      - BURN:40 @Victim
+    '2':
+      chance: 35
+      cooldown: 6
+      effects:
+      - BURN:40 @Victim
+    '3':
+      chance: 15
+      cooldown: 8
+      effects:
+      - BURN:40 @Victim
+bluntforce:
+  display: '%group-color%Сокрушительная Сила'
+  description: Шанс ударить с огромной силой.
+  applies-to: Топоры
+  group: ELITE
+  type: ATTACK
+  settings:
+    showActionBar: true
+  applies:
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 5
+      cooldown: 5
+      effects:
+      - DO_HARM:1 @Attacker
+    '2':
+      chance: 8
+      cooldown: 5
+      effects:
+      - DO_HARM:2 @Attacker
+    '3':
+      chance: 10
+      cooldown: 5
+      effects:
+      - DO_HARM:3 @Attacker
+    '4':
+      chance: 12
+      cooldown: 5
+      effects:
+      - DO_HARM:4 @Attacker
+aegis:
+  display: '%group-color%Эгида'
+  description: Шанс получить ускорение при получении урона от падения.
+  applies-to: Ботинки
+  type: FALL_DAMAGE
+  group: ULTIMATE
+  applies:
+  - ALL_BOOTS
+  levels:
+    '1':
+      chance: 40
+      cooldown: 3
+      effects:
+      - POTION:SPEED:0:60
+    '2':
+      chance: 60
+      cooldown: 3
+      effects:
+      - POTION:SPEED:1:60
+    '3':
+      chance: 70
+      cooldown: 3
+      effects:
+      - POTION:SPEED:2:60
+plummet:
+  display: '%group-color%Обрушение'
+  description: |-
+    Наносит урон ближайшим мобам
+    при получении урона от падения.
+  applies-to: Ботинки
+  type: FALL_DAMAGE
+  settings:
+    showActionBar: true
+  group: ULTIMATE
+  applies:
+  - ALL_BOOTS
+  levels:
+    '1':
+      chance: 40
+      effects:
+      - DO_HARM:2 @Aoe{radius=3,target=mobs}
+    '2':
+      chance: 80
+      effects:
+      - DO_HARM:3 @Aoe{radius=5,target=mobs}
+    '3':
+      effects:
+      - DO_HARM:5 @Aoe{radius=8,target=mobs}
+suspend:
+  display: '%group-color%Удержание'
+  description: Шанс не отбрасывать мобов при ударе.
+  applies-to: Мечи
+  type: ATTACK_MOB
+  group: ELITE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 40
+      effects:
+      - STOP_KNOCKBACK @Victim
+    '2':
+      chance: 80
+      effects:
+      - STOP_KNOCKBACK @Victim
+    '3':
+      effects:
+      - STOP_KNOCKBACK @Victim
+nightowl:
+  display: '%group-color%Ночная Сова'
+  description: Наносит больше урона мобам ночью.
+  applies-to: Мечи
+  type: ATTACK_MOB
+  group: ULTIMATE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 40
+      conditions:
+      - '%is night% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:25
+    '2':
+      chance: 60
+      conditions:
+      - '%is night% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:35
+    '3':
+      chance: 80
+      conditions:
+      - '%is night% = true : %allow%'
+      effects:
+      - INCREASE_DAMAGE:45
+nightwalker:
+  display: '%group-color%Ночной Странник'
+  description: Замораживает мобов ночью.
+  applies-to: Мечи
+  type: ATTACK_MOB
+  group: ELITE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 40
+      conditions:
+      - '%is night% = true : %allow%'
+      effects:
+      - POTION:SLOW:10:400 @Victim
+    '2':
+      chance: 70
+      conditions:
+      - '%is night% = true : %allow%'
+      effects:
+      - POTION:SLOW:10:400 @Victim
+    '3':
+      chance: 100
+      conditions:
+      - '%is night% = true : %allow%'
+      effects:
+      - POTION:SLOW:10:400 @Victim
+launch:
+  display: '%group-color%Запуск'
+  description: Подбрасывает вас при нажатии правой кнопки мыши.
+  applies-to: Мечи
+  type: RIGHT_CLICK
+  settings:
+    showActionBar: true
+  group: LEGENDARY
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 20
+      cooldown: 15
+      effects:
+      - BOOST:UP:8
+      - PARTICLE:CLOUD:20:2
+    '2':
+      chance: 27
+      cooldown: 15
+      effects:
+      - BOOST:UP:9
+      - PARTICLE:CLOUD:20:2
+    '3':
+      chance: 35
+      cooldown: 10
+      effects:
+      - BOOST:UP:10
+      - PARTICLE:CLOUD:20:2
+slingshot:
+  display: '%group-color%Рогатка'
+  description: Ускоряет ваш полёт при нажатии правой кнопки мыши.
+  applies-to: Элитры
+  type: RIGHT_CLICK
+  group: LEGENDARY
+  applies:
+  - ELYTRA
+  levels:
+    '1':
+      chance: 20
+      cooldown: 15
+      conditions:
+      - '%is holding% contains FIREWORK : %stop%'
+      effects:
+      - BOOST:UP:10
+    '2':
+      chance: 40
+      cooldown: 10
+      conditions:
+      - '%is holding% contains FIREWORK : %stop%'
+      effects:
+      - BOOST:UP:12
+    '3':
+      chance: 50
+      cooldown: 5
+      conditions:
+      - '%is holding% contains FIREWORK : %stop%'
+      effects:
+      - BOOST:UP:16
+nulify:
+  display: '%group-color%Аннулирование'
+  description: |-
+    Шанс нанести двойной урон
+    и ослепить противника.
+    Стоит 40 душ за активацию.
+  applies-to: Оружие
+  type: ATTACK
+  group: FABLED
+  applies:
+  - ALL_SWORD
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 8
+      cooldown: 10
+      conditions:
+      - '%souls on item% < 40 : %stop%'
+      effects:
+      - REMOVE_SOULS:40 @Attacker
+      - INCREASE_DAMAGE:100
+      - POTION:BLINDNESS:0:80 @Victim
+      - PARTICLE:FLASH:1:0 @Victim
+    '2':
+      chance: 10
+      cooldown: 10
+      conditions:
+      - '%souls on item% < 40 : %stop%'
+      effects:
+      - REMOVE_SOULS:40 @Attacker
+      - POTION:BLINDNESS:1:80 @Victim
+      - PARTICLE:FLASH:2:0 @Victim
+    '3':
+      chance: 12
+      cooldown: 10
+      souls: 40
+      effects:
+      - INCREASE_DAMAGE:100
+      - POTION:BLINDNESS:2:80 @Victim
+      - PARTICLE:FLASH:3:0 @Victim
+    '4':
+      chance: 14
+      cooldown: 10
+      conditions:
+      - '%souls on item% < 40 : %stop%'
+      effects:
+      - REMOVE_SOULS:40 @Attacker
+      - POTION:BLINDNESS:3:80 @Victim
+      - PARTICLE:FLASH:4:0 @Victim
+rush:
+  display: '%group-color%Рывок'
+  description: |-
+    Шанс получить ускорение при
+    взлёте с элитрами.
+    Стоит 10 душ за активацию.
+  applies-to: Элитры
+  type: ELYTRA_FLY
+  group: FABLED
+  applies:
+  - ELYTRA
+  levels:
+    '1':
+      chance: 15
+      cooldown: 5
+      conditions:
+      - '%souls on item% < 10 : %stop%'
+      effects:
+      - REMOVE_SOULS:10
+      - POTION:SPEED:3:60
+    '2':
+      chance: 25
+      cooldown: 5
+      conditions:
+      - '%souls on item% < 10 : %stop%'
+      effects:
+      - REMOVE_SOULS:10
+      - POTION:SPEED:4:60
+    '3':
+      chance: 26
+      cooldown: 5
+      conditions:
+      - '%souls on item% < 10 : %stop%'
+      effects:
+      - REMOVE_SOULS:10
+      - POTION:SPEED:5:60
+diploid:
+  display: '%group-color%Двойной'
+  description: |-
+    Шанс умножить добычу с мобов.
+    Стоит 5 душ за активацию.
+  applies-to: Мечи
+  type: KILL_MOB
+  group: FABLED
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 15
+      cooldown: 5
+      souls: 5
+      effects:
+      - MORE_DROPS:1
+    '2':
+      chance: 20
+      cooldown: 5
+      souls: 5
+      effects:
+      - MORE_DROPS:1
+    '3':
+      chance: 25
+      cooldown: 6
+      souls: 5
+      effects:
+      - MORE_DROPS:1
+    '4':
+      chance: 28
+      cooldown: 7
+      souls: 5
+      effects:
+      - MORE_DROPS:1
+    '5':
+      chance: 30
+      cooldown: 8
+      souls: 5
+      effects:
+      - MORE_DROPS:1
+multiplication:
+  display: '%group-color%Умножение'
+  description: |-
+    Шанс умножить добычу с руд.
+    Стоит 5 душ за активацию.
+  applies-to: Кирка
+  type: MINING
+  group: FABLED
+  applies:
+  - ALL_PICKAXE
+  levels:
+    '1':
+      chance: 15
+      cooldown: 5
+      settings:
+        whitelist:
+        - "COAL_ORE"
+        - "COPPER_ORE"
+        - "IRON_ORE"
+        - "GOLD_ORE"
+        - "LAPIS_ORE"
+        - "REDSTONE_ORE"
+        - "DIAMOND_ORE"
+        - "EMERALD_ORE"
+        - "NETHER_QUARTZ_ORE"
+        - "NETHER_GOLD_ORE"
+        - "ANCIENT_DEBRIS"
+        - "DEEPSLATE_COAL_ORE"
+        - "DEEPSLATE_COPPER_ORE"
+        - "DEEPSLATE_IRON_ORE"
+        - "DEEPSLATE_GOLD_ORE"
+        - "DEEPSLATE_LAPIS_ORE"
+        - "DEEPSLATE_REDSTONE_ORE"
+        - "DEEPSLATE_DIAMOND_ORE"
+        - "DEEPSLATE_EMERALD_ORE"
+      conditions:
+      - '%block type% contains ORE : %allow%'
+      - '%souls on item% > 4 : %allow%'
+      effects:
+      - MORE_DROPS:1
+      - 'REMOVE_SOULS:5'
+    '2':
+      chance: 20
+      cooldown: 5
+      settings:
+        whitelist:
+        - "COAL_ORE"
+        - "COPPER_ORE"
+        - "IRON_ORE"
+        - "GOLD_ORE"
+        - "LAPIS_ORE"
+        - "REDSTONE_ORE"
+        - "DIAMOND_ORE"
+        - "EMERALD_ORE"
+        - "NETHER_QUARTZ_ORE"
+        - "NETHER_GOLD_ORE"
+        - "ANCIENT_DEBRIS"
+        - "DEEPSLATE_COAL_ORE"
+        - "DEEPSLATE_COPPER_ORE"
+        - "DEEPSLATE_IRON_ORE"
+        - "DEEPSLATE_GOLD_ORE"
+        - "DEEPSLATE_LAPIS_ORE"
+        - "DEEPSLATE_REDSTONE_ORE"
+        - "DEEPSLATE_DIAMOND_ORE"
+        - "DEEPSLATE_EMERALD_ORE"
+      conditions:
+      - '%block type% contains ORE : %allow%'
+      - '%souls on item% > 4 : %allow%'
+      effects:
+      - MORE_DROPS:1
+      - 'REMOVE_SOULS:5'
+    '3':
+      chance: 25
+      cooldown: 6
+      settings:
+        whitelist:
+        - "COAL_ORE"
+        - "COPPER_ORE"
+        - "IRON_ORE"
+        - "GOLD_ORE"
+        - "LAPIS_ORE"
+        - "REDSTONE_ORE"
+        - "DIAMOND_ORE"
+        - "EMERALD_ORE"
+        - "NETHER_QUARTZ_ORE"
+        - "NETHER_GOLD_ORE"
+        - "ANCIENT_DEBRIS"
+        - "DEEPSLATE_COAL_ORE"
+        - "DEEPSLATE_COPPER_ORE"
+        - "DEEPSLATE_IRON_ORE"
+        - "DEEPSLATE_GOLD_ORE"
+        - "DEEPSLATE_LAPIS_ORE"
+        - "DEEPSLATE_REDSTONE_ORE"
+        - "DEEPSLATE_DIAMOND_ORE"
+        - "DEEPSLATE_EMERALD_ORE"
+      conditions:
+      - '%block type% contains ORE : %allow%'
+      - '%souls on item% > 4 : %allow%'
+      effects:
+      - MORE_DROPS:1
+      - 'REMOVE_SOULS:5'
+    '4':
+      chance: 28
+      cooldown: 7
+      settings:
+        whitelist:
+        - "COAL_ORE"
+        - "COPPER_ORE"
+        - "IRON_ORE"
+        - "GOLD_ORE"
+        - "LAPIS_ORE"
+        - "REDSTONE_ORE"
+        - "DIAMOND_ORE"
+        - "EMERALD_ORE"
+        - "NETHER_QUARTZ_ORE"
+        - "NETHER_GOLD_ORE"
+        - "ANCIENT_DEBRIS"
+        - "DEEPSLATE_COAL_ORE"
+        - "DEEPSLATE_COPPER_ORE"
+        - "DEEPSLATE_IRON_ORE"
+        - "DEEPSLATE_GOLD_ORE"
+        - "DEEPSLATE_LAPIS_ORE"
+        - "DEEPSLATE_REDSTONE_ORE"
+        - "DEEPSLATE_DIAMOND_ORE"
+        - "DEEPSLATE_EMERALD_ORE"
+      conditions:
+      - '%block type% contains ORE : %allow%'
+      - '%souls on item% > 4 : %allow%'
+      effects:
+      - MORE_DROPS:1
+      - 'REMOVE_SOULS:5'
+    '5':
+      chance: 30
+      cooldown: 8
+      settings:
+        whitelist:
+        - "COAL_ORE"
+        - "COPPER_ORE"
+        - "IRON_ORE"
+        - "GOLD_ORE"
+        - "LAPIS_ORE"
+        - "REDSTONE_ORE"
+        - "DIAMOND_ORE"
+        - "EMERALD_ORE"
+        - "NETHER_QUARTZ_ORE"
+        - "NETHER_GOLD_ORE"
+        - "ANCIENT_DEBRIS"
+        - "DEEPSLATE_COAL_ORE"
+        - "DEEPSLATE_COPPER_ORE"
+        - "DEEPSLATE_IRON_ORE"
+        - "DEEPSLATE_GOLD_ORE"
+        - "DEEPSLATE_LAPIS_ORE"
+        - "DEEPSLATE_REDSTONE_ORE"
+        - "DEEPSLATE_DIAMOND_ORE"
+        - "DEEPSLATE_EMERALD_ORE"
+      conditions:
+      - '%block type% contains ORE : %allow%'
+      - '%souls on item% > 4 : %allow%'
+      effects:
+      - MORE_DROPS:1
+      - 'REMOVE_SOULS:5'
+fuddle:
+  display: '%group-color%Путаница'
+  description: Перемешивает панель быстрого доступа противника.
+  applies-to: Мечи
+  type: ATTACK
+  settings:
+    showActionBar: true
+  group: ULTIMATE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 5
+      cooldown: 15
+      effects:
+      - SHUFFLE_HOTBAR @Victim
+    '2':
+      chance: 7
+      cooldown: 15
+      effects:
+      - SHUFFLE_HOTBAR @Victim
+    '3':
+      chance: 9
+      cooldown: 15
+      effects:
+      - SHUFFLE_HOTBAR @Victim
+spiritmaster:
+  display: '%group-color%Повелитель Душ'
+  description: |-
+    Шанс получить больше душ
+    за убийство игроков.
+  applies-to: Мечи
+  type: KILL_PLAYER
+  group: FABLED
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 35
+      effects:
+      - ADD_SOULS:1
+      - PARTICLE:HEART:1:0
+    '2':
+      chance: 45
+      effects:
+      - ADD_SOULS:1
+      - PARTICLE:HEART:1:0
+    '3':
+      chance: 55
+      effects:
+      - ADD_SOULS:1
+      - PARTICLE:HEART:1:0
+axeofspirits:
+  display: '%group-color%Топор Духов'
+  description: |-
+    Шанс получить больше душ
+    за убийство игроков.
+  applies-to: Топоры
+  type: KILL_PLAYER
+  group: FABLED
+  applies:
+  - ALL_AXE
+  levels:
+    '1':
+      chance: 45
+      effects:
+      - ADD_SOULS:1
+      - PARTICLE:HEART:1:0
+    '2':
+      chance: 65
+      effects:
+      - ADD_SOULS:1
+      - PARTICLE:HEART:1:0
+    '3':
+      chance: 75
+      effects:
+      - ADD_SOULS:1
+      - PARTICLE:HEART:1:0
+soulminer:
+  display: '%group-color%Шахтёр Душ'
+  description: Шанс получить души при добыче ресурсов.
+  applies-to: Кирка
+  type: MINING
+  group: FABLED
+  applies:
+  - ALL_PICKAXE
+  levels:
+    '1':
+      chance: 5
+      effects:
+      - ADD_SOULS:1
+      - PARTICLE:HEART:1:0
+    '2':
+      chance: 10
+      effects:
+      - ADD_SOULS:1
+      - PARTICLE:HEART:1:0
+    '3':
+      chance: 15
+      effects:
+      - ADD_SOULS:1
+      - PARTICLE:HEART:1:0
+soulgrind:
+  display: '%group-color%Жнец Душ'
+  description: Шанс получить души при убийстве мобов.
+  applies-to: Мечи
+  type: KILL_MOB
+  group: FABLED
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 30
+      effects:
+      - ADD_SOULS:1
+      - PARTICLE:HEART:1:0
+    '2':
+      chance: 60
+      effects:
+      - ADD_SOULS:1
+      - PARTICLE:HEART:1:0
+    '3':
+      chance: 90
+      effects:
+      - ADD_SOULS:1
+      - PARTICLE:HEART:1:0
+deranged:
+  display: '%group-color%Безумец'
+  description: Бьёт молнией по ближайшим игрокам.
+  applies-to: Мечи
+  type: ATTACK
+  settings:
+    showActionBar: true
+  group: LEGENDARY
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 5
+      cooldown: 10
+      effects:
+      - LIGHTNING @Aoe{radius=5,target=damageable}
+    '2':
+      chance: 8
+      cooldown: 12
+      effects:
+      - LIGHTNING @Aoe{radius=6,target=damageable}
+    '3':
+      chance: 12
+      cooldown: 14
+      effects:
+      - LIGHTNING @Aoe{radius=7,target=damageable}
+magnet:
+  display: '%group-color%Магнит'
+  description: Ваша атака притягивает игроков к вам.
+  applies-to: Мечи
+  type: ATTACK
+  group: ELITE
+  applies:
+  - ALL_SWORD
+  levels:
+    '1':
+      chance: 30
+      cooldown: 5
+      effects:
+      - PULL_CLOSER:1 @Victim
+    '2':
+      chance: 60
+      cooldown: 5
+      effects:
+      - PULL_CLOSER:2 @Victim
+    '3':
+      cooldown: 5
+      effects:
+      - PULL_CLOSER:3 @Victim
+rock:
+  display: '%group-color%Скала'
+  description: Шанс предотврадить отбрасывание.
+  applies-to: Броня
+  type: DEFENSE
+  group: COSMIC
+  applies:
+    - ALL_ARMOR
+  levels:
+    '1':
+      chance: 30
+      effects:
+        - STOP_KNOCKBACK @Self
+    '2':
+      chance: 60
+      effects:
+        - STOP_KNOCKBACK @Self
+    '3':
+      effects:
+        - STOP_KNOCKBACK @Self
+# fly:
+#   display: '%group-color%Полет'
+#   description: Позволяет летать.
+#   applies-to: Ботинки
+#   type: EFFECT_STATIC
+#   group: COSMIC
+#   applies:
+#     - ALL_BOOTS
+#   levels:
+#     '1':
+#       effects:
+#         - FLY
+dropmob:
+  display: '%group-color%Мясник'
+  description: Увеличивает количество лута с мобов.
+  applies-to: Мечи
+  type: KILL_MOB
+  group: COSMIC
+  applies:
+    - ALL_SWORD
+  levels:
+    '1':
+      chance: 25
+      effects:
+        - MORE_DROPS:1
+    '2':
+      chance: 30
+      effects:
+        - MORE_DROPS:1
+    '3':
+      chance: 35
+      effects:
+        - MORE_DROPS:1
+    '4':
+      chance: 38
+      effects:
+        - MORE_DROPS:1
+    '5':
+      chance: 40
+      effects:
+        - MORE_DROPS:1
+expvor:
+  display: '%group-color%Опытный вор'
+  description: Шанс украсть часть опыта противника.
+  applies-to: Мечи
+  type: ATTACK
+  group: COSMIC
+  applies:
+    - ALL_SWORD
+  levels:
+    '1':
+      chance: 10
+      cooldown: 5
+      effects:
+        - 'STEAL_EXP:<random number>1-1000</random number>'
+    '2':
+      chance: 20
+      cooldown: 5
+      effects:
+        - 'STEAL_EXP:<random number>1-1000</random number>'
+    '3':
+      chance: 30
+      cooldown: 5
+      effects:
+        - 'STEAL_EXP:<random number>1-1000</random number>'
+    '4':
+      chance: 40
+      cooldown: 5
+      effects:
+        - 'STEAL_EXP:<random number>1-1000</random number>'
+    '5':
+      chance: 50
+      cooldown: 5
+      effects:
+        - 'STEAL_EXP:<random number>1-1000</random number>'
+moneyvor:
+  display: '%group-color%Денежный вор'
+  description: Шанс украсть часть денег противника.
+  applies-to: Мечи
+  type: ATTACK
+  group: COSMIC
+  applies:
+    - ALL_SWORD
+  levels:
+    '1':
+      chance: 10
+      cooldown: 5
+      effects:
+        - 'STEAL_MONEY:<random number>500-1000</random number>'
+    '2':
+      chance: 20
+      cooldown: 5
+      effects:
+        - 'STEAL_MONEY:<random number>500-1000</random number>'
+    '3':
+      chance: 30
+      cooldown: 5
+      effects:
+        - 'STEAL_MONEY:<random number>500-1000</random number>'
+    '4':
+      chance: 40
+      cooldown: 5
+      effects:
+        - 'STEAL_MONEY:<random number>500-1000</random number>'
+    '5':
+      chance: 50
+      cooldown: 5
+      effects:
+        - 'STEAL_MONEY:<random number>500-1000</random number>'
+nerush:
+  display: '%group-color%Березовая кора'
+  description: Делает броню нерушимой.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB;DEFENSE_MOB_PROJECTILE;DEFENSE_PROJECTILE
+  group: COSMIC
+  applies:
+    - ALL_ARMOR
+  levels:
+    '1':
+      chance: 50
+      effects:
+        - ADD_DURABILITY_ARMOR:1
+trench5:
+  display: '%group-color%Улучшенная траншея'
+  description: Позволяет копать 5х5.
+  applies-to: Кирки, Лопаты
+  type: MINING
+  group: COSMIC
+  applies:
+    - ALL_PICKAXE
+    - ALL_SPADE
+  levels:
+    '1':
+      chance: 13
+      effects:
+        - BREAK_BLOCK @Trench{r=5}
+    '2':
+      chance: 26
+      effects:
+        - BREAK_BLOCK @Trench{r=5}
+    '3':
+      chance: 36
+      effects:
+        - BREAK_BLOCK @Trench{r=5}
+    '4':
+      chance: 49
+      effects:
+        - BREAK_BLOCK @Trench{r=5}
+    '5':
+      chance: 59
+      effects:
+        - BREAK_BLOCK @Trench{r=5}
+    '6':
+      chance: 72
+      effects:
+        - BREAK_BLOCK @Trench{r=5}
+    '7':
+      chance: 85
+      effects:
+        - BREAK_BLOCK @Trench{r=5}
+    '8':
+      chance: 90
+      effects:
+        - BREAK_BLOCK @Trench{r=5}
+    '9':
+      chance: 100
+      effects:
+        - BREAK_BLOCK @Trench{r=5}
+cure:
+  display: '%group-color%Святая защита'
+  description: Шанс снять все негативные эффекты.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB;DEFENSE_MOB_PROJECTILE;DEFENSE_PROJECTILE;ATTACK
+  group: COSMIC
+  applies:
+    - ALL_ARMOR
+  levels:
+    '1':
+      chance: 30
+      effects:
+        - CURE:SLOWNESS
+        - CURE:mining_fatigue
+        - CURE:nausea
+        - CURE:blindness
+        - CURE:hunger
+        - CURE:weakness
+        - CURE:poison
+        - CURE:wither
+        - CURE:levitation
+        - CURE:unluck
+        - CURE:darkness
+        - CURE:bad_omen
+        - CURE:slow_falling
+    '2':
+      chance: 60
+      effects:
+        - CURE:SLOWNESS
+        - CURE:mining_fatigue
+        - CURE:nausea
+        - CURE:blindness
+        - CURE:hunger
+        - CURE:weakness
+        - CURE:poison
+        - CURE:wither
+        - CURE:levitation
+        - CURE:unluck
+        - CURE:darkness
+        - CURE:bad_omen
+        - CURE:slow_falling
+    '3':
+      effects:
+        - CURE:SLOWNESS
+        - CURE:mining_fatigue
+        - CURE:nausea
+        - CURE:blindness
+        - CURE:hunger
+        - CURE:weakness
+        - CURE:POISON
+        - CURE:wither
+        - CURE:levitation
+        - CURE:unluck
+        - CURE:darkness
+        - CURE:bad_omen
+        - CURE:slow_falling
+targaryen:
+  display: '%group-color%Смерть Небес'
+  description: |-
+    Вспышка с небес
+    по противнику.
+  applies-to: Меч
+  type: ATTACK;ATTACK_MOB
+  settings:
+    showActionBar: true
+  group: REDQUEST
+  applies:
+    - ALL_SWORD
+  levels:
+    '1':
+      chance: 99
+      cooldown: 2
+      effects:
+        - LIGHTNING @Victim
+targaryen1:
+  display: '%group-color%Последний Дракон'
+  description: |-
+    Взрыв при ударе
+    по противнику.
+  applies-to: Меч
+  type: ATTACK;ATTACK_MOB
+  settings:
+    showActionBar: true
+  group: REDQUEST
+  applies:
+    - ALL_SWORD
+  levels:
+    '1':
+      chance: 24
+      cooldown: 2
+      effects:
+        - EXPLODE:2:false:true @Victim
+targaryen2:
+  display: '%group-color%Ночной Дозор'
+  description: |-
+    Призывает служителя
+    Визора.
+  applies-to: Броня
+  type: DEFENSE;DEFENSE_MOB
+  settings:
+    showActionBar: true
+  group: REDQUEST
+  applies:
+    - ALL_ARMOR
+  levels:
+    '1':
+      chance: 19
+      cooldown: 3
+      effects:
+        - GUARD:PIGLIN_BRUTE:10:2:&lСлужитель @Victim
+striker2:
+  display: '%group-color%Огонь'
+  description: Обрушивает стрелы на противника.
+  applies-to: Лук
+  type: SHOOT;SHOOT_MOB
+  settings:
+    showActionBar: true
+  group: REDQUEST
+  applies:
+    - BOW
+  levels:
+    '1':
+      chance: 99
+      cooldown: 2
+      effects:
+        - PROJECTILE:FIREBALL @Victim
+    '2':
+      chance: 18
+      cooldown: 8
+      effects:
+        - SPAWN_ARROWS @Victim
+    '3':
+      chance: 22
+      cooldown: 8
+      effects:
+        - SPAWN_ARROWS @Victim
