@@ -19,12 +19,6 @@
       "display": "Огненный крюк"
     },
     {
-      "appliesTo": "Кирки",
-      "highestLevel": 3,
-      "description": "Добыть целую жилу руды",
-      "display": "Шахтер"
-    },
-    {
       "appliesTo": "Оружие",
       "highestLevel": 5,
       "description": "Увеличивает урон, наносимый Эндермену и драконам Края.",
