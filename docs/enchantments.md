@@ -19,7 +19,6 @@
 
 - `/eenchants list` - список всех зачарований севрера.
 
-
 ## ⭐ **Кастомный Зачарования**
         
 <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;">
@@ -247,7 +246,7 @@
 </div>
 
 <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;">
-<strong>⬜ "Опытный рыбалов"</strong><br>
+<strong>⬜ "Опытный рыболов"</strong><br>
 Увеличивает количество опыта, получаемого от рыбалки.<br><br>
 <strong>Применяется к:</strong> Удочка<br>
 <strong>Максимальный уровень:</strong> 3
