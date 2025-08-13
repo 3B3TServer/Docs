@@ -19,15 +19,7 @@
 
 - `/eenchants list` - список всех зачарований севрера.
 
-
 ## ⭐ **Кастомный Зачарования**
-        
-<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;">
-<strong>⬜ "Автоподсечка"</strong><br>
-Автоматически подтягивает удочку при поклевке.<br><br>
-<strong>Применяется к:</strong> Удочка<br>
-<strong>Максимальный уровень:</strong> 1
-</div>
 
 <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;">
 <strong>⬜ "Вампир"</strong><br>
@@ -41,7 +33,7 @@
 Шанс восстановить здоровье при попадании стрелы.<br><br>
 <strong>Применяется к:</strong> Лук, Арбалет<br>
 <strong>Максимальный уровень:</strong> 3
-</div>        
+</div>
 
 <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;">
 <strong>⬜ "Взрывная добыча"</strong><br>
@@ -69,14 +61,14 @@
 Восстанавливает здоровье каждые несколько секунд.<br><br>
 <strong>Применяется к:</strong> Нагрудник, Элитра<br>
 <strong>Максимальный уровень:</strong> 4
-</div>        
+</div>
 
 <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;">
 <strong>⬜ "Восстановление"</strong><br>
 Шанс спасти предмет от поломки.<br><br>
 <strong>Применяется к:</strong> Всё, что имеет прочность<br>
 <strong>Максимальный уровень:</strong> 3
-</div>        
+</div>
 
 <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;">
 <strong>⬜ "Выживальщик"</strong><br>
