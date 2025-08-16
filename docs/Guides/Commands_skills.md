@@ -41,7 +41,7 @@
 
 - Прийти на спавн и подойти к определённому для скиллов NPC и нажать ПКМ.
 
-![Screenshot_20250816_191427_Gallery.jpg](https://github.com/user-attachments/assets/382050a7-9faf-4d1c-9da3-0be27cf8e4da)
+![SkillsNPC](/user-attachments/assets/)
 
 - `/skilltop` - команда для просмотра топов на сервере по скиллам.
 
