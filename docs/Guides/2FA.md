@@ -4,7 +4,7 @@
 
 1. **VK**: [vk.com/3b3tbot](https://vk.com/3b3tbot)
 2. **Discord**: `3B3T-AUTH#0041`
-3. **Telegram**: [@auth_3b3t_bot](https://t.me/authB3b3t_bot)
+3. **Telegram**: [@auth_3b3t_bot](https://t.me/auth_3b3t_bot)
 
 Также вы можете присоединиться к нашему второму серверу для постоянного общения с ботом 2FA:  
 [Ссылка на сервер](https://discord.com/invite/3b3t)
@@ -27,8 +27,8 @@
 2. Введите команду: `/addsocial`.  
 3. После ввода команды отправьте сообщение в личные сообщения боту:  
     - В VK: **@3B3TBot**  
-    - В Discord: **3B3T-AUTH#7026**  
-    - В Telegram: [@authB3b3t_bot](https://t.me/authB3b3t_bot)  
+    - В Discord: **3B3T-AUTH#0041**  
+    - В Telegram: [@auth_3b3t_bot](https://t.me/auth_3b3t_bot)  
 
    Сообщение должно содержать следующую команду:  
    ```!account link (ваш ник)```  
