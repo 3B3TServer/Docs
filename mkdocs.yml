@@ -4,7 +4,6 @@ site_url: https://wiki.3b3t.ru
 nav:
   - 'Главная страница': 'index.md'
   - 'Кастомные крафты и вещи': 'Custom_items_and_crafts.md'
-  - 'Питомцы': 'pets.md'
   - 'Топы': 'tops.md'
   - 'Зачарования': 'enchantments.md'
   - 'Кейсы': 'cases.md'
