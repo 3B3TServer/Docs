@@ -1,0 +1,41 @@
+name: Deploy Wiki
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # Нужно для git plugins
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      
+      - name: Install dependencies
+        run: |
+          pip install mkdocs-material \
+            mkdocs-git-revision-date-localized-plugin \
+            mkdocs-git-committers-plugin-2
+      
+      - name: Build site
+        run: mkdocs build --clean --strict
+      
+      - name: Deploy to server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "site/*"
+          target: "/var/www/wiki/repo/"
+          strip_components: 0
+          rm: true
