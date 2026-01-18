@@ -3,8 +3,8 @@
 На сервере есть возможность привязать свой аккаунт к ботам для обеспечения безопасности и удобства. Для этого доступны два варианта:
 
 1. **VK**: [vk.com/3b3tbot](https://vk.com/3b3tbot)
-2. **Discord**: `3B3T-AUTH#7026`
-3. **Telegram**: [@authB3b3t_bot](https://t.me/authB3b3t_bot)
+2. **Discord**: `3B3T-AUTH#0041`
+3. **Telegram**: [@auth_3b3t_bot](https://t.me/authB3b3t_bot)
 
 Также вы можете присоединиться к нашему второму серверу для постоянного общения с ботом 2FA:  
 [Ссылка на сервер](https://discord.com/invite/3b3t)
