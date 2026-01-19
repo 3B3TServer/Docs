@@ -284,19 +284,363 @@
 
 ---
 
-<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Взрывная добыча"</strong><br> Добывает блоки с помощью взрыва.<br><br> <strong>Применяется к:</strong> Кирка<br> <strong>Максимальный уровень:</strong> 5 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Шёлковый спавнер"</strong><br> Позволяет добывать спавнеры.<br><br> <strong>Применяется к:</strong> Кирка<br> <strong>Максимальный уровень:</strong> 4 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Лесоруб"</strong><br> Срубает дерево целиком.<br><br> <strong>Применяется к:</strong> Топор<br> <strong>Максимальный уровень:</strong> 1 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Спешка"</strong><br> Даёт постоянный эффект спешки.<br><br> <strong>Применяется к:</strong> Инструменты<br> <strong>Максимальный уровень:</strong> 2 </div>
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Взрывная добыча"</strong><br> 
+Добывает блоки с помощью взрыва.<br><br> 
+<strong>Применяется к:</strong> Кирка<br> 
+<strong>Максимальный уровень:</strong> 5 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Шёлковый спавнер"</strong><br> 
+Позволяет добывать спавнеры.<br><br> 
+<strong>Применяется к:</strong> Кирка<br> 
+<strong>Максимальный уровень:</strong> 4 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Лесоруб"</strong><br> 
+Срубает дерево целиком.<br><br> 
+<strong>Применяется к:</strong> Топор<br> 
+<strong>Максимальный уровень:</strong> 1 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Спешка"</strong><br> 
+Даёт постоянный эффект спешки.<br><br> 
+<strong>Применяется к:</strong> Инструменты<br> 
+<strong>Максимальный уровень:</strong> 2 
+</div>
+
+---
 
 ## **🏹 Луки и арбалеты**
 
-<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Вампирские стрелы"</strong><br> Восстанавливают здоровье владельцу при попадании стрелы.<br><br> <strong>Применяется к:</strong> Лук, Арбалет<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Взрывные стрелы"</strong><br> Шанс выстрелить стрелой, вызывающей взрыв при попадании.<br><br> <strong>Применяется к:</strong> Лук<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Наэлектризованные стрелы"</strong><br> Шанс призвать молнию при попадании стрелы.<br><br> <strong>Применяется к:</strong> Лук, Арбалет<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Отравленные стрелы"</strong><br> Стрелы накладывают эффект отравления при попадании.<br><br> <strong>Применяется к:</strong> Лук, Арбалет<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Иссушение стрелы"</strong><br> Стрелы накладывают эффект иссушения при попадании.<br><br> <strong>Применяется к:</strong> Лук, Арбалет<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Путающие стрелы"</strong><br> Накладывают эффект тошноты при попадании стрелы.<br><br> <strong>Применяется к:</strong> Лук, Арбалет<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Парение"</strong><br> Стрелы накладывают эффект левитации при попадании.<br><br> <strong>Применяется к:</strong> Лук, Арбалет<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Стрелы тьмы"</strong><br> Накладывают эффект тьмы при попадании стрелы.<br><br> <strong>Применяется к:</strong> Лук, Арбалет<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Стрелы драконьего огня"</strong><br> Поджигают цель эффектом драконьего пламени.<br><br> <strong>Применяется к:</strong> Лук, Арбалет<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Остаточные эффекты"</strong><br> Стрелы с зельями создают облако остаточного эффекта.<br><br> <strong>Применяется к:</strong> Лук, Арбалет<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Снайпер"</strong><br> Увеличивает скорость и дальность полёта снарядов.<br><br> <strong>Применяется к:</strong> Лук, Арбалет<br> <strong>Максимальный уровень:</strong> 2 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Резак"</strong><br> Стрелы могут сбросить и повредить броню врага.<br><br> <strong>Применяется к:</strong> Лук<br> <strong>Максимальный уровень:</strong> 1 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Эндер-лук"</strong><br> Стреляет жемчугами Эндера вместо стрел.<br><br> <strong>Применяется к:</strong> Лук<br> <strong>Максимальный уровень:</strong> 1 </div>
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Вампирские стрелы"</strong><br> 
+Восстанавливают здоровье владельцу при попадании стрелы.<br><br> 
+<strong>Применяется к:</strong> Лук, Арбалет<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Взрывные стрелы"</strong><br> 
+Шанс выстрелить стрелой, вызывающей взрыв при попадании.<br><br> 
+<strong>Применяется к:</strong> Лук<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Наэлектризованные стрелы"</strong><br> 
+Шанс призвать молнию при попадании стрелы.<br><br> 
+<strong>Применяется к:</strong> Лук, Арбалет<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Отравленные стрелы"</strong><br> 
+Стрелы накладывают эффект отравления при попадании.<br><br> 
+<strong>Применяется к:</strong> Лук, Арбалет<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Иссушение стрелы"</strong><br> 
+Стрелы накладывают эффект иссушения при попадании.<br><br> 
+<strong>Применяется к:</strong> Лук, Арбалет<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Путающие стрелы"</strong><br> 
+Накладывают эффект тошноты при попадании стрелы.<br><br> 
+<strong>Применяется к:</strong> Лук, Арбалет<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Парение"</strong><br> 
+Стрелы накладывают эффект левитации при попадании.<br><br> 
+<strong>Применяется к:</strong> Лук, Арбалет<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Стрелы тьмы"</strong><br> 
+Накладывают эффект тьмы при попадании стрелы.<br><br> 
+<strong>Применяется к:</strong> Лук, Арбалет<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Стрелы драконьего огня"</strong><br> 
+Поджигают цель эффектом драконьего пламени.<br><br> 
+<strong>Применяется к:</strong> Лук, Арбалет<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Остаточные эффекты"</strong><br> 
+Стрелы с зельями создают облако остаточного эффекта.<br><br> 
+<strong>Применяется к:</strong> Лук, Арбалет<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Снайпер"</strong><br> 
+ё1Увеличивает скорость и дальность полёта снарядов.<br><br> 
+<strong>Применяется к:</strong> Лук, Арбалет<br> 
+<strong>Максимальный уровень:</strong> 2 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Резак"</strong><br> Стрелы могут сбросить и повредить броню врага.<br><br> <strong>Применяется к:</strong> Лук<br> <strong>Максимальный уровень:</strong> 1 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Эндер-лук"</strong><br> Стреляет жемчугами Эндера вместо стрел.<br><br> <strong>Применяется к:</strong> Лук<br> <strong>Максимальный уровень:</strong> 1 </div>
 
 ## **🎣 Удочки**
 
-<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Выживальщик"</strong><br> Автоматически готовит сырую пойманную рыбу.<br><br> <strong>Применяется к:</strong> Удочка<br> <strong>Максимальный уровень:</strong> 1 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Двойной улов"</strong><br> Увеличивает количество пойманных предметов.<br><br> <strong>Применяется к:</strong> Удочка<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Опытный рыболов"</strong><br> Увеличивает получаемый опыт за рыбалку.<br><br> <strong>Применяется к:</strong> Удочка<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Хозяин рек"</strong><br> Увеличивает дальность заброса удочки.<br><br> <strong>Применяется к:</strong> Удочка<br> <strong>Максимальный уровень:</strong> 5 </div>
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Выживальщик"</strong><br>
+Автоматически готовит сырую пойманную рыбу.<br><br> 
+<strong>Применяется к:</strong> Удочка<br> 
+<strong>Максимальный уровень:</strong> 1 
+</div> 
 
-🌱 ФЕРМЕРСКИЕ ЗАЧАРОВАНИЯ
-<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Урожай"</strong><br> Шанс собрать урожай в области 3x3.<br><br> <strong>Применяется к:</strong> Мотыги<br> <strong>Максимальный уровень:</strong> 9 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Сеятель"</strong><br> Автоматически сажает семена при использовании.<br><br> <strong>Применяется к:</strong> Мотыги<br> <strong>Максимальный уровень:</strong> 5 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Сеятель картофеля"</strong><br> Автоматически сажает картофель при использовании.<br><br> <strong>Применяется к:</strong> Мотыги<br> <strong>Максимальный уровень:</strong> 5 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Сеятель моркови"</strong><br> Автоматически сажает морковь при использовании.<br><br> <strong>Применяется к:</strong> Мотыги<br> <strong>Максимальный уровень:</strong> 5 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Пересадчик"</strong><br> Автоматически пересаживает культуры при сборе урожая.<br><br> <strong>Применяется к:</strong> Мотыги<br> <strong>Максимальный уровень:</strong> 1 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Автоподсечка"</strong><br> Автоматически подсекает удочку при поклевке.<br><br> <strong>Применяется к:</strong> Удочка<br> <strong>Максимальный уровень:</strong> 4 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Двойной улов"</strong><br> Увеличивает количество пойманных предметов.<br><br> <strong>Применяется к:</strong> Удочка<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Опытный рыболов"</strong><br> Увеличивает получаемый опыт за рыбалку.<br><br> <strong>Применяется к:</strong> Удочка<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Хозяин рек"</strong><br> Увеличивает дальность заброса удочки.<br><br> <strong>Применяется к:</strong> Удочка<br> <strong>Максимальный уровень:</strong> 5 </div>
-☠️ ПРОКЛЯТИЯ
-<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Проклятие неудач"</strong><br> Шанс не получить дроп с блоков и мобов.<br><br> <strong>Применяется к:</strong> Инструменты, Оружие<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Проклятие посредственности"</strong><br> Шанс снять зачарование с выпавших предметов.<br><br> <strong>Применяется к:</strong> Инструменты, Оружие<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Проклятие разрушения"</strong><br> Шанс потратить больше прочности при использовании.<br><br> <strong>Применяется к:</strong> Всё, что имеет прочность<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Проклятие смерти"</strong><br> При убийстве игрока есть шанс умереть самому.<br><br> <strong>Применяется к:</strong> Оружие<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Проклятие утопленника"</strong><br> Шанс поймать зомби-утопленника.<br><br> <strong>Применяется к:</strong> Удочка<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Проклятие хрупкости"</strong><br> Мешает обработке предмета на точильном камне или наковальне.<br><br> <strong>Применяется к:</strong> Всё, что имеет прочность<br> <strong>Максимальный уровень:</strong> 1 </div>
-🧿 УТИЛИТАРНЫЕ / СПЕЦИАЛЬНЫЕ
-<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Подводный"</strong><br> Даёт эффект подводного дыхания и ускорения под водой.<br><br> <strong>Применяется к:</strong> Броня<br> <strong>Максимальный уровень:</strong> 3 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Переплавка"</strong><br> Автоматически переплавляет добытые блоки (как печь).<br><br> <strong>Применяется к:</strong> Инструменты<br> <strong>Максимальный уровень:</strong> 5 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Светоч"</strong><br> 100% шанс оставить факел там, где приземлилась стрела.<br><br> <strong>Применяется к:</strong> Оружие и инструменты<br> <strong>Максимальный уровень:</strong> 10 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Сияние"</strong><br> Подсвечивает ближайших врагов, делая их видимыми.<br><br> <strong>Применяется к:</strong> Оружие<br> <strong>Максимальный уровень:</strong> 2 </div> <div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> <strong>⬜ "Гладкость"</strong><br> Уменьшает шанс поломки предмета при использовании.<br><br> <strong>Применяется к:</strong> Всё, что имеет прочность<br> <strong>Максимальный уровень:</strong> 3 </div>
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Двойной улов"</strong><br> 
+Увеличивает количество пойманных предметов.<br><br> 
+<strong>Применяется к:</strong> Удочка<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Опытный рыболов"</strong><br> 
+Увеличивает получаемый опыт за рыбалку.<br><br> 
+<strong>Применяется к:</strong> Удочка<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Хозяин рек"</strong><br> 
+Увеличивает дальность заброса удочки.<br><br> 
+<strong>Применяется к:</strong> Удочка<br> 
+<strong>Максимальный уровень:</strong> 5 
+</div>
+
+---
+
+## **🌱 ФЕРМЕРСКИЕ ЗАЧАРОВАНИЯ**
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Урожай"</strong><br> 
+Шанс собрать урожай в области 3x3.<br><br> 
+<strong>Применяется к:</strong> Мотыги<br> 
+<strong>Максимальный уровень:</strong> 9 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Сеятель"</strong><br> 
+Автоматически сажает семена при использовании.<br><br> 
+<strong>Применяется к:</strong> Мотыги<br> 
+<strong>Максимальный уровень:</strong> 5 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Сеятель картофеля"</strong><br> 
+Автоматически сажает картофель при использовании.<br><br> 
+<strong>Применяется к:</strong> Мотыги<br> 
+<strong>Максимальный уровень:</strong> 5 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Сеятель моркови"</strong><br> 
+Автоматически сажает морковь при использовании.<br><br> 
+<strong>Применяется к:</strong> Мотыги<br> 
+<strong>Максимальный уровень:</strong> 5 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Пересадчик"</strong><br> 
+Автоматически пересаживает культуры при сборе урожая.<br><br> 
+<strong>Применяется к:</strong> Мотыги<br> 
+<strong>Максимальный уровень:</strong> 1 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Автоподсечка"</strong><br> 
+Автоматически подсекает удочку при поклевке.<br><br> 
+<strong>Применяется к:</strong> Удочка<br> 
+<strong>Максимальный уровень:</strong> 4 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Двойной улов"</strong><br> Увеличивает количество пойманных предметов.<br><br> 
+<strong>Применяется к:</strong> Удочка<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Опытный рыболов"</strong><br> 
+Увеличивает получаемый опыт за рыбалку.<br><br> 
+<strong>Применяется к:</strong> Удочка<br> <strong>
+Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Хозяин рек"</strong><br> 
+Увеличивает дальность заброса удочки.<br><br> 
+<strong>Применяется к:</strong> Удочка<br> 
+<strong>Максимальный уровень:</strong> 5 
+</div>
+
+---
+
+## **☠️ ПРОКЛЯТИЯ**
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Проклятие неудач"</strong><br> 
+Шанс не получить дроп с блоков и мобов.<br><br> 
+<strong>Применяется к:</strong> Инструменты, Оружие<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Проклятие посредственности"</strong><br> 
+Шанс снять зачарование с выпавших предметов.<br><br> 
+<strong>Применяется к:</strong> Инструменты, Оружие<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Проклятие разрушения"</strong><br> 
+Шанс потратить больше прочности при использовании.<br><br> 
+<strong>Применяется к:</strong> Всё, что имеет прочность<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Проклятие смерти"</strong><br> 
+При убийстве игрока есть шанс умереть самому.<br><br> 
+<strong>Применяется к:</strong> Оружие<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Проклятие утопленника"</strong><br> Шанс поймать зомби-утопленника.<br><br> 
+<strong>Применяется к:</strong> Удочка<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Проклятие хрупкости"</strong><br> 
+Мешает обработке предмета на точильном камне или наковальне.<br><br> 
+<strong>Применяется к:</strong> Всё, что имеет прочность<br> 
+<strong>Максимальный уровень:</strong> 1 
+</div>
+
+---
+
+## **🧿 УТИЛИТАРНЫЕ / СПЕЦИАЛЬНЫЕ**
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Подводный"</strong><br> 
+Даёт эффект подводного дыхания и ускорения под водой.<br><br> 
+<strong>Применяется к:</strong> Броня<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Переплавка"</strong><br> 
+Автоматически переплавляет добытые блоки (как печь).<br><br> 
+<strong>Применяется к:</strong> Инструменты<br> 
+<strong>Максимальный уровень:</strong> 5 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Светоч"</strong><br> 
+100% шанс оставить факел там, где приземлилась стрела.<br><br> 
+<strong>Применяется к:</strong> Оружие и инструменты<br> 
+<strong>Максимальный уровень:</strong> 10 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Сияние"</strong><br> 
+Подсвечивает ближайших врагов, делая их видимыми.<br><br> 
+<strong>Применяется к:</strong> Оружие<br> 
+<strong>Максимальный уровень:</strong> 2 
+</div> 
+
+---
+
+<div style="border:2px solid #888888; border-radius:6px; padding:12px; background:#1e1e1e; color:#ffffff;"> 
+<strong>⬜ "Гладкость"</strong><br> 
+Уменьшает шанс поломки предмета при использовании.<br><br> 
+<strong>Применяется к:</strong> Всё, что имеет прочность<br> 
+<strong>Максимальный уровень:</strong> 3 
+</div>
+
