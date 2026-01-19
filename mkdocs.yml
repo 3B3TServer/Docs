@@ -17,7 +17,7 @@ nav:
     - 'Доплата': 'Guides/donate_info.md'
   - 'Ивенты':
     - 'Мистический сундук': 'Events/Mystick_chest.md'
-
+repo_url: https://github.com/3B3TServer/Docs
 edit_uri: edit/main/docs/
 theme:
   name: material
