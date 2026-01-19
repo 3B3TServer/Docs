@@ -1,5 +1,5 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
-site_name: 3B3T Wik
+site_name: 3B3T Wiki 'index.md'
 site_url: https://wiki.3b3t.ru
 nav:
   - 'Главная страница': 'index.md'
