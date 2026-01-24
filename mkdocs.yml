@@ -37,9 +37,9 @@ plugins:
       enable_creation_date: true
       type: iso_date
       fallback_to_build_date: true
-  - git-committers:
-      repository: 3B3TServer/Docs
-      branch: main
+#  - git-committers:
+#      repository: 3B3TServer/Docs
+#      branch: main
   - search
 markdown_extensions:
   - admonition
