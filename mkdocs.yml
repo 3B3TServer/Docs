@@ -24,7 +24,7 @@ theme:
   language: ru
   palette:
     scheme: slate
-    primary: black
+    primary: deep purple
     accent: indigo
   icon:
     repo: fontawesome/brands/github
