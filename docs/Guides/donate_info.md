@@ -9,7 +9,7 @@
 - **Legenda → Sponsor** – 8980 ₽  
 - **Immorta → Sponsor** – 8300 ₽  
 - **Enigma → Sponsor** – 6600 ₽  
-- **Dragon → Sponsor** – 4900 ₽  
+- **Dragon → Sponsor** – 3400 ₽  
 
 ## 🐉 Dragon  
 - **Strannik → Dragon** – 5075 ₽  
