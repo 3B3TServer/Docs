@@ -46,6 +46,18 @@ theme:
     view: material/eye
   features:
     - content.action.edit
+    - navigation.tabs          # Вкладки в шапке
+    - navigation.tabs.sticky   # Закрепленные вкладки при прокрутке
+    - navigation.sections      # Секции в боковой панели
+    - navigation.expand        # Автоматическое раскрытие секций
+    - navigation.top           # Кнопка "наверх"
+    - navigation.footer        # Навигация в футере (prev/next)
+    - navigation.indexes       # Index страницы для секций
+    - toc.follow               # Автоскролл в содержании
+    - toc.integrate            # Интеграция TOC в навигацию
+    - search.suggest           # Подсказки при поиске
+    - search.highlight         # Подсветка результатов поиска
+    - search.share             # Кнопка "поделиться" результатами
 plugins:
   - git-revision-date-localized:
       enable_creation_date: true
