@@ -23,9 +23,23 @@ theme:
   name: material
   language: ru
   palette:
-    scheme: slate
-    primary: black
-    accent: indigo
+    # Светлая тема
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Переключить на темную тему
+    
+    # Темная тема
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Переключить на светлую тему
   icon:
     repo: fontawesome/brands/github
     edit: material/pencil 
