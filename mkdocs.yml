@@ -1,140 +1,101 @@
 # yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
 site_name: 3B3T Wiki 
 site_url: https://wiki.3b3t.ru
-site_description: Официальная вики сервера 3B3T - гайды, кастомные предметы, ивенты и многое другое
+site_description: Официальная вики сервера 3B3T
 site_author: 3B3T Team
+
 nav:
-  - Главная: 
-    - 'index.md'
-  - Игра:
-    - 'Кастомные крафты и вещи': 'Custom_items_and_crafts.md'
-    - 'Зачарования': 'enchantments.md'
-    - 'Кейсы': 'cases.md'
-    - 'Топы': 'tops.md'
-  - Гайды:
-    - 'Безопасность':
-      - '2FA': 'Guides/2FA.md'
-    - 'Команды':
-      - 'Команды клана': 'Guides/Commands_clan.md'
-      - 'Команды скиллов': 'Guides/Commands_skills.md'
-    - 'Предметы':
-      - 'Свитки': 'Guides/scrolls.md'
-      - 'Кастомные зелья': 'Guides/custom_potions.md'
-      - 'Вещи с боссов': 'Guides/itemsboss.md'
-    - 'Донат':
-      - 'Информация о донате': 'Guides/donate_info.md'
-  - Ивенты:
-    - 'Мистический сундук': 'Events/Mystick_chest.md'
+  - 🏠 Главная: index.md
+  
+  - ⚔️ Игровой процесс:
+    - Кастомные крафты: Custom_items_and_crafts.md
+    - Зачарования: enchantments.md
+    - Кейсы: cases.md
+    - Топы игроков: tops.md
+  
+  - 📚 Гайды для новичков:
+    - Безопасность (2FA): Guides/2FA.md
+    - Команды клана: Guides/Commands_clan.md
+    - Команды скиллов: Guides/Commands_skills.md
+  
+  - 🎒 Предметы:
+    - Свитки: Guides/scrolls.md
+    - Кастомные зелья: Guides/custom_potions.md
+    - Лут с боссов: Guides/itemsboss.md
+  
+  - 💎 Донат:
+    - Привилегии и возможности: Guides/donate_info.md
+  
+  - 🎉 Ивенты:
+    - Мистический сундук: Events/Mystick_chest.md
+
 repo_url: https://github.com/3B3TServer/Docs
-repo_name: 3B3TServer/Docs
+repo_name: GitHub
 edit_uri: edit/main/docs/
+
 theme:
   name: material
   language: ru
+  
   palette:
-    # Светлая тема
     - media: "(prefers-color-scheme: light)"
       scheme: default
-      primary: indigo
-      accent: indigo
+      primary: deep purple
+      accent: amber
       toggle:
-        icon: material/brightness-7
-        name: Переключить на темную тему
-    # Темная тема
+        icon: material/weather-night
+        name: Темная тема
+    
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
-      primary: black
-      accent: indigo
+      primary: deep purple
+      accent: amber
       toggle:
-        icon: material/brightness-4
-        name: Переключить на светлую тему
+        icon: material/weather-sunny
+        name: Светлая тема
+  
   icon:
     repo: fontawesome/brands/github
-    edit: material/pencil 
-    view: material/eye
-    logo: material/minecraft
+    edit: material/file-edit
+    logo: material/sword-cross
+  
   features:
-    # Навигация
-    - navigation.instant        # Мгновенная навигация (SPA)
-    - navigation.tracking       # Обновление URL при скролле
-    - navigation.tabs           # Вкладки в шапке
-    - navigation.tabs.sticky    # Закрепленные вкладки
-    - navigation.sections       # Секции в боковой панели
-    - navigation.expand         # Автоматическое раскрытие секций
-    - navigation.path           # Хлебные крошки
-    - navigation.indexes        # Index страницы для секций
-    - navigation.top            # Кнопка "наверх"
-    - navigation.footer         # Prev/Next внизу страницы
-    # Содержание
-    - toc.follow                # Автоскролл в содержании
-    - toc.integrate             # Интеграция TOC в навигацию (опционально, можете убрать если мешает)
-    # Поиск
-    - search.suggest            # Подсказки при поиске
-    - search.highlight          # Подсветка результатов
-    - search.share              # Кнопка "поделиться"
-    # Контент
-    - content.action.edit       # Кнопка "редактировать"
-    - content.action.view       # Кнопка "посмотреть исходник"
-    - content.code.copy         # Кнопка копирования кода
-    - content.code.annotate     # Аннотации в коде
-    - content.tooltips          # Всплывающие подсказки
+    - navigation.instant
+    - navigation.tracking
+    # БЕЗ ТАБОВ - только боковая панель
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+
 plugins:
   - search:
       lang: ru
-      separator: '[\s\-\.:,!=\[\]()"/]+|\.(?!\d)|&[lg]t;'
   - git-revision-date-localized:
       enable_creation_date: true
-      type: datetime
-      fallback_to_build_date: true
+      type: date
       locale: ru
+
 markdown_extensions:
-  - abbr
   - admonition
-  - attr_list
-  - def_list
-  - footnotes
-  - md_in_html
-  - tables
-  - pymdownx.highlight:
-      anchor_linenums: true
-      line_spans: __span
-      pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.snippets
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.details
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
-      slugify: !!python/object/apply:pymdownx.slugs.slugify
-        kwds:
-          case: lower
-  - pymdownx.betterem:
-      smart_enable: all
-  - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
-  - pymdownx.keys
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.tasklist:
-      custom_checkbox: true
-extra:
-  social:
-    - icon: fontawesome/brands/discord
-      link: https://discord.gg/ВАШ_ДИСКОРД
-      name: Discord сервер 3B3T
-    - icon: fontawesome/brands/telegram
-      link: https://t.me/ВАШ_ТЕЛЕГРАМ
-      name: Telegram канал
-    - icon: fontawesome/solid-server
-      link: https://3b3t.ru
-      name: Официальный сайт
-  generator: false  # Убрать "Made with Material for MkDocs"
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.inlinehilite
+  - attr_list
+  - md_in_html
+
 extra_css:
   - assets/groups_css/custom.css
   - assets/groups_css/simple.css
@@ -143,4 +104,13 @@ extra_css:
   - assets/groups_css/ultimate.css
   - assets/groups_css/legendary.css
   - assets/groups_css/fabled.css
-copyright: Copyright &copy; 2024-2025 3B3T Server
+
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.gg/3b3t
+    - icon: fontawesome/solid-gamepad
+      link: https://3b3t.ru
+  generator: false
+
+copyright: 3B3T Server © 2024-2025
