@@ -106,11 +106,6 @@ extra_css:
   - assets/groups_css/fabled.css
 
 extra:
-  social:
-    - icon: fontawesome/brands/discord
-      link: https://discord.gg/3b3t
-    - icon: fontawesome/solid-gamepad
-      link: https://3b3t.ru
   generator: false
 
 copyright: 3B3T Server © 2024-2025
