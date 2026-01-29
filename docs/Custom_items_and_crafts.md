@@ -18,7 +18,7 @@
 
 Расположите их в верстаке так, как показано на изображении.
 
-![CraftApple](../assets/applegolden.png)
+![CraftApple](../assets/EnchantedGoldenApple.png)
 
 ---
 
