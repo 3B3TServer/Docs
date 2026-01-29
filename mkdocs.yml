@@ -25,6 +25,7 @@ nav:
       - 'Информация о донате': 'Guides/donate_info.md'
   - 🎉 Ивенты:
     - Мистический сундук: Events/Mystick_chest.md
+    - Охота на драконье яйцо: Events/Dragon_egg_hunt.md
 
 repo_url: https://github.com/3B3TServer/Docs
 repo_name: GitHub
