@@ -13,7 +13,7 @@
 
 Custom представляет из себя Рпг анархию с [**прокачкой**](https://wiki.3b3t.ru/Guides/Commands_skills/) и уникальными [**зачарованиями**](https://wiki.3b3t.ru/enchantments/).
 
-Vanilla это уникальный геймплей: рейды, [**ивенты**](https://wiki.3b3t.ru/Events/Mystick_chest/), большие [**кланы**](https://wiki.3b3t.ru/Guides/Commands_clan/), пвп, фермы и много другое.
+Vanilla это уникальный геймплей: рейды, [**ивенты**](https://wiki.3b3t.ru/Events/Mystick_chest/), большие [**кланы**](https://wiki.3b3t.ru/Guides/Commands_clan/), пвп, фермы и многое другое.
 
 ---
 
